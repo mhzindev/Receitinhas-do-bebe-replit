@@ -247,25 +247,25 @@ export default function Home() {
         </div>
       </section>
       {/* Personal Story Section */}
-      <section className="container mx-auto px-4 mb-12" data-testid="story-section">
-        <div className="bg-gradient-to-br from-baby-pink to-baby-blue bg-opacity-20 rounded-2xl shadow-lg p-8">
+      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="story-section">
+        <div className="bg-gradient-to-br from-baby-pink to-baby-blue bg-opacity-20 rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-baby-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-heart text-white text-3xl"></i>
+            <div className="text-center mb-6 md:mb-8">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-baby-pink rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <i className="fas fa-heart text-white text-2xl md:text-3xl"></i>
               </div>
-              <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
                 A história que mudou tudo... 💕
               </h3>
             </div>
             
-            <div className="bg-white rounded-lg p-6 shadow-md mb-6">
-              <div className="italic text-gray-700 text-lg leading-relaxed text-center">
-                <p className="mb-4">
+            <div className="bg-white rounded-lg p-4 md:p-6 shadow-md mb-4 md:mb-6">
+              <div className="italic text-gray-700 text-sm md:text-lg leading-relaxed text-center">
+                <p className="mb-3 md:mb-4">
                   "Eu era uma mãe desesperada. Meu filho de 8 meses chorava a cada refeição, 
                   recusava tudo que eu oferecia e eu me sentia a pior mãe do mundo..."
                 </p>
-                <p className="mb-4">
+                <p className="mb-3 md:mb-4">
                   "Até que descobri que o problema não era comigo ou com ele - 
                   era simplesmente a FORMA como eu estava oferecendo a comida."
                 </p>
@@ -277,10 +277,10 @@ export default function Home() {
             </div>
             
             <div className="text-center">
-              <p className="font-poppins font-semibold text-gray-800 text-lg">
+              <p className="font-poppins font-semibold text-gray-800 text-sm md:text-lg">
                 Se funcionou comigo e com mais de 15.000 mães...
               </p>
-              <p className="font-poppins font-bold text-baby-pink text-xl">
+              <p className="font-poppins font-bold text-baby-pink text-lg md:text-xl">
                 VAI FUNCIONAR COM VOCÊ TAMBÉM! 💪
               </p>
             </div>
@@ -288,74 +288,74 @@ export default function Home() {
         </div>
       </section>
       {/* Before vs After Section */}
-      <section className="container mx-auto px-4 mb-12" data-testid="before-after-section">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="before-after-section">
+        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
+          <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-8">
             🔄 ANTES vs DEPOIS
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Before */}
-            <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6" data-testid="before-section">
-              <h4 className="font-poppins text-xl font-bold text-red-600 mb-4 text-center">
+            <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 md:p-6" data-testid="before-section">
+              <h4 className="font-poppins text-lg md:text-xl font-bold text-red-600 mb-3 md:mb-4 text-center">
                 😰 ANTES (sem as receitas)
               </h4>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
-                  <span className="text-red-500">❌</span>
-                  <span className="text-gray-700">Hora da comida = momento de estresse</span>
+              <ul className="space-y-2 md:space-y-3">
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-red-500 text-sm md:text-base">❌</span>
+                  <span className="text-gray-700 text-sm md:text-base">Hora da comida = momento de estresse</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-red-500">❌</span>
-                  <span className="text-gray-700">Bebê chorando e recusando comida</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-red-500 text-sm md:text-base">❌</span>
+                  <span className="text-gray-700 text-sm md:text-base">Bebê chorando e recusando comida</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-red-500">❌</span>
-                  <span className="text-gray-700">Você se sentindo culpada e frustrada</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-red-500 text-sm md:text-base">❌</span>
+                  <span className="text-gray-700 text-sm md:text-base">Você se sentindo culpada e frustrada</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-red-500">❌</span>
-                  <span className="text-gray-700">Medo do desenvolvimento inadequado</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-red-500 text-sm md:text-base">❌</span>
+                  <span className="text-gray-700 text-sm md:text-base">Medo do desenvolvimento inadequado</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-red-500">❌</span>
-                  <span className="text-gray-700">Noites em claro com preocupação</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-red-500 text-sm md:text-base">❌</span>
+                  <span className="text-gray-700 text-sm md:text-base">Noites em claro com preocupação</span>
                 </li>
               </ul>
             </div>
             
             {/* After */}
-            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6" data-testid="after-section">
-              <h4 className="font-poppins text-xl font-bold text-green-600 mb-4 text-center">
+            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4 md:p-6" data-testid="after-section">
+              <h4 className="font-poppins text-lg md:text-xl font-bold text-green-600 mb-3 md:mb-4 text-center">
                 😍 DEPOIS (com as receitas)
               </h4>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
-                  <span className="text-green-500">✅</span>
-                  <span className="text-gray-700">Refeições tranquilas e prazerosas</span>
+              <ul className="space-y-2 md:space-y-3">
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-green-500 text-sm md:text-base">✅</span>
+                  <span className="text-gray-700 text-sm md:text-base">Refeições tranquilas e prazerosas</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-green-500">✅</span>
-                  <span className="text-gray-700">Bebê pedindo mais comida</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-green-500 text-sm md:text-base">✅</span>
+                  <span className="text-gray-700 text-sm md:text-base">Bebê pedindo mais comida</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-green-500">✅</span>
-                  <span className="text-gray-700">Você confiante e realizada</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-green-500 text-sm md:text-base">✅</span>
+                  <span className="text-gray-700 text-sm md:text-base">Você confiante e realizada</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-green-500">✅</span>
-                  <span className="text-gray-700">Desenvolvimento saudável garantido</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-green-500 text-sm md:text-base">✅</span>
+                  <span className="text-gray-700 text-sm md:text-base">Desenvolvimento saudável garantido</span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-green-500">✅</span>
-                  <span className="text-gray-700">Paz de espírito total</span>
+                <li className="flex items-center space-x-2 md:space-x-3">
+                  <span className="text-green-500 text-sm md:text-base">✅</span>
+                  <span className="text-gray-700 text-sm md:text-base">Paz de espírito total</span>
                 </li>
               </ul>
             </div>
           </div>
           
-          <div className="text-center mt-8">
-            <p className="font-poppins text-lg font-semibold text-gray-800 mb-4">
+          <div className="text-center mt-6 md:mt-8">
+            <p className="font-poppins text-base md:text-lg font-semibold text-gray-800 mb-4">
               🤔 Qual dessas realidades você quer viver?
             </p>
           </div>
@@ -495,8 +495,8 @@ export default function Home() {
           
           <div className="space-y-4">
             <div className="w-full md:w-auto relative">
-              <div className="arrow-bounce text-5xl mb-3">👇</div>
-              <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow">
+              <div className="arrow-bounce text-3xl md:text-5xl mb-3">👇</div>
+              <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow px-4 py-4 text-sm sm:text-base">
                 🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘
               </CTAButton>
             </div>
