@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(50, 100%, 95%);
+  --foreground: hsl(0, 0%, 20%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 20%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 20%);
+  --primary: hsl(350, 100%, 86%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(120, 33%, 75%);
+  --secondary-foreground: hsl(0, 0%, 20%);
+  --muted: hsl(0, 0%, 96%);
+  --muted-foreground: hsl(0, 0%, 40%);
+  --accent: hsl(200, 100%, 85%);
+  --accent-foreground: hsl(0, 0%, 20%);
+  --destructive: hsl(0, 85%, 68%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 88%);
+  --input: hsl(0, 0%, 97%);
+  --ring: hsl(350, 100%, 86%);
+  --orange: hsl(30, 100%, 50%);
+  --baby-yellow: hsl(50, 100%, 95%);
+  --baby-pink: hsl(350, 100%, 86%);
+  --baby-green: hsl(120, 33%, 75%);
+  --baby-blue: hsl(200, 100%, 85%);
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-baby-yellow font-inter text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateX(-100%); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+.animated-pulse {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.floating-notification {
+  animation: slideIn 0.5s ease-out;
+}
+
+.bounce-gentle {
+  animation: bounce-gentle 2s infinite;
+}
