@@ -755,12 +755,19 @@ export default function Home() {
                   </p>
                   
                   <CTAButton variant="orange" size="xl" className="w-full sm:w-auto glow">
-                    🎯 QUERO O EBOOK COMPLETO AGORA! 🎯
+                    <span className="hidden sm:inline">🎯 QUERO O EBOOK COMPLETO AGORA! 🎯</span>
+                    <span className="sm:hidden">🎯 QUERO O EBOOK AGORA! 🎯</span>
                   </CTAButton>
                   
-                  <p className="text-xs text-gray-500 mt-3">
-                    ⚡ Acesso imediato • 💳 Pagamento seguro • 📱 Disponível em todos os dispositivos
-                  </p>
+                  <div className="text-xs text-gray-500 mt-3 px-2">
+                    <div className="flex flex-col sm:flex-row sm:justify-center sm:space-x-2 space-y-1 sm:space-y-0">
+                      <span className="flex items-center justify-center">⚡ Acesso imediato</span>
+                      <span className="hidden sm:inline">•</span>
+                      <span className="flex items-center justify-center">💳 Pagamento seguro</span>
+                      <span className="hidden sm:inline">•</span>
+                      <span className="flex items-center justify-center">📱 Todos os dispositivos</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -929,13 +936,24 @@ export default function Home() {
             <div className="w-full md:w-auto relative">
               <div className="arrow-bounce text-3xl md:text-5xl mb-3">👇</div>
               <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow px-4 py-4 text-sm sm:text-base">
-                🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘
+                <span className="hidden sm:inline">🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘</span>
+                <span className="sm:hidden">🆘 PARAR DE SOFRER AGORA! 🆘</span>
               </CTAButton>
             </div>
             <div className="bg-green-100 border border-green-300 rounded-lg p-3 max-w-md mx-auto">
-              <p className="text-sm text-green-800 font-semibold">🔐 SSL Seguro | 💳 Todos os cartões | 📱 Acesso imediato</p>
+              <div className="flex flex-col sm:flex-row sm:justify-center text-sm text-green-800 font-semibold space-y-1 sm:space-y-0 sm:space-x-2">
+                <span className="flex items-center justify-center">🔐 SSL Seguro</span>
+                <span className="hidden sm:inline">|</span>
+                <span className="flex items-center justify-center">💳 Todos os cartões</span>
+                <span className="hidden sm:inline">|</span>
+                <span className="flex items-center justify-center">📱 Acesso imediato</span>
+              </div>
             </div>
-            <p className="text-xs text-gray-600">👆 Um clique separa você da tranquilidade que você merece</p>
+            <div className="mt-3 px-2">
+              <p className="text-xs text-gray-600 text-center leading-relaxed">
+                👆 <span className="block sm:inline mt-1 sm:mt-0">Um clique separa você da tranquilidade que você merece</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
