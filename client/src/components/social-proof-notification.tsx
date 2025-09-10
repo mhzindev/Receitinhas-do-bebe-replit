@@ -1,9 +1,16 @@
 import { useState, useEffect } from "react";
 
-const names = [
-  "Ana de SP", "Maria do RJ", "Carla de MG", "Fernanda de RS", 
-  "Patricia de PR", "Juliana de BA", "Camila de SC", "Lucia de PE",
-  "Renata de GO", "Viviane de PB", "Sabrina de ES", "Claudia de MT"
+const notifications = [
+  "Ana de SP garantiu o eBook e em 3 dias seu bebê já comia brócolis!",
+  "Maria do RJ economizou R$ 200/mês em papinhas com as receitas!",
+  "Carla de MG transformou a hora da refeição em momento de alegria!",
+  "Fernanda de RS viu seu bebê pedir mais comida pela primeira vez!",
+  "Patricia de PR resolveu a seletividade alimentar em 1 semana!",
+  "Juliana de BA conseguiu fazer o filho comer verduras!",
+  "Camila de SC acabou com o estresse das refeições!",
+  "Lucia de PE viu o peso do bebê aumentar 500g em 15 dias!",
+  "Renata de GO garantiu o desenvolvimento saudável do filho!",
+  "Viviane de PB parou de se sentir culpada nas refeições!"
 ];
 
 export function SocialProofNotification() {
@@ -14,14 +21,14 @@ export function SocialProofNotification() {
     let currentIndex = 0;
 
     const showNotification = () => {
-      setCurrentName(names[currentIndex]);
+      setCurrentName(notifications[currentIndex]);
       setIsVisible(true);
 
       setTimeout(() => {
         setIsVisible(false);
-      }, 4000);
+      }, 5000);
 
-      currentIndex = (currentIndex + 1) % names.length;
+      currentIndex = (currentIndex + 1) % notifications.length;
     };
 
     // Show first notification after 3 seconds
@@ -46,9 +53,9 @@ export function SocialProofNotification() {
         </div>
         <div className="flex-1">
           <p className="text-xs font-medium text-gray-900" data-testid="social-proof-text">
-            {currentName} garantiu o eBook agora mesmo!
+            {currentName}
           </p>
-          <p className="text-xs text-gray-500">há 2 minutos</p>
+          <p className="text-xs text-gray-500">há poucos minutos</p>
         </div>
       </div>
     </div>

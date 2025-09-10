@@ -243,8 +243,126 @@ export default function Home() {
           {/* CTA Button 1 */}
           <div className="text-center mt-8">
             <CTAButton variant="primary" size="lg">
-              💖 SIM! QUERO AS RECEITAS AGORA 💖
+              🎯 SIM! QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
             </CTAButton>
+            <p className="text-xs text-gray-500 mt-2">💳 Acesso imediato | 🔒 Pagamento 100% seguro | ✅ Garantia de 7 dias</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Story Section */}
+      <section className="container mx-auto px-4 mb-12" data-testid="story-section">
+        <div className="bg-gradient-to-br from-baby-pink to-baby-blue bg-opacity-20 rounded-2xl shadow-lg p-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="w-20 h-20 bg-baby-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                <i className="fas fa-heart text-white text-3xl"></i>
+              </div>
+              <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                A história que mudou tudo... 💕
+              </h3>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md mb-6">
+              <div className="italic text-gray-700 text-lg leading-relaxed text-center">
+                <p className="mb-4">
+                  "Eu era uma mãe desesperada. Meu filho de 8 meses chorava a cada refeição, 
+                  recusava tudo que eu oferecia e eu me sentia a pior mãe do mundo..."
+                </p>
+                <p className="mb-4">
+                  "Até que descobri que o problema não era comigo ou com ele - 
+                  era simplesmente a FORMA como eu estava oferecendo a comida."
+                </p>
+                <p className="font-semibold text-baby-pink">
+                  "Em apenas 3 dias usando essas receitas, meu filho começou a comer com prazer. 
+                  Hoje ele tem 3 anos e é o bebê mais saudável da creche!" 
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <p className="font-poppins font-semibold text-gray-800 text-lg">
+                Se funcionou comigo e com mais de 15.000 mães...
+              </p>
+              <p className="font-poppins font-bold text-baby-pink text-xl">
+                VAI FUNCIONAR COM VOCÊ TAMBÉM! 💪
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Before vs After Section */}
+      <section className="container mx-auto px-4 mb-12" data-testid="before-after-section">
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+            🔄 ANTES vs DEPOIS
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Before */}
+            <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6" data-testid="before-section">
+              <h4 className="font-poppins text-xl font-bold text-red-600 mb-4 text-center">
+                😰 ANTES (sem as receitas)
+              </h4>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-3">
+                  <span className="text-red-500">❌</span>
+                  <span className="text-gray-700">Hora da comida = momento de estresse</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-red-500">❌</span>
+                  <span className="text-gray-700">Bebê chorando e recusando comida</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-red-500">❌</span>
+                  <span className="text-gray-700">Você se sentindo culpada e frustrada</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-red-500">❌</span>
+                  <span className="text-gray-700">Medo do desenvolvimento inadequado</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-red-500">❌</span>
+                  <span className="text-gray-700">Noites em claro com preocupação</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* After */}
+            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6" data-testid="after-section">
+              <h4 className="font-poppins text-xl font-bold text-green-600 mb-4 text-center">
+                😍 DEPOIS (com as receitas)
+              </h4>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-500">✅</span>
+                  <span className="text-gray-700">Refeições tranquilas e prazerosas</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-500">✅</span>
+                  <span className="text-gray-700">Bebê pedindo mais comida</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-500">✅</span>
+                  <span className="text-gray-700">Você confiante e realizada</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-500">✅</span>
+                  <span className="text-gray-700">Desenvolvimento saudável garantido</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="text-green-500">✅</span>
+                  <span className="text-gray-700">Paz de espírito total</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="font-poppins text-lg font-semibold text-gray-800 mb-4">
+              🤔 Qual dessas realidades você quer viver?
+            </p>
           </div>
         </div>
       </section>
@@ -297,9 +415,22 @@ export default function Home() {
       {/* Social Proof Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="testimonials-section">
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-            Veja o que as mamães estão falando! 📱
-          </h3>
+          <div className="text-center mb-8">
+            <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              Veja o que as mamães estão falando! 📱
+            </h3>
+            <div className="flex items-center justify-center space-x-2 mb-2">
+              <div className="flex space-x-1">
+                <i className="fas fa-star text-yellow-400"></i>
+                <i className="fas fa-star text-yellow-400"></i>
+                <i className="fas fa-star text-yellow-400"></i>
+                <i className="fas fa-star text-yellow-400"></i>
+                <i className="fas fa-star text-yellow-400"></i>
+              </div>
+              <span className="font-semibold text-gray-700">5.0/5</span>
+            </div>
+            <p className="text-gray-600">⭐ 2.847 avaliações verificadas</p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* WhatsApp Message 1 */}
@@ -309,8 +440,17 @@ export default function Home() {
                   <i className="fab fa-whatsapp text-white"></i>
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-800">Ana Paula</p>
-                  <p className="text-sm text-gray-600 mt-1">"Fiz a papinha de batata doce hoje, meu bebê amou! Obrigada! 😍"</p>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <p className="font-medium text-gray-800">Ana Paula - SP</p>
+                    <div className="flex space-x-1">
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-1">"Em 3 dias meu bebê que só chorava na hora da comida agora pede mais! A receita de batata doce foi um sucesso! 😍"</p>
                   <p className="text-xs text-gray-500 mt-2">14:23 ✓✓</p>
                 </div>
               </div>
@@ -323,8 +463,17 @@ export default function Home() {
                   <i className="fab fa-instagram text-white"></i>
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-800">@mamae_carol</p>
-                  <p className="text-sm text-gray-600 mt-1">"Salvou minha vida! As receitas são maravilhosas! 💕"</p>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <p className="font-medium text-gray-800">@mamae_carol</p>
+                    <div className="flex space-x-1">
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-1">"Meninas, FUNCIONOU! Meu filho super seletivo agora come brócolis! Economizei R$ 800 em consultas! 💕"</p>
                   <p className="text-xs text-gray-500 mt-2">2h • Direct</p>
                 </div>
               </div>
@@ -337,8 +486,17 @@ export default function Home() {
                   <i className="fab fa-whatsapp text-white"></i>
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-800">Fernanda</p>
-                  <p className="text-sm text-gray-600 mt-1">"Meu filho que era super seletivo agora come de tudo! 🙌"</p>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <p className="font-medium text-gray-800">Fernanda - MG</p>
+                    <div className="flex space-x-1">
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-1">"MILAGRE! Em 1 semana meu bebê de 10m que só comia leite agora come legumes, frutas, TUDO! 🙌"</p>
                   <p className="text-xs text-gray-500 mt-2">09:45 ✓✓</p>
                 </div>
               </div>
@@ -351,8 +509,17 @@ export default function Home() {
                   <i className="fab fa-instagram text-white"></i>
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-800">@ju_maternidade</p>
-                  <p className="text-sm text-gray-600 mt-1">"Amei as receitas! Fáceis e nutritivas 🍼✨"</p>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <p className="font-medium text-gray-800">@ju_maternidade</p>
+                    <div className="flex space-x-1">
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-1">"Nossa!! 15 min de preparo e minha filha comeu TUDO! Até o pediatra ficou impressionado com o peso! 🍼✨"</p>
                   <p className="text-xs text-gray-500 mt-2">1h • Direct</p>
                 </div>
               </div>
@@ -365,8 +532,17 @@ export default function Home() {
                   <i className="fab fa-whatsapp text-white"></i>
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-800">Patrícia</p>
-                  <p className="text-sm text-gray-600 mt-1">"Valeu cada centavo! Recomendo para todas as mães! 👏"</p>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <p className="font-medium text-gray-800">Patrícia - RS</p>
+                    <div className="flex space-x-1">
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-1">"Gastava R$ 300/mês com papínhas prontas. Agora gasto R$ 50 e ela ama! ROI incrível! 👏"</p>
                   <p className="text-xs text-gray-500 mt-2">16:12 ✓✓</p>
                 </div>
               </div>
@@ -379,8 +555,17 @@ export default function Home() {
                   <i className="fab fa-instagram text-white"></i>
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-800">@mama_lucia</p>
-                  <p className="text-sm text-gray-600 mt-1">"Economizei muito tempo! Receitas práticas e gostosas! 🥰"</p>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <p className="font-medium text-gray-800">@mama_lucia</p>
+                    <div className="flex space-x-1">
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                      <i className="fas fa-star text-yellow-400 text-xs"></i>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-1">"De 2h cozinhando para 20min! Sobra tempo para brincar com ele. Obrigada pela minha vida de volta! 🥰"</p>
                   <p className="text-xs text-gray-500 mt-2">4h • Direct</p>
                 </div>
               </div>
@@ -389,9 +574,10 @@ export default function Home() {
 
           {/* CTA Button 2 */}
           <div className="text-center mt-8">
-            <CTAButton variant="secondary" size="lg">
-              🌟 QUERO TRANSFORMAR A ALIMENTAÇÃO DO MEU BEBÊ AGORA! 🌟
+            <CTAButton variant="orange" size="lg">
+              ⚡ GARANTIR MINHA TRANQUILIDADE AGORA! ⚡
             </CTAButton>
+            <p className="text-xs text-gray-500 mt-2">👆 Clique e transforme a alimentação do seu bebê em 5 minutos</p>
           </div>
         </div>
       </section>
@@ -455,22 +641,34 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="final-cta-section">
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+        <div className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl shadow-lg p-8 text-center">
+          <div className="bg-red-600 text-white px-4 py-2 rounded-full inline-block mb-4">
+            <p className="font-bold text-sm">⚠️ ÚLTIMA CHANCE - Preço volta ao normal em:</p>
+          </div>
           <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-            Não perca essa oportunidade! 🚨
+            Não seja a ÚNICA mãe sem essas receitas! 😰
           </h3>
-          <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-            Milhares de mães já transformaram a alimentação dos seus bebês. 
-            Agora é a sua vez de ter refeições tranquilas e um bebê saudável!
-          </p>
+          <div className="bg-white border-2 border-baby-pink rounded-lg p-6 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              <strong>Enquanto outras 15.000 mães já têm:</strong><br/>
+              ✅ Bebês que comem com prazer<br/>
+              ✅ Refeições sem choro e estresse<br/>
+              ✅ Desenvolvimento saudável garantido<br/>
+              <br/>
+              <span className="text-red-600 font-semibold">Você ainda vai continuar lutando sozinha?</span>
+            </p>
+          </div>
           
           <div className="space-y-4">
             <div className="w-full md:w-auto">
-              <CTAButton variant="orange" size="xl" className="w-full md:w-auto">
-                💖 QUERO GARANTIR MINHA TRANQUILIDADE AGORA! 💖
+              <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl">
+                🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘
               </CTAButton>
             </div>
-            <p className="text-sm text-gray-500" data-testid="security-message">🔒 Compra 100% segura e protegida</p>
+            <div className="bg-green-100 border border-green-300 rounded-lg p-3 max-w-md mx-auto">
+              <p className="text-sm text-green-800 font-semibold">🔐 SSL Seguro | 💳 Todos os cartões | 📱 Acesso imediato</p>
+            </div>
+            <p className="text-xs text-gray-600">👆 Um clique separa você da tranquilidade que você merece</p>
           </div>
         </div>
       </section>
