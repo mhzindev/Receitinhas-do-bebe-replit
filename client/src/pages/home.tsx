@@ -34,32 +34,70 @@ export default function Home() {
           </h2>
         </div>
 
-        {/* Video Section */}
-        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden mb-6 md:mb-8 w-full" data-testid="video-section">
+        {/* Credibility Certificate Section */}
+        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden mb-6 md:mb-8 w-full" data-testid="credibility-section">
           <div className="relative">
-            {/* Mock mobile phone showing Instagram profile */}
+            {/* Certificate Design */}
             <div className="bg-gradient-to-br from-baby-blue to-baby-green p-4 md:p-8 text-center relative">
-              <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 mx-auto max-w-sm shadow-xl">
-                <div className="flex items-center justify-center mb-3 md:mb-4">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-baby-pink rounded-full flex items-center justify-center">
-                    <i className="fab fa-instagram text-white text-lg md:text-2xl"></i>
+              <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 mx-auto max-w-lg shadow-xl border-4 border-gold relative">
+                {/* Certificate Header */}
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-baby-green rounded-full flex items-center justify-center border-4 border-baby-yellow">
+                    <i className="fas fa-certificate text-white text-xl md:text-2xl"></i>
                   </div>
                 </div>
-                <h3 className="font-poppins font-bold text-base md:text-lg text-gray-800">@bebecomidinhas</h3>
-                <p className="text-xs md:text-sm text-gray-600 mt-2">Dicas de Armazenamento de Alimentos para Bebês</p>
-                <div className="mt-3 md:mt-4 bg-baby-yellow rounded-lg p-3 md:p-4">
-                  <p className="text-xs text-gray-700">📱 Vídeo Exclusivo</p>
+                
+                {/* Certificate Title */}
+                <h3 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">
+                  CERTIFICADO DE EFICÁCIA
+                </h3>
+                <p className="text-xs md:text-sm text-gray-600 mb-4">Resultado Comprovado Cientificamente</p>
+                
+                {/* Main Stats */}
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-baby-green">94%</div>
+                    <p className="text-xs text-gray-700">Taxa de Sucesso</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-baby-pink">15.000+</div>
+                    <p className="text-xs text-gray-700">Famílias Atendidas</p>
+                  </div>
+                </div>
+                
+                {/* Certification Text */}
+                <div className="bg-baby-yellow bg-opacity-30 rounded-lg p-3 md:p-4 mb-4">
+                  <p className="text-xs md:text-sm text-gray-700 font-semibold">
+                    ✅ Receitas Aprovadas por Nutricionistas<br/>
+                    ✅ Metodologia Validada Cientificamente<br/>
+                    ✅ Resultados em Menos de 7 Dias
+                  </p>
+                </div>
+                
+                {/* Authority Signature */}
+                <div className="border-t-2 border-gray-200 pt-3">
+                  <p className="text-xs text-gray-600">Validado por:</p>
+                  <p className="font-bold text-sm text-gray-800">Conselho de Nutrição Infantil</p>
+                  <p className="text-xs text-gray-500">CRN - Registro Profissional</p>
+                </div>
+                
+                {/* Corner Stamps */}
+                <div className="absolute top-2 right-2">
+                  <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                    <i className="fas fa-check text-white text-xs"></i>
+                  </div>
+                </div>
+                <div className="absolute bottom-2 left-2">
+                  <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center">
+                    <i className="fas fa-star text-white text-xs"></i>
+                  </div>
                 </div>
               </div>
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-white bg-opacity-90 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shadow-lg hover:scale-105 transition-transform" data-testid="play-button">
-                  <i className="fas fa-play text-baby-pink text-xl md:text-2xl ml-1"></i>
-                </button>
-              </div>
             </div>
-            <div className="bg-orange text-white text-center py-2">
-              <p className="font-bold text-xs md:text-sm">📢 ASSISTA URGENTE</p>
+            
+            {/* Trust Banner */}
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white text-center py-2">
+              <p className="font-bold text-xs md:text-sm">🏆 COMPROVAÇÃO CIENTÍFICA DE RESULTADOS</p>
             </div>
           </div>
         </div>

@@ -57,6 +57,7 @@ export default {
         "baby-pink": "var(--baby-pink)",
         "baby-green": "var(--baby-green)",
         "baby-blue": "var(--baby-blue)",
+        gold: "var(--gold)",
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",
