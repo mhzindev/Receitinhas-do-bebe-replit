@@ -110,6 +110,10 @@ export function FeedbackModal({ isOpen, onClose, feedbacks, currentIndex, onNavi
             className={`max-w-full max-h-[60vh] object-contain transition-opacity duration-300 ${
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="600"
             onLoad={() => setImageLoaded(true)}
           />
           

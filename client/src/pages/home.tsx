@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { CountdownTimer } from "@/components/countdown-timer";
-import { SocialProofNotification } from "@/components/social-proof-notification";
+// Lazy load social proof for better performance
+const SocialProofNotification = lazy(() => import("@/components/social-proof-notification").then(module => ({ default: module.SocialProofNotification })));
 import { CTAButton } from "@/components/cta-button";
 import { Award, Check, Shield, Users, Star, Heart, Baby, MapPin, Clock, ShieldCheck, Download, User } from "lucide-react";
 import { LivePurchaseCounter } from "@/components/live-purchase-counter";
@@ -135,7 +136,9 @@ export default function Home() {
         </div>
       </div>
       {/* Floating Social Proof Notification */}
-      <SocialProofNotification />
+      <Suspense fallback={<div className="hidden"></div>}>
+        <SocialProofNotification />
+      </Suspense>
       {/* Header Section */}
       <header className="container mx-auto px-3 md:px-4 py-4 md:py-8">
         <div className="text-center">

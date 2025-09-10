@@ -1,0 +1,112 @@
+/* Critical CSS - Above the fold styles */
+@tailwind base;
+
+/* Critical variables for immediate rendering */
+:root {
+  --background: hsl(50, 100%, 95%);
+  --foreground: hsl(0, 0%, 20%);
+  --baby-yellow: hsl(50, 100%, 95%);
+  --baby-pink: hsl(350, 100%, 86%);
+  --baby-green: hsl(120, 33%, 75%);
+  --baby-blue: hsl(200, 100%, 85%);
+  --gold: hsl(45, 100%, 60%);
+}
+
+/* Critical base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--foreground);
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Critical layout containers */
+#root {
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Above-the-fold hero section styles */
+.hero-section {
+  background: linear-gradient(135deg, var(--baby-yellow) 0%, var(--baby-pink) 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Critical button styles */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+/* Critical typography */
+h1, h2, h3 {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Loading skeleton to prevent layout shift */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Mobile-first critical responsive */
+@media (max-width: 475px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .cta-button {
+    min-height: 44px;
+    width: 100%;
+  }
+}

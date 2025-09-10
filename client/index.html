@@ -29,9 +29,19 @@
     <!-- Preload critical fonts for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Direct CSS loading to avoid FOUC -->
+    <link rel="stylesheet" href="/src/index.css">
+    
+    <!-- Critical fonts preload -->
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrFJDUc1NECPY.woff2" type="font/woff2" crossorigin>
+    
     <!-- Non-blocking font loading - only essential weights -->
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap"></noscript>
+    
+    <!-- Resource hints para melhor performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
   </head>
   <body>
     <div id="root"></div>

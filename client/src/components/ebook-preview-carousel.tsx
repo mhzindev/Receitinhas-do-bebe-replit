@@ -581,6 +581,10 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
                 src={zoomedImage}
                 alt="Página real do eBook em tamanho ampliado"
                 className="w-full h-auto rounded-lg shadow-lg"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="1200"
               />
             </div>
 
