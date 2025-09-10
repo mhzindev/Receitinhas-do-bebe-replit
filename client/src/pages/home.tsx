@@ -967,10 +967,10 @@ export default function Home() {
 
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
                 <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <i className="fas fa-sync-alt text-white text-lg"></i>
+                  <i className="fas fa-download text-white text-lg"></i>
                 </div>
                 <h4 className="font-semibold text-purple-800 text-sm md:text-base mb-1">Entrega Garantida</h4>
-                <p className="text-purple-700 text-xs md:text-sm">Garantia de entrega do seu produto</p>
+                <p className="text-purple-700 text-xs md:text-sm">Acesso imediato por email</p>
               </div>
             </div>
 
