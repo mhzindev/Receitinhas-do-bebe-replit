@@ -414,7 +414,11 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
                             src={realImage}
                             alt={`Página real: ${content.title}`}
                             className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
-                            loading="lazy"
+                            loading={index === 0 ? "eager" : "lazy"}
+                            decoding="async"
+                            fetchPriority={index === 0 ? "high" : "low"}
+                            width="400"
+                            height="600"
                           />
                           
                           {/* Overlay de zoom */}

@@ -90,6 +90,10 @@ export function FeedbackImage({
           className={`w-full h-auto transition-opacity duration-300 ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
+          loading="lazy"
+          decoding="async"
+          width="300"
+          height="400"
           onLoad={() => setImageLoaded(true)}
           onError={() => setImageError(true)}
         />
