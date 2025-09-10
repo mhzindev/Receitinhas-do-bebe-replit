@@ -2,6 +2,116 @@ import { CountdownTimer } from "@/components/countdown-timer";
 import { SocialProofNotification } from "@/components/social-proof-notification";
 import { CTAButton } from "@/components/cta-button";
 import { FeedbackGallery } from "@/components/feedback-gallery";
+import { EBookPreviewCarousel } from "@/components/ebook-preview-carousel";
+
+// Dados do eBook baseados nas imagens anexadas
+const ebookContents = [
+  {
+    id: "1",
+    title: "Mingau de Aveia com Banana",
+    subtitle: "Receita completa passo a passo",
+    description: "Uma das receitas mais amadas pelas mamães! Nutritiva, fácil e perfeita para a introdução alimentar.",
+    type: "recipe" as const,
+    preview: {
+      ingredients: [
+        "2 colheres de sopa de aveia em flocos",
+        "1/2 xícara de água ou leite materno/fórmula",
+        "1/2 banana amassada",
+        "1 pitada de canela (opcional)"
+      ],
+      steps: [
+        "Cozinhe a aveia em fogo baixo por 5 minutos",
+        "Retire do fogo e adicione a banana amassada",
+        "Misture bem até obter consistência homogênea",
+        "Espere esfriar antes de oferecer ao bebê"
+      ],
+      ageRange: "6+ meses"
+    },
+    icon: "🥣",
+    bgGradient: "bg-gradient-to-br from-yellow-100 via-orange-50 to-pink-100",
+    textColor: "text-gray-800"
+  },
+  {
+    id: "2", 
+    title: "Plano Alimentar Completo",
+    subtitle: "Guia dos 6 aos 12 meses",
+    description: "Planejamento semanal detalhado com horários, quantidades e progressão alimentar adequada para cada fase.",
+    type: "plan" as const,
+    preview: {
+      highlights: [
+        "Cronograma semanal organizado",
+        "Quantidades adequadas por idade",
+        "Progressão de texturas e sabores",
+        "Horários ideais para cada refeição",
+        "Lista de compras incluída"
+      ],
+      ageRange: "6 a 12 meses"
+    },
+    icon: "📋",
+    bgGradient: "bg-gradient-to-br from-blue-100 via-cyan-50 to-teal-100",
+    textColor: "text-gray-800"
+  },
+  {
+    id: "3",
+    title: "Lista de Substituições Saudáveis",
+    subtitle: "Alternativas nutritivas para qualquer situação",
+    description: "Não tem um ingrediente? Descobra substituições inteligentes que mantêm o valor nutricional e o sabor!",
+    type: "tips" as const,
+    preview: {
+      highlights: [
+        "Mais de 50 substituições testadas",
+        "Alternativas para alergias alimentares",
+        "Opções para diferentes orçamentos",
+        "Equivalências nutricionais",
+        "Dicas de armazenamento"
+      ],
+      ageRange: "6 a 12 meses"
+    },
+    icon: "🔄",
+    bgGradient: "bg-gradient-to-br from-green-100 via-emerald-50 to-lime-100",
+    textColor: "text-gray-800"
+  },
+  {
+    id: "4",
+    title: "Guia do Sono",
+    subtitle: "Noites tranquilas para bebê e família",
+    description: "A alimentação afeta diretamente o sono! Aprenda a criar uma rotina que garante noites mais tranquilas.",
+    type: "guide" as const,
+    preview: {
+      highlights: [
+        "Rotina de sono após as refeições",
+        "Alimentos que ajudam no sono",
+        "Timing perfeito das refeições",
+        "Dicas para noites mais tranquilas",
+        "Sinais de fome x sono"
+      ],
+      ageRange: "6+ meses"
+    },
+    icon: "😴",
+    bgGradient: "bg-gradient-to-br from-purple-100 via-pink-50 to-rose-100",
+    textColor: "text-gray-800"
+  },
+  {
+    id: "5",
+    title: "Dicas de Armazenamento",
+    subtitle: "Conserve alimentos com segurança",
+    description: "Organize sua cozinha e mantenha os alimentos frescos por mais tempo, economizando tempo e dinheiro.",
+    type: "tips" as const,
+    preview: {
+      highlights: [
+        "Tempo de conservação de cada alimento",
+        "Técnicas de congelamento seguro",
+        "Organização da geladeira",
+        "Papinhas prontas que duram dias",
+        "Aproveitamento máximo dos ingredientes"
+      ],
+      ageRange: "Todas as idades"
+    },
+    icon: "🥫",
+    bgGradient: "bg-gradient-to-br from-amber-100 via-yellow-50 to-orange-100",
+    textColor: "text-gray-800"
+  }
+];
 
 export default function Home() {
   return (
@@ -546,6 +656,98 @@ export default function Home() {
               ⚡ GARANTIR MINHA TRANQUILIDADE AGORA! ⚡
             </CTAButton>
             <p className="text-xs text-gray-500 mt-2 px-2">👆 Clique e transforme a alimentação do seu bebê em 5 minutos</p>
+          </div>
+        </div>
+      </section>
+      {/* eBook Preview Section */}
+      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="ebook-preview-section">
+        <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-10 relative overflow-hidden">
+          {/* Decorative Background Elements */}
+          <div className="absolute top-4 right-4 opacity-5">
+            <i className="fas fa-book-open text-baby-pink text-8xl"></i>
+          </div>
+          <div className="absolute bottom-4 left-4 opacity-5">
+            <i className="fas fa-utensils text-baby-blue text-6xl"></i>
+          </div>
+          
+          <div className="relative max-w-6xl mx-auto">
+            {/* Header with Strong Copy */}
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-block bg-gradient-to-r from-baby-pink to-baby-blue text-white rounded-full px-6 py-2 mb-4">
+                <span className="font-bold text-sm">✨ EXCLUSIVO ✨</span>
+              </div>
+              
+              <h3 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                👀 <span className="gradient-text">Veja por dentro do eBook!</span>
+              </h3>
+              
+              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <span className="font-semibold text-baby-pink">Algumas das receitas e guias</span> que você vai encontrar
+              </p>
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <div className="flex items-center bg-green-50 border border-green-200 rounded-full px-4 py-2">
+                  <i className="fas fa-shield-check text-green-600 mr-2"></i>
+                  <span className="text-green-700 font-semibold text-sm">100% Testado</span>
+                </div>
+                <div className="flex items-center bg-blue-50 border border-blue-200 rounded-full px-4 py-2">
+                  <i className="fas fa-users text-blue-600 mr-2"></i>
+                  <span className="text-blue-700 font-semibold text-sm">+15k Mães Aprovaram</span>
+                </div>
+                <div className="flex items-center bg-purple-50 border border-purple-200 rounded-full px-4 py-2">
+                  <i className="fas fa-heart text-purple-600 mr-2"></i>
+                  <span className="text-purple-700 font-semibold text-sm">Aprovado por Nutricionistas</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Carousel */}
+            <EBookPreviewCarousel contents={ebookContents} />
+
+            {/* Bottom CTA with Social Proof */}
+            <div className="mt-8 md:mt-12 text-center">
+              <div className="bg-gradient-to-r from-baby-yellow to-baby-pink rounded-2xl p-6 md:p-8 border-2 border-baby-pink">
+                <div className="max-w-2xl mx-auto">
+                  <h4 className="font-poppins text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                    😍 <span className="text-baby-pink">Isso é só uma amostra!</span>
+                  </h4>
+                  <p className="text-gray-700 text-base md:text-lg mb-4 leading-relaxed">
+                    O eBook completo contém <span className="font-bold text-baby-pink">mais de 100 receitas</span>, 
+                    planos semanais detalhados, e todos os guias que você precisa para transformar 
+                    a alimentação do seu bebê em apenas alguns dias!
+                  </p>
+                  
+                  {/* Value Proposition */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div className="bg-white/80 rounded-lg p-3">
+                      <div className="text-2xl mb-2">📚</div>
+                      <p className="text-sm font-semibold text-gray-800">+100 Receitas</p>
+                    </div>
+                    <div className="bg-white/80 rounded-lg p-3">
+                      <div className="text-2xl mb-2">⏰</div>
+                      <p className="text-sm font-semibold text-gray-800">Resultados em 5 dias</p>
+                    </div>
+                    <div className="bg-white/80 rounded-lg p-3">
+                      <div className="text-2xl mb-2">🛡️</div>
+                      <p className="text-sm font-semibold text-gray-800">Garantia de 7 dias</p>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-gray-600 mb-4">
+                    💫 <span className="font-semibold">Transforme a alimentação do seu bebê hoje mesmo!</span>
+                  </p>
+                  
+                  <CTAButton variant="orange" size="xl" className="w-full sm:w-auto glow">
+                    🎯 QUERO O EBOOK COMPLETO AGORA! 🎯
+                  </CTAButton>
+                  
+                  <p className="text-xs text-gray-500 mt-3">
+                    ⚡ Acesso imediato • 💳 Pagamento seguro • 📱 Disponível em todos os dispositivos
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
