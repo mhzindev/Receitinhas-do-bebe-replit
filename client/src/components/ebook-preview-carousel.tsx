@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Maximize } from "lucide-react";
 
 // Importar imagens reais do eBook
 import ebookCover from "@/assets/ebook-pages/ebook-cover.jpg";
@@ -416,7 +417,6 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
                             className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
                             loading={index === 0 ? "eager" : "lazy"}
                             decoding="async"
-                            fetchPriority={index === 0 ? "high" : "low"}
                             width="400"
                             height="600"
                           />
@@ -444,7 +444,7 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
                             className="inline-flex items-center space-x-2 bg-baby-pink text-white px-4 py-2 rounded-full hover:bg-pink-600 transition-colors"
                             data-testid={`zoom-page-${content.id}`}
                           >
-                            <i className="fas fa-expand-arrows-alt"></i>
+                            <Maximize className="w-4 h-4" />
                             <span>Ver em Tamanho Real</span>
                           </button>
                         </div>
