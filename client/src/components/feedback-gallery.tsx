@@ -3,35 +3,38 @@ import { FeedbackImage } from "./feedback-image";
 import { FeedbackModal } from "./feedback-modal";
 import { MobileFeedbackCarousel } from "./mobile-feedback-carousel";
 
-import realFeedbackImage from "@assets/WhatsApp Image 2025-09-09 at 21.22.56_1757463806105.jpeg";
+// Importing real feedback images
+const feedbackImage1 = "/attached_assets/WhatsApp Image 2025-09-09 at 22.56.58_1757469548851.jpeg";
+const feedbackImage2 = "/attached_assets/WhatsApp Image 2025-09-09 at 22.57.31_1757469548853.jpeg"; 
+const feedbackImage3 = "/attached_assets/WhatsApp Image 2025-09-09 at 22.58.04_1757469548853.jpeg";
 
 // Feedbacks com imagem real e placeholders para demonstração
 const feedbackData = [
   {
     id: "1",
-    imageSrc: realFeedbackImage, // Imagem real anexada pelo usuário
+    imageSrc: feedbackImage1,
     platform: "whatsapp" as const,
     customerName: "Ana Paula",
     location: "SP",
-    message: "Em 3 dias meu bebê que só chorava na hora da comida agora pede mais! A receita de batata doce foi um sucesso!",
+    message: "Em 5 dias meu bebê que só chorava na hora da comida agora pede mais! A receita de batata doce foi um sucesso!",
     time: "14:23 ✓✓",
     rating: 5,
     verified: true
   },
   {
     id: "2", 
-    imageSrc: "https://via.placeholder.com/400x600/FFB6C1/FFFFFF?text=Instagram+DM", // Placeholder Instagram
-    platform: "instagram" as const,
+    imageSrc: feedbackImage2,
+    platform: "whatsapp" as const,
     customerName: "Carol",
     location: "RJ",
     message: "Meninas, FUNCIONOU! Meu filho super seletivo agora come brócolis! Economizei R$ 800 em consultas!",
-    time: "2h • Direct",
+    time: "11:47 ✓✓",
     rating: 5,
     verified: true
   },
   {
     id: "3",
-    imageSrc: "https://via.placeholder.com/400x600/25D366/FFFFFF?text=WhatsApp+Message", // Placeholder WhatsApp
+    imageSrc: feedbackImage3,
     platform: "whatsapp" as const,
     customerName: "Fernanda",
     location: "MG",
