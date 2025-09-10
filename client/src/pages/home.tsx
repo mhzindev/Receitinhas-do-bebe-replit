@@ -35,84 +35,84 @@ export default function Home() {
         </div>
 
         {/* Video Section */}
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden mb-8" data-testid="video-section">
+        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden mb-6 md:mb-8" data-testid="video-section">
           <div className="relative">
             {/* Mock mobile phone showing Instagram profile */}
-            <div className="bg-gradient-to-br from-baby-blue to-baby-green p-8 text-center relative">
-              <div className="bg-white rounded-3xl p-6 mx-auto max-w-sm shadow-xl">
-                <div className="flex items-center justify-center mb-4">
-                  <div className="w-16 h-16 bg-baby-pink rounded-full flex items-center justify-center">
-                    <i className="fab fa-instagram text-white text-2xl"></i>
+            <div className="bg-gradient-to-br from-baby-blue to-baby-green p-4 md:p-8 text-center relative">
+              <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 mx-auto max-w-sm shadow-xl">
+                <div className="flex items-center justify-center mb-3 md:mb-4">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-baby-pink rounded-full flex items-center justify-center">
+                    <i className="fab fa-instagram text-white text-lg md:text-2xl"></i>
                   </div>
                 </div>
-                <h3 className="font-poppins font-bold text-lg text-gray-800">@bebecomidinhas</h3>
-                <p className="text-sm text-gray-600 mt-2">Dicas de Armazenamento de Alimentos para Bebês</p>
-                <div className="mt-4 bg-baby-yellow rounded-lg p-4">
+                <h3 className="font-poppins font-bold text-base md:text-lg text-gray-800">@bebecomidinhas</h3>
+                <p className="text-xs md:text-sm text-gray-600 mt-2">Dicas de Armazenamento de Alimentos para Bebês</p>
+                <div className="mt-3 md:mt-4 bg-baby-yellow rounded-lg p-3 md:p-4">
                   <p className="text-xs text-gray-700">📱 Vídeo Exclusivo</p>
                 </div>
               </div>
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-white bg-opacity-90 rounded-full w-20 h-20 flex items-center justify-center shadow-lg hover:scale-105 transition-transform" data-testid="play-button">
-                  <i className="fas fa-play text-baby-pink text-2xl ml-1"></i>
+                <button className="bg-white bg-opacity-90 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shadow-lg hover:scale-105 transition-transform" data-testid="play-button">
+                  <i className="fas fa-play text-baby-pink text-xl md:text-2xl ml-1"></i>
                 </button>
               </div>
             </div>
             <div className="bg-orange text-white text-center py-2">
-              <p className="font-bold text-sm">📢 ASSISTA URGENTE</p>
+              <p className="font-bold text-xs md:text-sm">📢 ASSISTA URGENTE</p>
             </div>
           </div>
         </div>
       </header>
       {/* Trust & Credibility Section */}
-      <section className="container mx-auto px-4 mb-8" data-testid="trust-section">
-        <div className="bg-white rounded-2xl shadow-lg p-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <section className="container mx-auto px-3 md:px-4 mb-6 md:mb-8" data-testid="trust-section">
+        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 text-center">
             <div className="flex flex-col items-center" data-testid="trust-item-1">
-              <div className="w-12 h-12 bg-baby-green rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-shield-alt text-white text-lg"></i>
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-baby-green rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-shield-alt text-white text-sm md:text-lg"></i>
               </div>
-              <p className="text-xs md:text-sm font-semibold text-gray-700">Satisfação Garantida</p>
+              <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">Satisfação Garantida</p>
               <p className="text-xs text-gray-500">ou seu dinheiro de volta</p>
             </div>
             
             <div className="flex flex-col items-center" data-testid="trust-item-2">
-              <div className="w-12 h-12 bg-baby-blue rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-users text-white text-lg"></i>
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-baby-blue rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-users text-white text-sm md:text-lg"></i>
               </div>
-              <p className="text-xs md:text-sm font-semibold text-gray-700">+15.000 Famílias</p>
+              <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">+15.000 Famílias</p>
               <p className="text-xs text-gray-500">já transformadas</p>
             </div>
             
             <div className="flex flex-col items-center" data-testid="trust-item-3">
-              <div className="w-12 h-12 bg-baby-pink rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-star text-white text-lg"></i>
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-baby-pink rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-star text-white text-sm md:text-lg"></i>
               </div>
-              <p className="text-xs md:text-sm font-semibold text-gray-700">94% Aprovação</p>
+              <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">94% Aprovação</p>
               <p className="text-xs text-gray-500">dos bebês aceitam</p>
             </div>
             
             <div className="flex flex-col items-center" data-testid="trust-item-4">
-              <div className="w-12 h-12 bg-orange rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-certificate text-white text-lg"></i>
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-orange rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-certificate text-white text-sm md:text-lg"></i>
               </div>
-              <p className="text-xs md:text-sm font-semibold text-gray-700">Aprovado por</p>
+              <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">Aprovado por</p>
               <p className="text-xs text-gray-500">nutricionistas</p>
             </div>
           </div>
         </div>
       </section>
       {/* Flash Offer Section */}
-      <section className="bg-gradient-to-r from-red-600 to-orange text-white py-8 mb-8" data-testid="flash-offer-section">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold mb-4">
+      <section className="bg-gradient-to-r from-red-600 to-orange text-white py-6 md:py-8 mb-6 md:mb-8" data-testid="flash-offer-section">
+        <div className="container mx-auto px-3 md:px-4 text-center">
+          <h3 className="font-poppins text-xl sm:text-2xl md:text-3xl font-bold mb-4 leading-tight">
             ⚡ OFERTA RELÂMPAGO - Só hoje! ⚡
           </h3>
           
           {/* Value Breakdown */}
-          <div className="bg-white bg-opacity-10 rounded-lg p-4 mb-6 max-w-2xl mx-auto">
-            <p className="text-sm mb-2">📊 Valor individual dos produtos:</p>
-            <div className="text-sm space-y-1">
+          <div className="bg-white bg-opacity-10 rounded-lg p-3 md:p-4 mb-4 md:mb-6 max-w-2xl mx-auto">
+            <p className="text-xs md:text-sm mb-2">📊 Valor individual dos produtos:</p>
+            <div className="text-xs md:text-sm space-y-1">
               <div className="flex justify-between">
                 <span>• eBook Comidinhas do Bebê</span>
                 <span>R$ 197,00</span>
@@ -144,21 +144,21 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
             <div className="text-center">
-              <p className="text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
-              <p className="text-5xl md:text-6xl font-bold" data-testid="sale-price">
-                por apenas <span className="text-baby-yellow">R$ 12,90</span>
+              <p className="text-lg md:text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" data-testid="sale-price">
+                por apenas <span className="text-baby-yellow block sm:inline">R$ 12,90</span>
               </p>
               <p className="text-sm mt-2">💳 2x de R$ 6,45 sem juros</p>
             </div>
-            <div className="bg-red-700 text-white px-8 py-4 rounded-full bounce-gentle shadow-2xl" data-testid="discount-badge">
-              <p className="font-bold text-xl">🔥 98% OFF!</p>
-              <p className="text-sm">ECONOMIA DE R$ 542,10!</p>
+            <div className="bg-red-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full bounce-gentle shadow-2xl" data-testid="discount-badge">
+              <p className="font-bold text-lg md:text-xl">🔥 98% OFF!</p>
+              <p className="text-xs md:text-sm">ECONOMIA DE R$ 542,10!</p>
             </div>
           </div>
           
           {/* Live Counter */}
-          <div className="mt-6 bg-baby-yellow text-gray-800 rounded-lg p-3 max-w-md mx-auto">
-            <p className="text-sm font-bold">👥 1.247 mães compraram hoje</p>
+          <div className="mt-4 md:mt-6 bg-baby-yellow text-gray-800 rounded-lg p-3 max-w-md mx-auto">
+            <p className="text-xs md:text-sm font-bold">👥 1.247 mães compraram hoje</p>
             <p className="text-xs">⚡ Última compra há 2 minutos</p>
           </div>
         </div>
