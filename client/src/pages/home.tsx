@@ -987,7 +987,7 @@ export default function Home() {
         <div className="container mx-auto px-3 md:px-4">
           <div className="text-center">
             <h4 className="font-poppins text-xl md:text-2xl font-bold text-baby-pink mb-3 md:mb-4">💝 Receitinhas do Bebê</h4>
-            <p className="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">Transformando a alimentação infantil com amor e carinho</p>
+            <p className="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">Você fez a escolha certa! Mais de 15.000 mães já transformaram a alimentação dos seus bebês com nossas receitas. Agora é a sua vez! 💕</p>
             
             
             
