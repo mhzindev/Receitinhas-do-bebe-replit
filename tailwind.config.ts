@@ -80,7 +80,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         sans: ["Inter", "sans-serif"],
-        serif: ["Georgia", "serif"],
+        serif: ["Playfair Display", "Georgia", "serif"],
         mono: ["Menlo", "monospace"],
       },
       keyframes: {
