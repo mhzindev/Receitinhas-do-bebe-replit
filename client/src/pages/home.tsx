@@ -970,7 +970,7 @@ export default function Home() {
                   <i className="fas fa-sync-alt text-white text-lg"></i>
                 </div>
                 <h4 className="font-semibold text-purple-800 text-sm md:text-base mb-1">Entrega Garantida</h4>
-                <p className="text-purple-700 text-xs md:text-sm">Sempre com novo conteúdo</p>
+                <p className="text-purple-700 text-xs md:text-sm">Garantia de entrega do seu produto</p>
               </div>
             </div>
 
