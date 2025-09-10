@@ -156,7 +156,7 @@ export default function Home() {
             </div>
             <div className="bg-red-700 text-white px-8 py-4 rounded-full bounce-gentle shadow-2xl" data-testid="discount-badge">
               <p className="font-bold text-xl">🔥 98% OFF!</p>
-              <p className="text-sm">ECONOMIA DE R$ 542!</p>
+              <p className="text-sm">ECONOMIA DE R$ 542,10!</p>
             </div>
           </div>
           
