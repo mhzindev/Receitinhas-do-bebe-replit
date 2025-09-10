@@ -183,8 +183,8 @@ export default function Home() {
               </div>
               
               <div className="flex items-start space-x-4 p-4 bg-baby-blue bg-opacity-30 rounded-lg" data-testid="product-item-2">
-                <div className="w-8 h-8 bg-baby-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-plus text-white"></i>
+                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white"></i>
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-lg text-gray-800">🌙 Guia Completo do Sono do Bebê</h4>
@@ -193,8 +193,8 @@ export default function Home() {
               </div>
 
               <div className="flex items-start space-x-4 p-4 bg-baby-pink bg-opacity-30 rounded-lg" data-testid="product-item-3">
-                <div className="w-8 h-8 bg-baby-pink rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-plus text-white"></i>
+                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white"></i>
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-lg text-gray-800">🤱 Desmame Sem Traumas</h4>
@@ -206,7 +206,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="flex items-start space-x-4 p-4 bg-baby-green bg-opacity-30 rounded-lg" data-testid="product-item-4">
                 <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-plus text-white"></i>
+                  <i className="fas fa-check text-white"></i>
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-lg text-gray-800">📅 Plano Alimentar Semanal</h4>
@@ -215,8 +215,8 @@ export default function Home() {
               </div>
 
               <div className="flex items-start space-x-4 p-4 bg-accent bg-opacity-30 rounded-lg" data-testid="product-item-5">
-                <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-plus text-white"></i>
+                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white"></i>
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-lg text-gray-800">✅ Checklist de Introdução Alimentar</h4>
@@ -225,8 +225,8 @@ export default function Home() {
               </div>
 
               <div className="flex items-start space-x-4 p-4 bg-orange bg-opacity-20 rounded-lg" data-testid="product-item-6">
-                <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-plus text-white"></i>
+                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white"></i>
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-lg text-gray-800">🔄 Lista de Substituições Inteligentes</h4>
