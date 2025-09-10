@@ -1,0 +1,21 @@
+Com base no vídeo, a seção "Veja por dentro do eBook!" da landing page tem como objetivo dar uma amostra do conteúdo do produto, oferecendo uma pré-visualização das receitas. A intenção é aumentar a confiança do cliente e mostrar o valor do eBook.
+A seção funciona como um carrossel horizontal, onde o usuário pode deslizar para a direita para ver diferentes receitas. Cada slide de receita segue um padrão similar e visualmente atraente.
+Estrutura e Conteúdo da Seção:
+ * Título Principal: A seção é introduzida com um título claro: "👀 Veja por dentro do eBook!". O emoji de olhos é usado para chamar a atenção.
+ * Subtítulo: Abaixo, um subtítulo explica o que o usuário está prestes a ver: "Algumas das receitas que você vai encontrar".
+ * Amostras de Receitas (Slides do Carrossel):
+   * Receita 1: "Mingau de Aveia com Banana"
+     * Ingredientes: A lista de ingredientes é concisa e clara. Inclui 2 colheres de sopa de aveia em flocos, 1/2 xícara de água ou leite materno/fórmula, e 1/2 banana amassada.
+     * Modo de Preparo: As instruções são numeradas, curtas e fáceis de seguir. O texto "esfriar antes de oferecer ao bebê" é um detalhe útil que demonstra cuidado.
+   * Receita 2: "Danones Caseiros - Morango com Inhame"
+     * Ingredientes: A lista inclui 4 morangos maduros, 1/2 inhame pequeno cozido e amassado, e 1/2 xícara de água filtrada.
+     * Modo de Preparo: As instruções são claras, explicando o processo de cozimento, liquidificação e como obter uma consistência homogênea. Há uma nota sobre a temperatura de serviço: "Sirva morno ou frio". A apresentação da receita em uma tigela rosa e com um design de folhas ao redor torna a imagem atraente.
+   * Receita 3: "Creme de Milho com Frango e Batata"
+     * A imagem mostra um creme amarelo, sugerindo a consistência e a cor do milho. Embora o vídeo não mostre os detalhes de ingredientes e preparo para esta receita, o formato sugere que a estrutura é a mesma das anteriores.
+   * Design Visual do Carrossel: As receitas são apresentadas em cartões verticais que se movem da direita para a esquerda. O design é limpo, com fotos que parecem ter sido tiradas de cima, destacando a comida de forma apetitosa.
+Análise da Estratégia da Seção:
+A seção "Veja por dentro do eBook!" é uma ferramenta de marketing eficaz. Ela não apenas mostra a qualidade e a clareza do conteúdo do eBook, mas também:
+ * Aumenta a Confiança: Ao verem exemplos concretos, os pais se sentem mais seguros em relação ao que estão comprando.
+ * Reduz a Incerteza: A pré-visualização elimina a dúvida sobre se o conteúdo será útil ou bem-feito.
+ * Demonstra o Valor: A seção destaca a praticidade das receitas, com ingredientes simples e instruções fáceis, o que é um grande benefício para pais ocupados.
+ * Prova Social: A faixa de notificação "Tatiane (do MS) aproveitou o cupom DANI10 no checkout!" continua aparecendo no canto inferior, misturando a prova do produto com a prova social de compra.
