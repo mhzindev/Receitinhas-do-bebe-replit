@@ -1,6 +1,6 @@
 # Overview
 
-This is a Portuguese landing page for selling a baby food recipe eBook called "Comidinhas do Bebê". The application is built as a full-stack web application using React for the frontend and Express.js for the backend, with a focus on high-conversion sales page elements including countdown timers, social proof notifications, and strategic call-to-action buttons.
+This is a Portuguese landing page for selling a baby food recipe eBook called "Receitinhas do Bebê". The application is built as a full-stack web application using React for the frontend and Express.js for the backend, with a focus on high-conversion sales page elements including countdown timers, social proof notifications, and strategic call-to-action buttons.
 
 # User Preferences
 

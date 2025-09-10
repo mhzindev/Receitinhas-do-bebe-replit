@@ -27,7 +27,7 @@ export default function Home() {
       <header className="container mx-auto px-3 md:px-4 py-4 md:py-8">
         <div className="text-center">
           <h1 className="font-poppins text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-baby-pink mb-3 md:mb-4 leading-tight" data-testid="main-title">
-            💝 Comidinhas do Bebê 🍼
+            💝 Receitinhas do Bebê 🍼
           </h1>
           <h2 className="font-poppins text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-gray-700 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-2" data-testid="main-subtitle">
             "Descubra como milhares de mães conseguiram fazer seus bebês comerem de forma saudável e sem estresse!"
@@ -152,7 +152,7 @@ export default function Home() {
             <p className="text-xs md:text-sm mb-2">📊 Valor individual dos produtos:</p>
             <div className="text-xs md:text-sm space-y-1">
               <div className="flex justify-between">
-                <span>• eBook Comidinhas do Bebê</span>
+                <span>• eBook Receitinhas do Bebê</span>
                 <span>R$ 197,00</span>
               </div>
               <div className="flex justify-between">
@@ -215,7 +215,7 @@ export default function Home() {
                   <i className="fas fa-check text-white text-xs md:text-sm"></i>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🎁 eBook Comidinhas do Bebê</h4>
+                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🎁 eBook Receitinhas do Bebê</h4>
                   <p className="text-xs md:text-base text-gray-600">+100 receitas organizadas por idade e textura</p>
                 </div>
               </div>
@@ -632,7 +632,7 @@ export default function Home() {
       <footer className="bg-gray-800 text-white py-8 md:py-12" data-testid="footer">
         <div className="container mx-auto px-3 md:px-4">
           <div className="text-center">
-            <h4 className="font-poppins text-xl md:text-2xl font-bold text-baby-pink mb-3 md:mb-4">💝 Comidinhas do Bebê</h4>
+            <h4 className="font-poppins text-xl md:text-2xl font-bold text-baby-pink mb-3 md:mb-4">💝 Receitinhas do Bebê</h4>
             <p className="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">Transformando a alimentação infantil com amor e carinho</p>
             
             <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8 text-xs md:text-sm text-gray-400">
@@ -642,7 +642,7 @@ export default function Home() {
             </div>
             
             <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-700">
-              <p className="text-gray-500 text-xs md:text-sm" data-testid="copyright">© 2025 Comidinhas do Bebê. Todos os direitos reservados.</p>
+              <p className="text-gray-500 text-xs md:text-sm" data-testid="copyright">© 2025 Receitinhas do Bebê. Todos os direitos reservados.</p>
             </div>
           </div>
         </div>
