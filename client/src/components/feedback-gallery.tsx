@@ -70,6 +70,78 @@ const textTestimonials = [
     message: "De 2h cozinhando para 20min! Sobra tempo para brincar com ele. Obrigada pela minha vida de volta! 🥰",
     time: "4h • Direct", 
     rating: 5
+  },
+  {
+    platform: "whatsapp" as const,
+    customerName: "Mariana",
+    location: "SC",
+    message: "Meu bebê seletivo agora come cenoura, brócolis e até beterraba! O segredo está nas texturas e temperos! 👶🥕",
+    time: "08:45 ✓✓",
+    rating: 5
+  },
+  {
+    platform: "instagram" as const,
+    customerName: "@mae_real_2024",
+    location: "",
+    message: "Acabou o drama da hora da comida! Agora ele pede bis e até os avós ficaram impressionados! 🙌",
+    time: "2h • Direct",
+    rating: 5
+  },
+  {
+    platform: "whatsapp" as const,
+    customerName: "Juliana",
+    location: "PR",
+    message: "Economizei R$ 400 em consulta com nutricionista! Essas receitas valem mais que qualquer consultoria 💰",
+    time: "12:30 ✓✓",
+    rating: 5
+  },
+  {
+    platform: "instagram" as const,
+    customerName: "@mama_do_gael",
+    location: "",
+    message: "3 semanas e meu filho subiu 2 percentis no gráfico! Pediatra perguntou qual era o segredo 📈",
+    time: "6h • Direct",
+    rating: 5
+  },
+  {
+    platform: "whatsapp" as const,
+    customerName: "Amanda",
+    location: "BA",
+    message: "Finalmente posso almoçar em paz! Ele fica quietinho comendo sozinho enquanto eu como também 🍽️",
+    time: "19:22 ✓✓",
+    rating: 5
+  },
+  {
+    platform: "instagram" as const,
+    customerName: "@primeiro_filho_chronicles",
+    location: "",
+    message: "Obrigada por salvar minha sanidade mental! Não sabia mais o que fazer com as recusas 🙏💕",
+    time: "30min • Direct",
+    rating: 5
+  },
+  {
+    platform: "whatsapp" as const,
+    customerName: "Camila",
+    location: "GO",
+    message: "Receitas aprovadas pela vovó italiana! Ela disse que nunca viu bebê comer tão bem aos 8 meses 👵🇮🇹",
+    time: "15:18 ✓✓",
+    rating: 5
+  },
+  {
+    platform: "instagram" as const,
+    customerName: "@vida_de_mae_real",
+    location: "",
+    message: "BLW sem mistério! Agora entendo como fazer direito sem pânico de engasgo. Game changer! 🔄",
+    time: "4h • Direct",
+    rating: 5
+  },
+  {
+    platform: "whatsapp" as const,
+    customerName: "Renata",
+    location: "ES",
+    message: "Minha sogra FINALMENTE parou de dar pitaco na alimentação depois que viu os resultados! 😂👏",
+    time: "21:45 ✓✓",
+    rating: 5
   }
 ];
 
@@ -91,7 +163,7 @@ export function FeedbackGallery() {
     setIsModalOpen(false);
   };
 
-  const displayedTextTestimonials = showAllFeedbacks ? textTestimonials : textTestimonials.slice(0, 2);
+  const displayedTextTestimonials = showAllFeedbacks ? textTestimonials : textTestimonials.slice(0, 6);
 
   return (
     <div className="space-y-8">
@@ -165,7 +237,7 @@ export function FeedbackGallery() {
             💬 Mais Depoimentos
           </h4>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {displayedTextTestimonials.map((testimonial, index) => {
               const config = testimonial.platform === "whatsapp" 
                 ? { bgColor: "bg-green-50", borderColor: "border-green-400", iconColor: "bg-green-400", icon: "fab fa-whatsapp" }
