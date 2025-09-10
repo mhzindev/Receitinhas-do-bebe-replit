@@ -429,11 +429,13 @@ export default function Home() {
           </div>
 
           {/* CTA Button 1 */}
-          <div className="text-center mt-8 relative">
+          <div className="text-center mt-8 relative flex flex-col items-center">
             <div className="arrow-bounce text-4xl mb-4">👇</div>
-            <CTAButton variant="primary" size="lg" className="glow w-full sm:w-auto text-lg font-bold shadow-2xl">
-              🎯 QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
-            </CTAButton>
+            <div className="w-full flex justify-center">
+              <CTAButton variant="primary" size="lg" className="glow w-full sm:w-auto text-lg font-bold shadow-2xl max-w-2xl">
+                🎯 QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
+              </CTAButton>
+            </div>
             <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-1">
                 <span className="text-green-600">⚡</span>
@@ -716,10 +718,12 @@ export default function Home() {
           </Suspense>
 
           {/* CTA Button 2 */}
-          <div className="text-center mt-6 md:mt-8">
-            <CTAButton variant="orange" size="lg" className="w-full sm:w-auto px-4 py-4 text-sm sm:text-base">
-              ⚡ GARANTIR MINHA TRANQUILIDADE AGORA! ⚡
-            </CTAButton>
+          <div className="text-center mt-6 md:mt-8 flex justify-center">
+            <div className="w-full flex justify-center">
+              <CTAButton variant="orange" size="lg" className="w-full sm:w-auto px-4 py-4 text-sm sm:text-base max-w-2xl">
+                ⚡ GARANTIR MINHA TRANQUILIDADE AGORA! ⚡
+              </CTAButton>
+            </div>
             <p className="text-xs text-gray-500 mt-2 px-2">👆 Clique e transforme a alimentação do seu bebê em 5 minutos</p>
           </div>
         </div>
@@ -809,10 +813,12 @@ export default function Home() {
                     💫 <span className="font-semibold">Transforme a alimentação do seu bebê hoje mesmo!</span>
                   </p>
                   
-                  <CTAButton variant="orange" size="xl" className="w-full sm:w-auto glow">
-                    <span className="hidden sm:inline">🎯 QUERO O EBOOK COMPLETO AGORA! 🎯</span>
-                    <span className="sm:hidden">🎯 QUERO O EBOOK AGORA! 🎯</span>
-                  </CTAButton>
+                  <div className="w-full flex justify-center">
+                    <CTAButton variant="orange" size="xl" className="w-full sm:w-auto glow max-w-2xl">
+                      <span className="hidden sm:inline">🎯 QUERO O EBOOK COMPLETO AGORA! 🎯</span>
+                      <span className="sm:hidden">🎯 QUERO O EBOOK AGORA! 🎯</span>
+                    </CTAButton>
+                  </div>
                   
                   <div className="text-xs text-gray-500 mt-3 px-2">
                     <div className="flex flex-col sm:flex-row sm:justify-center sm:space-x-2 space-y-1 sm:space-y-0">
@@ -988,12 +994,14 @@ export default function Home() {
           </div>
           
           <div className="space-y-4">
-            <div className="w-full md:w-auto relative">
+            <div className="w-full flex flex-col items-center relative">
               <div className="arrow-bounce text-3xl md:text-5xl mb-3">👇</div>
-              <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow px-4 py-4 text-sm sm:text-base">
-                <span className="hidden sm:inline">🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘</span>
-                <span className="sm:hidden">🆘 PARAR DE SOFRER AGORA! 🆘</span>
-              </CTAButton>
+              <div className="w-full flex justify-center">
+                <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow px-4 py-4 text-sm sm:text-base max-w-2xl">
+                  <span className="hidden sm:inline">🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘</span>
+                  <span className="sm:hidden">🆘 PARAR DE SOFRER AGORA! 🆘</span>
+                </CTAButton>
+              </div>
             </div>
             <div className="bg-green-100 border border-green-300 rounded-lg p-3 max-w-md mx-auto">
               <div className="flex flex-col sm:flex-row sm:justify-center text-sm text-green-800 font-semibold space-y-1 sm:space-y-0 sm:space-x-2">

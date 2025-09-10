@@ -60,20 +60,23 @@ export function CTAButton({
   };
 
   return (
-    <Button
-      onClick={handleClick}
-      className={`
-        ${getVariantClasses()}
-        ${getSizeClasses()}
-        font-poppins font-bold rounded-full shadow-lg 
-        transform hover:scale-105 transition-all duration-200 
-        animated-pulse leading-tight
-        min-h-[44px] flex items-center justify-center
-        ${className}
-      `}
-      data-testid="cta-button"
-    >
-      {children}
-    </Button>
+    <div className="flex justify-center items-center w-full">
+      <Button
+        onClick={handleClick}
+        className={`
+          ${getVariantClasses()}
+          ${getSizeClasses()}
+          font-poppins font-bold rounded-full shadow-lg 
+          transform hover:scale-105 transition-all duration-200 
+          animated-pulse leading-tight
+          min-h-[44px] flex items-center justify-center
+          text-center mx-auto
+          ${className}
+        `}
+        data-testid="cta-button"
+      >
+        {children}
+      </Button>
+    </div>
   );
 }
