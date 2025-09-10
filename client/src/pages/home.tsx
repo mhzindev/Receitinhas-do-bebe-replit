@@ -194,7 +194,7 @@ export default function Home() {
                 <div className="border-t-2 border-gray-200 pt-3">
                   <p className="text-xs text-gray-600">Validado por:</p>
                   <p className="font-bold text-sm text-gray-800">Conselho de Nutrição Infantil</p>
-                  <p className="text-xs text-gray-500">CRN - Registro Profissional</p>
+                  
                 </div>
                 
                 {/* Corner Stamps */}
@@ -257,11 +257,12 @@ export default function Home() {
         </div>
       </section>
       {/* Flash Offer Section */}
-      <section className="bg-gradient-to-r from-red-600 to-orange text-white py-6 md:py-8 mb-6 md:mb-8" data-testid="flash-offer-section">
-        <div className="container mx-auto px-3 md:px-4 text-center">
-          <h3 className="font-poppins text-xl sm:text-2xl md:text-3xl font-bold mb-4 leading-tight">
-            ⚡ OFERTA RELÂMPAGO - Só hoje! ⚡
-          </h3>
+      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-8 md:py-12 mb-8 md:mb-12 relative overflow-hidden" data-testid="flash-offer-section">
+        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-6 border border-white/20">
+            <h3 className="font-poppins text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
+              ⚡ ÚLTIMA CHANCE - OFERTA RELÂMPAGO ⚡
+            </h3>
           
           {/* Value Breakdown */}
           <div className="bg-white bg-opacity-10 rounded-lg p-3 md:p-4 mb-4 md:mb-6 max-w-2xl mx-auto">
@@ -296,104 +297,157 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 px-2">
-            <div className="text-center w-full md:w-auto">
-              <p className="text-lg md:text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
-              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight break-words" data-testid="sale-price">
-                por apenas <span className="text-baby-yellow block sm:inline whitespace-nowrap">R$ 12,90</span>
-              </p>
-              <p className="text-sm mt-2">💳 2x de R$ 6,45 sem juros</p>
-            </div>
-            <div className="bg-red-700 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-full bounce-gentle shadow-2xl flex-shrink-0" data-testid="discount-badge">
-              <p className="font-bold text-base md:text-lg lg:text-xl">🔥 98% OFF!</p>
-              <p className="text-xs md:text-sm">ECONOMIA DE R$ 542,10!</p>
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+              <div className="text-center flex-1">
+                <p className="text-xl md:text-2xl line-through opacity-80 mb-2" data-testid="original-price">De R$ 555,00</p>
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" data-testid="sale-price">
+                  <div className="text-white/90 text-lg md:text-xl mb-1">por apenas</div>
+                  <div className="text-yellow-300 drop-shadow-lg">R$ 12,90</div>
+                </div>
+                <p className="text-base md:text-lg mt-3 text-white/90">💳 2x de R$ 6,45 sem juros</p>
+              </div>
+              <div className="bg-yellow-400 text-red-700 px-8 py-6 rounded-2xl shadow-2xl border-4 border-white/20 transform hover:scale-105 transition-transform" data-testid="discount-badge">
+                <p className="font-black text-xl md:text-2xl mb-1">🔥 98% OFF!</p>
+                <p className="text-sm md:text-base font-bold">ECONOMIA DE R$ 542,10!</p>
+              </div>
             </div>
           </div>
           
           {/* Live Counter */}
-          <LivePurchaseCounter />
+          <div className="mt-8">
+            <LivePurchaseCounter />
+          </div>
         </div>
       </section>
       {/* Product Content Section */}
-      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="product-content-section">
-        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
-          <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-8">
-            🎁 O que você vai receber:
-          </h3>
+      <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-16" data-testid="product-content-section">
+        <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-10 border border-gray-100">
+          <div className="text-center mb-8 md:mb-12">
+            <div className="inline-block bg-gradient-to-r from-baby-pink to-baby-green text-white rounded-full px-6 py-2 mb-4">
+              <span className="font-bold text-sm">✨ CONTEÚDO EXCLUSIVO ✨</span>
+            </div>
+            <h3 className="font-poppins text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+              🎁 O que você vai receber:
+            </h3>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Um kit completo para transformar a alimentação do seu bebê
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-            <div className="space-y-4 md:space-y-6">
-              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-yellow rounded-lg" data-testid="product-item-1">
-                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
-                </div>
-                <div>
-                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🎁 eBook Receitinhas do Bebê</h4>
-                  <p className="text-xs md:text-base text-gray-600">+100 receitas organizadas por idade e textura</p>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            <div className="space-y-6">
+              <div className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-baby-yellow via-yellow-50 to-orange-50 border-2 border-baby-yellow/30 rounded-2xl p-6" data-testid="product-item-1">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-baby-green to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Check className="text-white w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">🎁 eBook Receitinhas do Bebê</h4>
+                    <p className="text-gray-700 font-medium text-base">+100 receitas organizadas por idade e textura</p>
+                    <p className="text-gray-600 text-sm mt-2">Valor individual: <span className="font-bold text-green-600">R$ 197,00</span></p>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-blue bg-opacity-30 rounded-lg" data-testid="product-item-2">
-                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
-                </div>
-                <div>
-                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🌙 Guia Completo do Sono do Bebê</h4>
-                  <p className="text-xs md:text-base text-gray-600">Técnicas comprovadas para noites tranquilas</p>
+              <div className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-baby-blue via-blue-50 to-sky-50 border-2 border-baby-blue/30 rounded-2xl p-6" data-testid="product-item-2">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-baby-green to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Check className="text-white w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">🌙 Guia Completo do Sono do Bebê</h4>
+                    <p className="text-gray-700 font-medium text-base">Técnicas comprovadas para noites tranquilas</p>
+                    <p className="text-gray-600 text-sm mt-2">Valor individual: <span className="font-bold text-green-600">R$ 97,00</span></p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-pink bg-opacity-30 rounded-lg" data-testid="product-item-3">
-                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
-                </div>
-                <div>
-                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🤱 Desmame Sem Traumas</h4>
-                  <p className="text-xs md:text-base text-gray-600">Transição suave e natural</p>
+              <div className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-baby-pink via-pink-50 to-rose-50 border-2 border-baby-pink/30 rounded-2xl p-6" data-testid="product-item-3">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-baby-green to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Check className="text-white w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">🤱 Desmame Sem Traumas</h4>
+                    <p className="text-gray-700 font-medium text-base">Transição suave e natural</p>
+                    <p className="text-gray-600 text-sm mt-2">Valor individual: <span className="font-bold text-green-600">R$ 97,00</span></p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-4 md:space-y-6">
-              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-green bg-opacity-30 rounded-lg" data-testid="product-item-4">
-                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
-                </div>
-                <div>
-                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">📅 Plano Alimentar Semanal</h4>
-                  <p className="text-xs md:text-base text-gray-600">Cardápios organizados e balanceados</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-accent bg-opacity-30 rounded-lg" data-testid="product-item-5">
-                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
-                </div>
-                <div>
-                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">✅ Checklist de Introdução Alimentar</h4>
-                  <p className="text-xs md:text-base text-gray-600">Passo a passo detalhado</p>
+            <div className="space-y-6">
+              <div className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 border-2 border-green-200 rounded-2xl p-6" data-testid="product-item-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-baby-green to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Check className="text-white w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">📅 Plano Alimentar Semanal</h4>
+                    <p className="text-gray-700 font-medium text-base">Cardápios organizados e balanceados</p>
+                    <p className="text-gray-600 text-sm mt-2">Valor individual: <span className="font-bold text-green-600">R$ 97,00</span></p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-orange bg-opacity-20 rounded-lg" data-testid="product-item-6">
-                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
+              <div className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-purple-50 via-violet-50 to-indigo-50 border-2 border-purple-200 rounded-2xl p-6" data-testid="product-item-5">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-baby-green to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Check className="text-white w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">✅ Checklist de Introdução Alimentar</h4>
+                    <p className="text-gray-700 font-medium text-base">Passo a passo detalhado</p>
+                    <p className="text-gray-600 text-sm mt-2">Valor individual: <span className="font-bold text-green-600">R$ 97,00</span></p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🔄 Lista de Substituições Inteligentes</h4>
-                  <p className="text-xs md:text-base text-gray-600">Alternativas nutritivas e práticas</p>
+              </div>
+
+              <div className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 border-2 border-orange-200 rounded-2xl p-6" data-testid="product-item-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-baby-green to-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Check className="text-white w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">🔄 Lista de Substituições Inteligentes</h4>
+                    <p className="text-gray-700 font-medium text-base">Alternativas nutritivas e práticas</p>
+                    <p className="text-gray-600 text-sm mt-2">Bônus especial: <span className="font-bold text-green-600">R$ 67,00</span></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Total Value Summary */}
+          <div className="mt-10 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl text-center">
+            <p className="text-2xl font-bold text-gray-800 mb-2">
+              VALOR TOTAL: <span className="text-green-600">R$ 555,00</span>
+            </p>
+            <p className="text-lg text-gray-600">
+              Hoje por apenas: <span className="text-red-600 font-bold text-2xl">R$ 12,90</span>
+            </p>
+          </div>
+
           {/* CTA Button 1 */}
-          <div className="text-center mt-6 md:mt-8 relative">
-            <div className="arrow-bounce text-3xl md:text-4xl mb-2">👇</div>
-            <CTAButton variant="primary" size="lg" className="glow w-full sm:w-auto px-4 py-4 text-sm sm:text-base">
-              🎯 SIM! QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
+          <div className="text-center mt-8 relative">
+            <div className="arrow-bounce text-4xl mb-4">👇</div>
+            <CTAButton variant="primary" size="lg" className="glow w-full sm:w-auto text-lg font-bold shadow-2xl">
+              🎯 QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
             </CTAButton>
-            <p className="text-xs text-gray-500 mt-2 px-2">💳 Acesso imediato | 🔒 Pagamento 100% seguro | ✅ Garantia de 7 dias</p>
+            <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 text-sm text-gray-600">
+              <div className="flex items-center gap-1">
+                <span className="text-green-600">⚡</span>
+                <span>Acesso imediato</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-blue-600">🔒</span>
+                <span>Pagamento 100% seguro</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="text-green-600">✅</span>
+                <span>Garantia de 7 dias</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
