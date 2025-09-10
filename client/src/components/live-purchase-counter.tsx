@@ -12,54 +12,128 @@ const purchaseMessages = [
   "💫 Nova compra há {time}",
 ];
 
-const timeVariations = [
-  "agora mesmo",
-  "1 minuto",
-  "2 minutos", 
-  "3 minutos",
-  "4 minutos",
-];
+// Sessão storage para persistir dados entre reloads
+const SESSION_STORAGE_KEY = "live_purchase_counter";
+
+interface SessionData {
+  basePurchaseCount: number;
+  sessionIncreaments: number;
+  sessionStarted: number;
+}
+
+const getSessionData = (): SessionData => {
+  try {
+    const stored = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    if (stored) {
+      return JSON.parse(stored);
+    }
+  } catch (error) {
+    console.debug("Error reading session data:", error);
+  }
+  
+  // Valores padrão para nova sessão
+  const baseCount = 1247 + Math.floor(Math.random() * 50); // Varia entre 1247-1297
+  return {
+    basePurchaseCount: baseCount,
+    sessionIncreaments: 0,
+    sessionStarted: Date.now()
+  };
+};
+
+const saveSessionData = (data: SessionData) => {
+  try {
+    sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(data));
+  } catch (error) {
+    console.debug("Error saving session data:", error);
+  }
+};
 
 export function LivePurchaseCounter({ className = "" }: LivePurchaseCounterProps) {
-  const [currentMessage, setCurrentMessage] = useState(purchaseMessages[0].replace("{time}", "2 minutos"));
-  const [totalPurchases, setTotalPurchases] = useState(1247);
+  const [sessionData, setSessionData] = useState<SessionData>(getSessionData);
+  const [lastPurchaseAt, setLastPurchaseAt] = useState(Date.now() - (Math.random() * 240000 + 60000)); // 1-5 min atrás
+  const [wasLastRecent, setWasLastRecent] = useState(false);
+
+  const getCurrentMessage = () => {
+    const minutesAgo = Math.floor((Date.now() - lastPurchaseAt) / 60000);
+    
+    let timeText: string;
+    if (minutesAgo < 1) {
+      timeText = "agora mesmo";
+    } else if (minutesAgo === 1) {
+      timeText = "1 minuto";
+    } else if (minutesAgo <= 4) {
+      timeText = `${minutesAgo} minutos`;
+    } else {
+      // Reset para tempo mais recente se passou muito tempo
+      const newTime = Date.now() - (Math.random() * 180000 + 60000); // 1-4 min atrás
+      setLastPurchaseAt(newTime);
+      timeText = `${Math.floor((Date.now() - newTime) / 60000)} minutos`;
+    }
+
+    const messageTemplate = purchaseMessages[Math.floor(Math.random() * purchaseMessages.length)];
+    return messageTemplate.replace("{time}", timeText);
+  };
+
+  const [currentMessage, setCurrentMessage] = useState(getCurrentMessage());
 
   useEffect(() => {
-    // Função que gera uma nova mensagem realística
-    const updateMessage = () => {
-      // 40% chance de ser "agora mesmo" para criar urgência
-      // 60% chance de ser 1-4 minutos
-      const isRecent = Math.random() < 0.4;
-      const timeText = isRecent 
-        ? timeVariations[0] // "agora mesmo"
-        : timeVariations[Math.floor(Math.random() * (timeVariations.length - 1)) + 1];
-      
-      // Seleciona mensagem aleatória
-      const messageTemplate = purchaseMessages[Math.floor(Math.random() * purchaseMessages.length)];
-      const newMessage = messageTemplate.replace("{time}", timeText);
-      
-      setCurrentMessage(newMessage);
+    let timeoutId: NodeJS.Timeout;
 
-      // Se foi "agora mesmo", incrementa contador de compras
-      if (isRecent) {
-        setTotalPurchases(prev => prev + Math.floor(Math.random() * 2) + 1); // +1 ou +2
-      }
+    const scheduleNextUpdate = () => {
+      // Intervalo variável entre 18-40 segundos
+      const nextDelay = Math.random() * 22000 + 18000;
+      
+      timeoutId = setTimeout(() => {
+        // 20% chance de "compra recente" (não consecutiva)
+        const shouldBeRecent = Math.random() < 0.2 && !wasLastRecent;
+        
+        if (shouldBeRecent) {
+          // Nova compra "agora mesmo"
+          setLastPurchaseAt(Date.now());
+          setWasLastRecent(true);
+          
+          // Incrementa contador se ainda não atingiu o limite da sessão (3-6 incrementos por sessão)
+          const maxIncrements = 3 + Math.floor(Math.random() * 4); // 3-6
+          if (sessionData.sessionIncreaments < maxIncrements) {
+            const increment = Math.floor(Math.random() * 2) + 1; // +1 ou +2
+            const newSessionData = {
+              ...sessionData,
+              sessionIncreaments: sessionData.sessionIncreaments + increment
+            };
+            setSessionData(newSessionData);
+            saveSessionData(newSessionData);
+          }
+        } else {
+          setWasLastRecent(false);
+        }
+        
+        // Atualiza a mensagem baseada no timestamp
+        setCurrentMessage(getCurrentMessage());
+        
+        // Agenda próxima atualização
+        scheduleNextUpdate();
+      }, nextDelay);
     };
 
-    // Primeira atualização após 3-8 segundos (parece mais natural)
-    const initialDelay = Math.random() * 5000 + 3000;
-    const initialTimer = setTimeout(updateMessage, initialDelay);
+    // Atualiza mensagem imediatamente baseada no timestamp atual
+    const messageUpdateInterval = setInterval(() => {
+      setCurrentMessage(getCurrentMessage());
+    }, 30000); // Atualiza texto a cada 30s para refletir passagem do tempo
 
-    // Depois, atualiza a cada 15-45 segundos (frequência realística)
-    const interval = setInterval(() => {
-      updateMessage();
-    }, Math.random() * 30000 + 15000); // 15-45 segundos
+    // Primeira atualização após 3-8 segundos
+    const initialDelay = Math.random() * 5000 + 3000;
+    setTimeout(() => {
+      setCurrentMessage(getCurrentMessage());
+      scheduleNextUpdate();
+    }, initialDelay);
 
     return () => {
-      clearTimeout(initialTimer);
-      clearInterval(interval);
+      clearTimeout(timeoutId);
+      clearInterval(messageUpdateInterval);
     };
-  }, []);
+  }, [sessionData, lastPurchaseAt, wasLastRecent]);
+
+  const totalPurchases = sessionData.basePurchaseCount + sessionData.sessionIncreaments;
 
   return (
     <div className={`mt-4 md:mt-6 bg-baby-yellow text-gray-800 rounded-lg p-3 max-w-md mx-auto ${className}`}>
