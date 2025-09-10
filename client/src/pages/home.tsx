@@ -3,6 +3,7 @@ import { CountdownTimer } from "@/components/countdown-timer";
 import { SocialProofNotification } from "@/components/social-proof-notification";
 import { CTAButton } from "@/components/cta-button";
 import { Award, Check, Shield, Users, Star, Heart, Baby, MapPin, Clock, ShieldCheck, Download, User } from "lucide-react";
+import { LivePurchaseCounter } from "@/components/live-purchase-counter";
 
 // Lazy load heavy components for better performance
 const FeedbackGallery = lazy(() => import("@/components/feedback-gallery").then(module => ({ default: module.FeedbackGallery })));
@@ -307,10 +308,7 @@ export default function Home() {
           </div>
           
           {/* Live Counter */}
-          <div className="mt-4 md:mt-6 bg-baby-yellow text-gray-800 rounded-lg p-3 max-w-md mx-auto">
-            <p className="text-xs md:text-sm font-bold">👥 1.247 mães compraram hoje</p>
-            <p className="text-xs">⚡ Última compra há 2 minutos</p>
-          </div>
+          <LivePurchaseCounter />
         </div>
       </section>
       {/* Product Content Section */}
