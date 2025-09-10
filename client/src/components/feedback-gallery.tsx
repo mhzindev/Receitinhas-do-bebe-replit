@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { FeedbackImage } from "./feedback-image";
 import { FeedbackModal } from "./feedback-modal";
+import { MobileFeedbackCarousel } from "./mobile-feedback-carousel";
 
-// Mock data for now - será substituído por imagens reais
+import realFeedbackImage from "@assets/WhatsApp Image 2025-09-09 at 21.22.56_1757463806105.jpeg";
+
+// Feedbacks com imagem real e placeholders para demonstração
 const feedbackData = [
   {
     id: "1",
-    imageSrc: "/api/placeholder/400/600", // Será substituído pela imagem real
+    imageSrc: realFeedbackImage, // Imagem real anexada pelo usuário
     platform: "whatsapp" as const,
     customerName: "Ana Paula",
     location: "SP",
@@ -17,7 +20,7 @@ const feedbackData = [
   },
   {
     id: "2", 
-    imageSrc: "/api/placeholder/400/600",
+    imageSrc: "https://via.placeholder.com/400x600/FFB6C1/FFFFFF?text=Instagram+DM", // Placeholder Instagram
     platform: "instagram" as const,
     customerName: "Carol",
     location: "RJ",
@@ -28,7 +31,7 @@ const feedbackData = [
   },
   {
     id: "3",
-    imageSrc: "/api/placeholder/400/600", 
+    imageSrc: "https://via.placeholder.com/400x600/25D366/FFFFFF?text=WhatsApp+Message", // Placeholder WhatsApp
     platform: "whatsapp" as const,
     customerName: "Fernanda",
     location: "MG",
@@ -123,22 +126,34 @@ export function FeedbackGallery() {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6">
             {feedbackData.map((feedback, index) => (
-              <FeedbackImage
+              <div 
                 key={feedback.id}
-                imageSrc={feedback.imageSrc}
-                platform={feedback.platform}
-                customerName={feedback.customerName}
-                location={feedback.location}
-                message={feedback.message}
-                time={feedback.time}
-                rating={feedback.rating}
-                verified={feedback.verified}
-                onClick={() => handleImageClick(index)}
-              />
+                className="fade-in-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <FeedbackImage
+                  imageSrc={feedback.imageSrc}
+                  platform={feedback.platform}
+                  customerName={feedback.customerName}
+                  location={feedback.location}
+                  message={feedback.message}
+                  time={feedback.time}
+                  rating={feedback.rating}
+                  verified={feedback.verified}
+                  onClick={() => handleImageClick(index)}
+                />
+              </div>
             ))}
           </div>
+
+          {/* Mobile Carousel */}
+          <MobileFeedbackCarousel 
+            feedbacks={feedbackData}
+            onImageClick={handleImageClick}
+          />
         </div>
 
         {/* Text Testimonials */}
@@ -154,7 +169,11 @@ export function FeedbackGallery() {
                 : { bgColor: "bg-pink-50", borderColor: "border-pink-400", iconColor: "bg-pink-400", icon: "fab fa-instagram" };
 
               return (
-                <div key={index} className={`${config.bgColor} rounded-lg p-4 border-l-4 ${config.borderColor}`}>
+                <div 
+                  key={index} 
+                  className={`${config.bgColor} rounded-lg p-4 border-l-4 ${config.borderColor} message-arriving`}
+                  style={{ animationDelay: `${(index + 3) * 0.15}s` }}
+                >
                   <div className="flex items-start space-x-3">
                     <div className={`w-8 h-8 ${config.iconColor} rounded-full flex items-center justify-center`}>
                       <i className={`${config.icon} text-white`}></i>

@@ -1,6 +1,7 @@
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SocialProofNotification } from "@/components/social-proof-notification";
 import { CTAButton } from "@/components/cta-button";
+import { FeedbackGallery } from "@/components/feedback-gallery";
 
 export default function Home() {
   return (
@@ -413,165 +414,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof Section */}
+      {/* Social Proof Section with Images */}
       <section className="container mx-auto px-4 mb-12" data-testid="testimonials-section">
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              Veja o que as mamães estão falando! 📱
-            </h3>
-            <div className="flex items-center justify-center space-x-2 mb-2">
-              <div className="flex space-x-1">
-                <i className="fas fa-star text-yellow-400"></i>
-                <i className="fas fa-star text-yellow-400"></i>
-                <i className="fas fa-star text-yellow-400"></i>
-                <i className="fas fa-star text-yellow-400"></i>
-                <i className="fas fa-star text-yellow-400"></i>
-              </div>
-              <span className="font-semibold text-gray-700">5.0/5</span>
-            </div>
-            <p className="text-gray-600">⭐ 2.847 avaliações verificadas</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* WhatsApp Message 1 */}
-            <div className="bg-green-50 rounded-lg p-4 border-l-4 border-green-400" data-testid="testimonial-whatsapp-1">
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
-                  <i className="fab fa-whatsapp text-white"></i>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <p className="font-medium text-gray-800">Ana Paula - SP</p>
-                    <div className="flex space-x-1">
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">"Em 3 dias meu bebê que só chorava na hora da comida agora pede mais! A receita de batata doce foi um sucesso! 😍"</p>
-                  <p className="text-xs text-gray-500 mt-2">14:23 ✓✓</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Instagram Message 1 */}
-            <div className="bg-pink-50 rounded-lg p-4 border-l-4 border-pink-400" data-testid="testimonial-instagram-1">
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center">
-                  <i className="fab fa-instagram text-white"></i>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <p className="font-medium text-gray-800">@mamae_carol</p>
-                    <div className="flex space-x-1">
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">"Meninas, FUNCIONOU! Meu filho super seletivo agora come brócolis! Economizei R$ 800 em consultas! 💕"</p>
-                  <p className="text-xs text-gray-500 mt-2">2h • Direct</p>
-                </div>
-              </div>
-            </div>
-
-            {/* WhatsApp Message 2 */}
-            <div className="bg-green-50 rounded-lg p-4 border-l-4 border-green-400" data-testid="testimonial-whatsapp-2">
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
-                  <i className="fab fa-whatsapp text-white"></i>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <p className="font-medium text-gray-800">Fernanda - MG</p>
-                    <div className="flex space-x-1">
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">"MILAGRE! Em 1 semana meu bebê de 10m que só comia leite agora come legumes, frutas, TUDO! 🙌"</p>
-                  <p className="text-xs text-gray-500 mt-2">09:45 ✓✓</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Instagram Message 2 */}
-            <div className="bg-pink-50 rounded-lg p-4 border-l-4 border-pink-400" data-testid="testimonial-instagram-2">
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center">
-                  <i className="fab fa-instagram text-white"></i>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <p className="font-medium text-gray-800">@ju_maternidade</p>
-                    <div className="flex space-x-1">
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">"Nossa!! 15 min de preparo e minha filha comeu TUDO! Até o pediatra ficou impressionado com o peso! 🍼✨"</p>
-                  <p className="text-xs text-gray-500 mt-2">1h • Direct</p>
-                </div>
-              </div>
-            </div>
-
-            {/* WhatsApp Message 3 */}
-            <div className="bg-green-50 rounded-lg p-4 border-l-4 border-green-400" data-testid="testimonial-whatsapp-3">
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
-                  <i className="fab fa-whatsapp text-white"></i>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <p className="font-medium text-gray-800">Patrícia - RS</p>
-                    <div className="flex space-x-1">
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">"Gastava R$ 300/mês com papínhas prontas. Agora gasto R$ 50 e ela ama! ROI incrível! 👏"</p>
-                  <p className="text-xs text-gray-500 mt-2">16:12 ✓✓</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Instagram Message 3 */}
-            <div className="bg-pink-50 rounded-lg p-4 border-l-4 border-pink-400" data-testid="testimonial-instagram-3">
-              <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center">
-                  <i className="fab fa-instagram text-white"></i>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <p className="font-medium text-gray-800">@mama_lucia</p>
-                    <div className="flex space-x-1">
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                      <i className="fas fa-star text-yellow-400 text-xs"></i>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">"De 2h cozinhando para 20min! Sobra tempo para brincar com ele. Obrigada pela minha vida de volta! 🥰"</p>
-                  <p className="text-xs text-gray-500 mt-2">4h • Direct</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <FeedbackGallery />
 
           {/* CTA Button 2 */}
           <div className="text-center mt-8">
