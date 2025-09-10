@@ -923,7 +923,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Seção Anti-Pirataria */}
       <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="anti-piracy-section">
         <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl shadow-lg p-6 md:p-8">
@@ -970,7 +969,7 @@ export default function Home() {
                 <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <i className="fas fa-sync-alt text-white text-lg"></i>
                 </div>
-                <h4 className="font-semibold text-purple-800 text-sm md:text-base mb-1">Atualizações Incluídas</h4>
+                <h4 className="font-semibold text-purple-800 text-sm md:text-base mb-1">Entrega Garantida</h4>
                 <p className="text-purple-700 text-xs md:text-sm">Sempre com novo conteúdo</p>
               </div>
             </div>
@@ -983,7 +982,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8 md:py-12" data-testid="footer">
         <div className="container mx-auto px-3 md:px-4">
