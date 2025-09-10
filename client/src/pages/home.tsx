@@ -60,7 +60,7 @@ export default function Home() {
                     <p className="text-xs text-gray-700">Taxa de Sucesso</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-baby-pink">15.000+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-baby-pink">+15.000</div>
                     <p className="text-xs text-gray-700">Famílias Atendidas</p>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ export default function Home() {
                   <p className="text-xs md:text-sm text-gray-700 font-semibold">
                     ✅ Receitas Aprovadas por Nutricionistas<br/>
                     ✅ Metodologia Validada Cientificamente<br/>
-                    ✅ Resultados em Menos de 7 Dias
+                    ✅ Resultados em Até 7 Dias
                   </p>
                 </div>
                 
@@ -126,8 +126,8 @@ export default function Home() {
               <div className="w-10 h-10 md:w-12 md:h-12 bg-baby-pink rounded-full flex items-center justify-center mb-2">
                 <i className="fas fa-star text-white text-sm md:text-lg"></i>
               </div>
-              <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">94% Aprovação</p>
-              <p className="text-xs text-gray-500">dos bebês aceitam</p>
+              <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">94% Taxa de Sucesso</p>
+              <p className="text-xs text-gray-500">aprovação comprovada</p>
             </div>
             
             <div className="flex flex-col items-center" data-testid="trust-item-4">
@@ -164,7 +164,7 @@ export default function Home() {
                 <span>R$ 97,00</span>
               </div>
               <div className="flex justify-between">
-                <span>• Plano Alimentar + Checklist</span>
+                <span>• Plano Alimentar Semanal</span>
                 <span>R$ 97,00</span>
               </div>
               <div className="flex justify-between">
@@ -184,13 +184,13 @@ export default function Home() {
             <div className="text-center w-full md:w-auto">
               <p className="text-lg md:text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
               <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight break-words" data-testid="sale-price">
-                por apenas <span className="text-baby-yellow block sm:inline whitespace-nowrap">R$ 12,90</span>
+                por apenas <span className="text-baby-yellow block sm:inline whitespace-nowrap">R$ 11,10</span>
               </p>
-              <p className="text-sm mt-2">💳 2x de R$ 6,45 sem juros</p>
+              <p className="text-sm mt-2">💳 2x de R$ 5,55 sem juros</p>
             </div>
             <div className="bg-red-700 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-full bounce-gentle shadow-2xl flex-shrink-0" data-testid="discount-badge">
               <p className="font-bold text-base md:text-lg lg:text-xl">🔥 98% OFF!</p>
-              <p className="text-xs md:text-sm">ECONOMIA DE R$ 542,10!</p>
+              <p className="text-xs md:text-sm">ECONOMIA DE R$ 543,90!</p>
             </div>
           </div>
           
@@ -308,15 +308,15 @@ export default function Home() {
                   era simplesmente a FORMA como eu estava oferecendo a comida."
                 </p>
                 <p className="font-semibold text-baby-pink">
-                  "Em apenas 3 dias usando essas receitas, meu filho começou a comer com prazer. 
-                  Hoje ele tem 3 anos e é o bebê mais saudável da creche!" 
+                  "Em apenas 5 dias usando essas receitas, meu filho começou a comer com prazer. 
+                  Hoje ele tem 3 anos e é a criança mais saudável da creche!" 
                 </p>
               </div>
             </div>
             
             <div className="text-center">
               <p className="font-poppins font-semibold text-gray-800 text-sm md:text-lg">
-                Se funcionou comigo e com mais de 15.000 mães...
+                Se funcionou comigo e com mais de +15.000 mães...
               </p>
               <p className="font-poppins font-bold text-baby-pink text-lg md:text-xl">
                 VAI FUNCIONAR COM VOCÊ TAMBÉM! 💪
@@ -525,10 +525,10 @@ export default function Home() {
               <div className="bg-white border-2 border-green-100 rounded-lg p-6 shadow-md">
                 <div className="flex items-center mb-3">
                   <i className="fas fa-money-bill-wave text-green-600 text-2xl mr-3"></i>
-                  <h4 className="font-semibold text-gray-800">Reembolso Instantâneo</h4>
+                  <h4 className="font-semibold text-gray-800">Reembolso Garantido</h4>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  Dinheiro de volta em <strong>até 24 horas</strong> via PIX, sem burocracias ou perguntas incômodas.
+                  Dinheiro de volta em <strong>até 7 dias</strong> via PIX, sem burocracias ou perguntas incômodas.
                 </p>
               </div>
               
@@ -605,7 +605,7 @@ export default function Home() {
           </h3>
           <div className="bg-white border-2 border-baby-pink rounded-lg p-6 mb-6 max-w-2xl mx-auto">
             <p className="text-gray-700 text-lg leading-relaxed">
-              <strong>Enquanto outras 15.000 mães já têm:</strong><br/>
+              <strong>Enquanto outras +15.000 mães já têm:</strong><br/>
               ✅ Bebês que comem com prazer<br/>
               ✅ Refeições sem choro e estresse<br/>
               ✅ Desenvolvimento saudável garantido<br/>
