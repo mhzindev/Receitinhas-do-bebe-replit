@@ -21,10 +21,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Floating Social Proof Notification */}
       <SocialProofNotification />
-
       {/* Header Section */}
       <header className="container mx-auto px-4 py-8">
         <div className="text-center">
@@ -66,7 +64,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       {/* Trust & Credibility Section */}
       <section className="container mx-auto px-4 mb-8" data-testid="trust-section">
         <div className="bg-white rounded-2xl shadow-lg p-6">
@@ -105,7 +102,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Flash Offer Section */}
       <section className="bg-gradient-to-r from-red-600 to-orange text-white py-8 mb-8" data-testid="flash-offer-section">
         <div className="container mx-auto px-4 text-center">
@@ -167,7 +163,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Product Content Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="product-content-section">
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -251,7 +246,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Personal Story Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="story-section">
         <div className="bg-gradient-to-br from-baby-pink to-baby-blue bg-opacity-20 rounded-2xl shadow-lg p-8">
@@ -293,7 +287,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Before vs After Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="before-after-section">
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -368,7 +361,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Problem Identification Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="problem-section">
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -400,7 +392,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Solution Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="solution-section">
         <div className="bg-gradient-to-br from-baby-blue to-baby-green rounded-2xl shadow-lg p-8 text-center">
@@ -413,7 +404,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
       {/* Social Proof Section with Images */}
       <section className="container mx-auto px-4 mb-12" data-testid="testimonials-section">
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -428,7 +418,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="benefits-section">
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -463,7 +452,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Guarantee Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="guarantee-section">
         <div className="bg-gradient-to-r from-baby-green to-baby-blue rounded-2xl shadow-lg p-8 text-center">
@@ -485,7 +473,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Final CTA Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="final-cta-section">
         <div className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl shadow-lg p-8 text-center">
@@ -520,7 +507,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12" data-testid="footer">
         <div className="container mx-auto px-4">
@@ -535,9 +521,7 @@ export default function Home() {
             </div>
             
             <div className="mt-8 pt-8 border-t border-gray-700">
-              <p className="text-gray-500 text-sm" data-testid="copyright">
-                © 2024 Comidinhas do Bebê. Todos os direitos reservados.
-              </p>
+              <p className="text-gray-500 text-sm" data-testid="copyright">© 2025 Comidinhas do Bebê. Todos os direitos reservados.</p>
             </div>
           </div>
         </div>
