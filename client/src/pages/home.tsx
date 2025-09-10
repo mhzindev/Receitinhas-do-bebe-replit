@@ -6,14 +6,18 @@ export default function Home() {
   return (
     <div className="bg-baby-yellow font-inter text-foreground">
       {/* Countdown Banner */}
-      <div className="bg-orange text-white py-3 text-center sticky top-0 z-50">
+      <div className="bg-red-600 text-white py-3 text-center sticky top-0 z-50">
         <div className="container mx-auto px-4">
-          <p className="text-sm md:text-base font-bold" data-testid="countdown-banner">
-            🔥 ÚLTIMAS HORAS - Oferta Relâmpago! 
-            <span className="ml-2">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-4">
+            <p className="text-sm md:text-base font-bold" data-testid="countdown-banner">
+              🔥 APENAS 47 VAGAS RESTANTES neste preço! 
+            </p>
+            <div className="flex items-center space-x-2">
+              <span className="text-sm">⏰</span>
               <CountdownTimer />
-            </span>
-          </p>
+              <span className="text-sm">restantes</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -62,22 +66,103 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Trust & Credibility Section */}
+      <section className="container mx-auto px-4 mb-8" data-testid="trust-section">
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="flex flex-col items-center" data-testid="trust-item-1">
+              <div className="w-12 h-12 bg-baby-green rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-shield-alt text-white text-lg"></i>
+              </div>
+              <p className="text-xs md:text-sm font-semibold text-gray-700">Satisfação Garantida</p>
+              <p className="text-xs text-gray-500">ou seu dinheiro de volta</p>
+            </div>
+            
+            <div className="flex flex-col items-center" data-testid="trust-item-2">
+              <div className="w-12 h-12 bg-baby-blue rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-users text-white text-lg"></i>
+              </div>
+              <p className="text-xs md:text-sm font-semibold text-gray-700">+15.000 Famílias</p>
+              <p className="text-xs text-gray-500">já transformadas</p>
+            </div>
+            
+            <div className="flex flex-col items-center" data-testid="trust-item-3">
+              <div className="w-12 h-12 bg-baby-pink rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-star text-white text-lg"></i>
+              </div>
+              <p className="text-xs md:text-sm font-semibold text-gray-700">94% Aprovação</p>
+              <p className="text-xs text-gray-500">dos bebês aceitam</p>
+            </div>
+            
+            <div className="flex flex-col items-center" data-testid="trust-item-4">
+              <div className="w-12 h-12 bg-orange rounded-full flex items-center justify-center mb-2">
+                <i className="fas fa-certificate text-white text-lg"></i>
+              </div>
+              <p className="text-xs md:text-sm font-semibold text-gray-700">Aprovado por</p>
+              <p className="text-xs text-gray-500">nutricionistas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Flash Offer Section */}
-      <section className="bg-orange text-white py-6 mb-8" data-testid="flash-offer-section">
+      <section className="bg-gradient-to-r from-red-600 to-orange text-white py-8 mb-8" data-testid="flash-offer-section">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold mb-2">
+          <h3 className="font-poppins text-2xl md:text-3xl font-bold mb-4">
             ⚡ OFERTA RELÂMPAGO - Só hoje! ⚡
           </h3>
+          
+          {/* Value Breakdown */}
+          <div className="bg-white bg-opacity-10 rounded-lg p-4 mb-6 max-w-2xl mx-auto">
+            <p className="text-sm mb-2">📊 Valor individual dos produtos:</p>
+            <div className="text-sm space-y-1">
+              <div className="flex justify-between">
+                <span>• eBook Comidinhas do Bebê</span>
+                <span>R$ 197,00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>• Guia do Sono do Bebê</span>
+                <span>R$ 97,00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>• Desmame Sem Traumas</span>
+                <span>R$ 97,00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>• Plano Alimentar + Checklist</span>
+                <span>R$ 97,00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>• Bônus Substituições</span>
+                <span>R$ 67,00</span>
+              </div>
+              <div className="border-t border-white border-opacity-30 pt-2 mt-2">
+                <div className="flex justify-between font-bold">
+                  <span>VALOR TOTAL:</span>
+                  <span>R$ 555,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
             <div className="text-center">
-              <p className="text-lg line-through opacity-75" data-testid="original-price">De R$ 197,00</p>
-              <p className="text-4xl md:text-5xl font-bold" data-testid="sale-price">
+              <p className="text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
+              <p className="text-5xl md:text-6xl font-bold" data-testid="sale-price">
                 por apenas <span className="text-baby-yellow">R$ 19,90</span>
               </p>
+              <p className="text-sm mt-2">💳 12x de R$ 1,66 sem juros</p>
             </div>
-            <div className="bg-destructive text-white px-6 py-3 rounded-full bounce-gentle" data-testid="discount-badge">
-              <p className="font-bold text-lg">🔥 95% OFF só hoje!</p>
+            <div className="bg-red-700 text-white px-8 py-4 rounded-full bounce-gentle shadow-2xl" data-testid="discount-badge">
+              <p className="font-bold text-xl">🔥 96% OFF!</p>
+              <p className="text-sm">ECONOMIA DE R$ 535!</p>
             </div>
+          </div>
+          
+          {/* Live Counter */}
+          <div className="mt-6 bg-baby-yellow text-gray-800 rounded-lg p-3 max-w-md mx-auto">
+            <p className="text-sm font-bold">👥 1.247 mães compraram hoje</p>
+            <p className="text-xs">⚡ Última compra há 2 minutos</p>
           </div>
         </div>
       </section>
