@@ -178,7 +178,7 @@ export function FeedbackGallery() {
               <i key={i} className="fas fa-star text-yellow-400"></i>
             ))}
           </div>
-          <span className="font-semibold text-gray-700">5.0/5</span>
+          <span className="font-semibold text-gray-700">4.9/5</span>
         </div>
         <p className="text-gray-600">⭐ 2.847 avaliações verificadas</p>
         <div className="mt-4 bg-baby-yellow rounded-lg p-3 max-w-md mx-auto">
@@ -186,7 +186,6 @@ export function FeedbackGallery() {
           <p className="text-xs text-gray-600">⚡ Último feedback há 3 minutos</p>
         </div>
       </div>
-
       {/* Hybrid Layout: Images + Text */}
       <div className="space-y-8">
         {/* Featured Image Feedbacks */}
@@ -291,7 +290,6 @@ export function FeedbackGallery() {
           )}
         </div>
       </div>
-
       {/* Modal */}
       <FeedbackModal
         isOpen={isModalOpen}
