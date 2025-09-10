@@ -923,6 +923,67 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Seção Anti-Pirataria */}
+      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="anti-piracy-section">
+        <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl shadow-lg p-6 md:p-8">
+          <div className="text-center">
+            {/* Header com ícone de escudo */}
+            <div className="mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-baby-blue to-baby-green rounded-full mb-4 shadow-lg">
+                <i className="fas fa-shield-check text-white text-2xl md:text-3xl"></i>
+              </div>
+              <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
+                🛡️ COMPROMISSO COM A ÉTICA
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+                Valorizamos seu investimento e o trabalho honesto
+              </p>
+            </div>
+
+            {/* Mensagem principal */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 mb-6 shadow-sm">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed max-w-4xl mx-auto">
+                Ao adquirir este produto, você não está apenas comprando um item, mas sim <strong className="text-baby-pink">investindo no trabalho e na dedicação de uma equipe de profissionais</strong>. Cada detalhe foi pensado para entregar um conteúdo de alta qualidade, e essa criação só é possível com o seu apoio. <strong className="text-gray-800">A pirataria é um crime que prejudica a indústria e desvaloriza o esforço de quem cria.</strong> Compre o original, garanta a qualidade e ajude a construir um mercado mais justo e ético.
+              </p>
+            </div>
+
+            {/* Benefícios do original */}
+            <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-check-circle text-white text-lg"></i>
+                </div>
+                <h4 className="font-semibold text-green-800 text-sm md:text-base mb-1">Conteúdo 100% Original</h4>
+                <p className="text-green-700 text-xs md:text-sm">Receitas testadas e aprovadas</p>
+              </div>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-headset text-white text-lg"></i>
+                </div>
+                <h4 className="font-semibold text-blue-800 text-sm md:text-base mb-1">Suporte Garantido</h4>
+                <p className="text-blue-700 text-xs md:text-sm">Atendimento especializado</p>
+              </div>
+
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
+                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-sync-alt text-white text-lg"></i>
+                </div>
+                <h4 className="font-semibold text-purple-800 text-sm md:text-base mb-1">Atualizações Incluídas</h4>
+                <p className="text-purple-700 text-xs md:text-sm">Sempre com novo conteúdo</p>
+              </div>
+            </div>
+
+            {/* Selo de autenticidade */}
+            <div className="mt-6 inline-flex items-center bg-gradient-to-r from-baby-pink to-baby-blue text-white rounded-full px-6 py-3 shadow-lg">
+              <i className="fas fa-certificate mr-2"></i>
+              <span className="font-semibold text-sm">Produto Original Certificado</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8 md:py-12" data-testid="footer">
         <div className="container mx-auto px-3 md:px-4">
