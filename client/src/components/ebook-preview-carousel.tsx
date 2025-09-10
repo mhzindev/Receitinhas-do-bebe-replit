@@ -202,6 +202,15 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >
+      {/* Explicação inicial do toggle (apenas na primeira visualização) */}
+      {currentIndex === 0 && (
+        <div className="mb-3 p-3 bg-blue-50 border border-blue-200 rounded-xl text-center">
+          <p className="text-sm text-blue-700">
+            💡 <strong>Dica:</strong> Use os botões abaixo para alternar entre <strong>resumo das receitas</strong> e <strong>páginas originais</strong> do eBook
+          </p>
+        </div>
+      )}
+      
       {/* Enhanced Stats with View Mode Toggle */}
       <div className="flex justify-between items-center mb-4 px-2 gap-2">
         <span className="flex items-center space-x-2 text-sm text-gray-600 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1">
@@ -209,19 +218,56 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
           <span>{currentIndex + 1} de {contents.length}</span>
         </span>
         
-        {/* Toggle de modo de visualização */}
-        <button
-          onClick={toggleViewMode}
-          className={`flex items-center space-x-2 text-sm font-semibold rounded-full px-4 py-2 transition-all duration-300 shadow-md ${
-            viewMode === "real" 
-              ? "bg-baby-pink text-white hover:bg-pink-600" 
-              : "bg-white text-gray-700 hover:bg-gray-50"
-          }`}
-          data-testid="view-mode-toggle"
-        >
-          <i className={`fas ${viewMode === "real" ? "fa-image" : "fa-list-alt"}`}></i>
-          <span>{viewMode === "real" ? "Páginas Reais" : "Ver Páginas"}</span>
-        </button>
+        {/* Toggle de modo de visualização melhorado */}
+        <div className="bg-white/95 backdrop-blur-sm rounded-full p-1.5 shadow-lg border border-gray-200">
+          <div className="flex items-center space-x-1">
+            {/* Botão Modo Estruturado */}
+            <button
+              onClick={() => {
+                setViewMode("structured");
+                setIsAutoPlaying(false);
+                stopAutoPlay();
+              }}
+              className={`flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
+                viewMode === "structured" 
+                  ? "bg-baby-blue text-white shadow-md" 
+                  : "text-gray-600 hover:text-baby-blue hover:bg-blue-50"
+              }`}
+              data-testid="structured-view-toggle"
+            >
+              <i className="fas fa-list-alt text-sm"></i>
+              <span className="hidden sm:inline">Resumo</span>
+            </button>
+            
+            {/* Divisor visual */}
+            <div className="w-px h-6 bg-gray-300"></div>
+            
+            {/* Botão Páginas Reais */}
+            <button
+              onClick={() => {
+                setViewMode("real");
+                setIsAutoPlaying(false);
+                stopAutoPlay();
+              }}
+              className={`flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
+                viewMode === "real" 
+                  ? "bg-baby-pink text-white shadow-md" 
+                  : "text-gray-600 hover:text-baby-pink hover:bg-pink-50"
+              }`}
+              data-testid="real-view-toggle"
+            >
+              <i className="fas fa-book-open text-sm"></i>
+              <span className="hidden sm:inline">Páginas</span>
+            </button>
+          </div>
+          
+          {/* Indicador do modo atual */}
+          <div className="text-center mt-1">
+            <span className="text-xs text-gray-500 font-medium">
+              {viewMode === "structured" ? "Conteúdo Estruturado" : "Páginas Originais"}
+            </span>
+          </div>
+        </div>
         
         <span className="flex items-center space-x-2 text-sm text-gray-600 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1">
           <i className="fas fa-eye text-baby-blue"></i>
@@ -255,7 +301,7 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
               <div key={content.id} className="min-w-full">
                 {viewMode === "structured" ? (
                   // Visualização Estruturada (Original)
-                  <div className={`relative ${content.bgGradient} p-6 md:p-8 min-h-[500px] md:min-h-[600px] flex flex-col`}>
+                  <div className={`relative ${content.bgGradient} p-6 md:p-8 min-h-[500px] md:min-h-[600px] flex flex-col transition-all duration-700 ease-in-out transform`}>
                     
                     {/* Header */}
                     <div className="text-center mb-6">
@@ -356,7 +402,7 @@ export function EBookPreviewCarousel({ contents }: EBookPreviewCarouselProps) {
                   </div>
                 ) : (
                   // Visualização de Páginas Reais
-                  <div className="relative bg-gray-50 p-4 md:p-6 min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center">
+                  <div className="relative bg-gray-50 p-4 md:p-6 min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center transition-all duration-700 ease-in-out transform">
                     {realImage ? (
                       <div className="relative w-full max-w-md mx-auto">
                         {/* Imagem da página real */}
