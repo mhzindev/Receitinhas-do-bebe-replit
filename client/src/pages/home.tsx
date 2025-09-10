@@ -150,13 +150,13 @@ export default function Home() {
             <div className="text-center">
               <p className="text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
               <p className="text-5xl md:text-6xl font-bold" data-testid="sale-price">
-                por apenas <span className="text-baby-yellow">R$ 19,90</span>
+                por apenas <span className="text-baby-yellow">R$ 12,90</span>
               </p>
-              <p className="text-sm mt-2">💳 12x de R$ 1,66 sem juros</p>
+              <p className="text-sm mt-2">💳 2x de R$ 6,45 sem juros</p>
             </div>
             <div className="bg-red-700 text-white px-8 py-4 rounded-full bounce-gentle shadow-2xl" data-testid="discount-badge">
-              <p className="font-bold text-xl">🔥 96% OFF!</p>
-              <p className="text-sm">ECONOMIA DE R$ 535!</p>
+              <p className="font-bold text-xl">🔥 98% OFF!</p>
+              <p className="text-sm">ECONOMIA DE R$ 542!</p>
             </div>
           </div>
           
