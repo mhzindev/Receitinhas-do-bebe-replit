@@ -184,13 +184,13 @@ export default function Home() {
             <div className="text-center w-full md:w-auto">
               <p className="text-lg md:text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
               <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight break-words" data-testid="sale-price">
-                por apenas <span className="text-baby-yellow block sm:inline whitespace-nowrap">R$ 11,10</span>
+                por apenas <span className="text-baby-yellow block sm:inline whitespace-nowrap">R$ 12,90</span>
               </p>
-              <p className="text-sm mt-2">💳 2x de R$ 5,55 sem juros</p>
+              <p className="text-sm mt-2">💳 2x de R$ 6,45 sem juros</p>
             </div>
             <div className="bg-red-700 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-full bounce-gentle shadow-2xl flex-shrink-0" data-testid="discount-badge">
               <p className="font-bold text-base md:text-lg lg:text-xl">🔥 98% OFF!</p>
-              <p className="text-xs md:text-sm">ECONOMIA DE R$ 543,90!</p>
+              <p className="text-xs md:text-sm">ECONOMIA DE R$ 542,10!</p>
             </div>
           </div>
           
