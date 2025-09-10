@@ -10,9 +10,7 @@ export default function Home() {
       <div className="bg-red-600 text-white py-2 md:py-3 text-center sticky top-0 z-50 w-full">
         <div className="container mx-auto px-2 md:px-4 max-w-full">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-4">
-            <p className="text-xs sm:text-sm md:text-base font-bold leading-tight px-2" data-testid="countdown-banner">
-              🔥 APENAS 47 VAGAS RESTANTES! 
-            </p>
+            <p className="text-xs sm:text-sm md:text-base font-bold leading-tight px-2" data-testid="countdown-banner">🔥OFERTA POR TEMPO LIMITADO!</p>
             <div className="flex items-center space-x-1 md:space-x-2">
               <span className="text-xs md:text-sm">⏰</span>
               <CountdownTimer />
