@@ -3,10 +3,10 @@ import { FeedbackImage } from "./feedback-image";
 import { FeedbackModal } from "./feedback-modal";
 import { MobileFeedbackCarousel } from "./mobile-feedback-carousel";
 
-// Importing latest real feedback images
-const feedbackImage1 = "/attached_assets/WhatsApp Image 2025-09-09 at 22.56.58_1757469753656.jpeg";
-const feedbackImage2 = "/attached_assets/WhatsApp Image 2025-09-09 at 22.57.31_1757469753657.jpeg"; 
-const feedbackImage3 = "/attached_assets/WhatsApp Image 2025-09-09 at 22.58.04_1757469753658.jpeg";
+// Real feedback images served from public folder
+const feedbackImage1 = "/feedback-images/feedback1.jpeg";
+const feedbackImage2 = "/feedback-images/feedback2.jpeg"; 
+const feedbackImage3 = "/feedback-images/feedback3.jpeg";
 
 // Feedbacks com imagem real e placeholders para demonstração
 const feedbackData = [
