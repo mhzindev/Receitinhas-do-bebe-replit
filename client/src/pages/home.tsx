@@ -574,8 +574,31 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="final-cta-section">
         <div className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl shadow-lg p-8 text-center">
-          <div className="bg-red-600 text-white px-4 py-2 rounded-full inline-block mb-4">
-            <p className="font-bold text-sm">⚠️ ÚLTIMA CHANCE - Preço volta ao normal em:</p>
+          {/* Enhanced ÚLTIMA CHANCE banner with timer */}
+          <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-xl p-6 mb-6 shadow-xl border-2 border-red-800">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:space-x-4">
+              <div className="flex items-center space-x-2">
+                <i className="fas fa-exclamation-triangle text-yellow-400 text-xl animate-pulse"></i>
+                <h4 className="font-bold text-lg md:text-xl">ÚLTIMA CHANCE</h4>
+                <i className="fas fa-exclamation-triangle text-yellow-400 text-xl animate-pulse"></i>
+              </div>
+              
+              <div className="text-center">
+                <p className="text-sm md:text-base font-semibold mb-2">Preço volta ao normal em:</p>
+                <div className="bg-white text-red-600 px-4 py-2 rounded-lg shadow-inner">
+                  <div className="flex items-center space-x-2">
+                    <i className="fas fa-clock text-red-600"></i>
+                    <CountdownTimer />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-4 text-center">
+              <p className="text-sm md:text-base font-semibold text-yellow-200">
+                🔥 Depois disso, o preço volta para R$ 555,00! 🔥
+              </p>
+            </div>
           </div>
           <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-6">
             Não seja a ÚNICA mãe sem essas receitas! 😰
