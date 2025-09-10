@@ -55,6 +55,25 @@
     max-width: 100%;
     overflow-x: hidden;
   }
+
+  /* Extra small screen fixes */
+  @media (max-width: 475px) {
+    .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    
+    /* Prevent text overflow */
+    h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+    
+    /* Ensure buttons are touchable */
+    button {
+      min-height: 44px;
+    }
+  }
 }
 
 @layer components {

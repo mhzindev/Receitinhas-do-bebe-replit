@@ -5,12 +5,12 @@ import { FeedbackGallery } from "@/components/feedback-gallery";
 
 export default function Home() {
   return (
-    <div className="bg-baby-yellow font-inter text-foreground">
+    <div className="bg-baby-yellow font-inter text-foreground w-full overflow-x-hidden">
       {/* Countdown Banner */}
-      <div className="bg-red-600 text-white py-2 md:py-3 text-center sticky top-0 z-50">
-        <div className="container mx-auto px-2 md:px-4">
+      <div className="bg-red-600 text-white py-2 md:py-3 text-center sticky top-0 z-50 w-full">
+        <div className="container mx-auto px-2 md:px-4 max-w-full">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-4">
-            <p className="text-xs sm:text-sm md:text-base font-bold leading-tight" data-testid="countdown-banner">
+            <p className="text-xs sm:text-sm md:text-base font-bold leading-tight px-2" data-testid="countdown-banner">
               🔥 APENAS 47 VAGAS RESTANTES! 
             </p>
             <div className="flex items-center space-x-1 md:space-x-2">
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
 
         {/* Video Section */}
-        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden mb-6 md:mb-8" data-testid="video-section">
+        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden mb-6 md:mb-8 w-full" data-testid="video-section">
           <div className="relative">
             {/* Mock mobile phone showing Instagram profile */}
             <div className="bg-gradient-to-br from-baby-blue to-baby-green p-4 md:p-8 text-center relative">
@@ -142,16 +142,16 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-            <div className="text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 px-2">
+            <div className="text-center w-full md:w-auto">
               <p className="text-lg md:text-2xl line-through opacity-75" data-testid="original-price">De R$ 555,00</p>
-              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" data-testid="sale-price">
-                por apenas <span className="text-baby-yellow block sm:inline">R$ 12,90</span>
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight break-words" data-testid="sale-price">
+                por apenas <span className="text-baby-yellow block sm:inline whitespace-nowrap">R$ 12,90</span>
               </p>
               <p className="text-sm mt-2">💳 2x de R$ 6,45 sem juros</p>
             </div>
-            <div className="bg-red-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full bounce-gentle shadow-2xl" data-testid="discount-badge">
-              <p className="font-bold text-lg md:text-xl">🔥 98% OFF!</p>
+            <div className="bg-red-700 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-full bounce-gentle shadow-2xl flex-shrink-0" data-testid="discount-badge">
+              <p className="font-bold text-base md:text-lg lg:text-xl">🔥 98% OFF!</p>
               <p className="text-xs md:text-sm">ECONOMIA DE R$ 542,10!</p>
             </div>
           </div>
@@ -405,27 +405,27 @@ export default function Home() {
         </div>
       </section>
       {/* Social Proof Section with Images */}
-      <section className="container mx-auto px-4 mb-12" data-testid="testimonials-section">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="testimonials-section">
+        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
           <FeedbackGallery />
 
           {/* CTA Button 2 */}
-          <div className="text-center mt-8">
-            <CTAButton variant="orange" size="lg">
+          <div className="text-center mt-6 md:mt-8">
+            <CTAButton variant="orange" size="lg" className="w-full sm:w-auto px-4 py-4 text-sm sm:text-base">
               ⚡ GARANTIR MINHA TRANQUILIDADE AGORA! ⚡
             </CTAButton>
-            <p className="text-xs text-gray-500 mt-2">👆 Clique e transforme a alimentação do seu bebê em 5 minutos</p>
+            <p className="text-xs text-gray-500 mt-2 px-2">👆 Clique e transforme a alimentação do seu bebê em 5 minutos</p>
           </div>
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="container mx-auto px-4 mb-12" data-testid="benefits-section">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="benefits-section">
+        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
+          <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-8">
             Os benefícios que você vai ter:
           </h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 w-full">
             <div className="text-center p-6 bg-baby-yellow rounded-lg" data-testid="benefit-1">
               <div className="text-4xl mb-4">⏰</div>
               <h4 className="font-poppins font-semibold text-lg mb-2">Economiza seu tempo</h4>
