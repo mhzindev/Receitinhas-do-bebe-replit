@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Check, ShoppingCart, Download } from "lucide-react";
 
 // Histórias de sucesso (tipo 1)
 const successStories = [
@@ -117,21 +118,21 @@ export function SocialProofNotification() {
         return {
           bgColor: 'bg-baby-green',
           borderColor: 'border-baby-green',
-          icon: 'fas fa-check',
+          icon: Check,
           timeText: 'há poucos minutos'
         };
       case 'purchase':
         return {
           bgColor: 'bg-baby-blue',
           borderColor: 'border-baby-blue', 
-          icon: 'fas fa-shopping-cart',
+          icon: ShoppingCart,
           timeText: 'agora'
         };
       case 'delivery':
         return {
           bgColor: 'bg-baby-pink',
           borderColor: 'border-baby-pink',
-          icon: 'fas fa-download',
+          icon: Download,
           timeText: 'há 2 minutos'
         };
     }
@@ -143,7 +144,7 @@ export function SocialProofNotification() {
     <div className={`fixed bottom-4 left-4 z-40 bg-white border ${style.borderColor} rounded-lg shadow-lg p-3 max-w-xs floating-notification`} data-testid="social-proof-notification">
       <div className="flex items-center space-x-3">
         <div className={`w-8 h-8 ${style.bgColor} rounded-full flex items-center justify-center`}>
-          <i className={`${style.icon} text-white text-xs`}></i>
+          <style.icon className="text-white w-4 h-4" />
         </div>
         <div className="flex-1">
           <p className="text-xs font-medium text-gray-900" data-testid="social-proof-text">

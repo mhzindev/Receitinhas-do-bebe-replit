@@ -1,8 +1,12 @@
+import { lazy, Suspense } from "react";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SocialProofNotification } from "@/components/social-proof-notification";
 import { CTAButton } from "@/components/cta-button";
-import { FeedbackGallery } from "@/components/feedback-gallery";
-import { EBookPreviewCarousel } from "@/components/ebook-preview-carousel";
+import { Award, Check, Shield, Users, Star, Heart, Baby, MapPin, Clock, ShieldCheck, Download, User } from "lucide-react";
+
+// Lazy load heavy components for better performance
+const FeedbackGallery = lazy(() => import("@/components/feedback-gallery").then(module => ({ default: module.FeedbackGallery })));
+const EBookPreviewCarousel = lazy(() => import("@/components/ebook-preview-carousel").then(module => ({ default: module.EBookPreviewCarousel })));
 
 // Dados do eBook baseados nas imagens anexadas
 const ebookContents = [
@@ -151,7 +155,7 @@ export default function Home() {
                 {/* Certificate Header */}
                 <div className="flex items-center justify-center mb-4">
                   <div className="w-16 h-16 md:w-20 md:h-20 bg-baby-green rounded-full flex items-center justify-center border-4 border-baby-yellow">
-                    <i className="fas fa-certificate text-white text-xl md:text-2xl"></i>
+                    <Award className="text-white w-6 h-6 md:w-8 md:h-8" />
                   </div>
                 </div>
                 
@@ -192,12 +196,12 @@ export default function Home() {
                 {/* Corner Stamps */}
                 <div className="absolute top-2 right-2">
                   <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                    <i className="fas fa-check text-white text-xs"></i>
+                    <Check className="text-white w-3 h-3" />
                   </div>
                 </div>
                 <div className="absolute bottom-2 left-2">
                   <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center">
-                    <i className="fas fa-star text-white text-xs"></i>
+                    <Star className="text-white w-3 h-3" />
                   </div>
                 </div>
               </div>
@@ -216,7 +220,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 text-center">
             <div className="flex flex-col items-center" data-testid="trust-item-1">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-baby-green rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-shield-alt text-white text-sm md:text-lg"></i>
+                <Shield className="text-white w-4 h-4 md:w-5 md:h-5" />
               </div>
               <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">Satisfação Garantida</p>
               <p className="text-xs text-gray-500">ou seu dinheiro de volta</p>
@@ -224,7 +228,7 @@ export default function Home() {
             
             <div className="flex flex-col items-center" data-testid="trust-item-2">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-baby-blue rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-users text-white text-sm md:text-lg"></i>
+                <Users className="text-white w-4 h-4 md:w-5 md:h-5" />
               </div>
               <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">+15.000 Famílias</p>
               <p className="text-xs text-gray-500">já transformadas</p>
@@ -232,7 +236,7 @@ export default function Home() {
             
             <div className="flex flex-col items-center" data-testid="trust-item-3">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-baby-pink rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-star text-white text-sm md:text-lg"></i>
+                <Star className="text-white w-4 h-4 md:w-5 md:h-5" />
               </div>
               <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">94% Taxa de Sucesso</p>
               <p className="text-xs text-gray-500">aprovação comprovada</p>
@@ -240,7 +244,7 @@ export default function Home() {
             
             <div className="flex flex-col items-center" data-testid="trust-item-4">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-orange rounded-full flex items-center justify-center mb-2">
-                <i className="fas fa-certificate text-white text-sm md:text-lg"></i>
+                <Award className="text-white w-4 h-4 md:w-5 md:h-5" />
               </div>
               <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">Aprovado por</p>
               <p className="text-xs text-gray-500">nutricionistas</p>
@@ -320,7 +324,7 @@ export default function Home() {
             <div className="space-y-4 md:space-y-6">
               <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-yellow rounded-lg" data-testid="product-item-1">
                 <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
+                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🎁 eBook Receitinhas do Bebê</h4>
@@ -330,7 +334,7 @@ export default function Home() {
               
               <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-blue bg-opacity-30 rounded-lg" data-testid="product-item-2">
                 <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
+                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🌙 Guia Completo do Sono do Bebê</h4>
@@ -340,7 +344,7 @@ export default function Home() {
 
               <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-pink bg-opacity-30 rounded-lg" data-testid="product-item-3">
                 <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
+                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🤱 Desmame Sem Traumas</h4>
@@ -352,7 +356,7 @@ export default function Home() {
             <div className="space-y-4 md:space-y-6">
               <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-green bg-opacity-30 rounded-lg" data-testid="product-item-4">
                 <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
+                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">📅 Plano Alimentar Semanal</h4>
@@ -362,7 +366,7 @@ export default function Home() {
 
               <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-accent bg-opacity-30 rounded-lg" data-testid="product-item-5">
                 <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
+                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">✅ Checklist de Introdução Alimentar</h4>
@@ -372,7 +376,7 @@ export default function Home() {
 
               <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-orange bg-opacity-20 rounded-lg" data-testid="product-item-6">
                 <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
+                  <Check className="text-white w-3 h-3 md:w-4 md:h-4" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🔄 Lista de Substituições Inteligentes</h4>
@@ -398,13 +402,13 @@ export default function Home() {
           
           {/* Decorative Background Elements */}
           <div className="absolute top-4 right-4 opacity-10">
-            <i className="fas fa-heart text-baby-pink text-6xl heart-pulse"></i>
+            <Heart className="text-baby-pink w-16 h-16 heart-pulse" />
           </div>
           <div className="absolute bottom-4 left-4 opacity-10">
-            <i className="fas fa-star text-gold text-4xl"></i>
+            <Star className="text-gold w-10 h-10" />
           </div>
           <div className="absolute top-1/2 left-6 opacity-5">
-            <i className="fas fa-baby text-baby-blue text-8xl"></i>
+            <Baby className="text-baby-blue w-20 h-20" />
           </div>
           
           <div className="relative max-w-5xl mx-auto">
@@ -416,13 +420,13 @@ export default function Home() {
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-baby-pink to-baby-blue rounded-full flex items-center justify-center mx-auto mb-4 relative overflow-hidden shadow-2xl">
                     <div className="absolute inset-0 bg-gradient-to-br from-baby-pink to-baby-blue opacity-90"></div>
                     <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center">
-                      <i className="fas fa-user-circle text-baby-pink text-2xl md:text-3xl"></i>
+                      <User className="text-baby-pink w-8 h-8 md:w-12 md:h-12" />
                     </div>
                   </div>
                   
                   {/* Verified Badge */}
                   <div className="absolute -bottom-1 -right-1 verified-badge text-white rounded-full p-2 w-8 h-8 flex items-center justify-center">
-                    <i className="fas fa-check text-xs"></i>
+                    <Check className="w-3 h-3" />
                   </div>
                 </div>
               </div>
@@ -648,7 +652,13 @@ export default function Home() {
       {/* Social Proof Section with Images */}
       <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="testimonials-section">
         <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
-          <FeedbackGallery />
+          <Suspense fallback={
+            <div className="animate-pulse bg-gray-200 rounded-xl h-96 flex items-center justify-center">
+              <div className="text-gray-500">Carregando depoimentos...</div>
+            </div>
+          }>
+            <FeedbackGallery />
+          </Suspense>
 
           {/* CTA Button 2 */}
           <div className="text-center mt-6 md:mt-8">
@@ -703,7 +713,13 @@ export default function Home() {
             </div>
 
             {/* Enhanced Carousel */}
-            <EBookPreviewCarousel contents={ebookContents} />
+            <Suspense fallback={
+              <div className="animate-pulse bg-gray-200 rounded-xl h-96 flex items-center justify-center">
+                <div className="text-gray-500">Carregando prévia do eBook...</div>
+              </div>
+            }>
+              <EBookPreviewCarousel contents={ebookContents} />
+            </Suspense>
 
             {/* Bottom CTA with Social Proof */}
             <div className="mt-8 md:mt-12 text-center">
