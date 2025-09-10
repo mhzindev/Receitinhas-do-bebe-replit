@@ -164,85 +164,85 @@ export default function Home() {
         </div>
       </section>
       {/* Product Content Section */}
-      <section className="container mx-auto px-4 mb-12" data-testid="product-content-section">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="product-content-section">
+        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
+          <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-8">
             🎁 O que você vai receber:
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 p-4 bg-baby-yellow rounded-lg" data-testid="product-item-1">
-                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white"></i>
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+            <div className="space-y-4 md:space-y-6">
+              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-yellow rounded-lg" data-testid="product-item-1">
+                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-lg text-gray-800">🎁 eBook Comidinhas do Bebê</h4>
-                  <p className="text-gray-600">+100 receitas organizadas por idade e textura</p>
+                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🎁 eBook Comidinhas do Bebê</h4>
+                  <p className="text-xs md:text-base text-gray-600">+100 receitas organizadas por idade e textura</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4 p-4 bg-baby-blue bg-opacity-30 rounded-lg" data-testid="product-item-2">
-                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white"></i>
+              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-blue bg-opacity-30 rounded-lg" data-testid="product-item-2">
+                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-lg text-gray-800">🌙 Guia Completo do Sono do Bebê</h4>
-                  <p className="text-gray-600">Técnicas comprovadas para noites tranquilas</p>
+                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🌙 Guia Completo do Sono do Bebê</h4>
+                  <p className="text-xs md:text-base text-gray-600">Técnicas comprovadas para noites tranquilas</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 bg-baby-pink bg-opacity-30 rounded-lg" data-testid="product-item-3">
-                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white"></i>
+              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-pink bg-opacity-30 rounded-lg" data-testid="product-item-3">
+                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-lg text-gray-800">🤱 Desmame Sem Traumas</h4>
-                  <p className="text-gray-600">Transição suave e natural</p>
+                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🤱 Desmame Sem Traumas</h4>
+                  <p className="text-xs md:text-base text-gray-600">Transição suave e natural</p>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 p-4 bg-baby-green bg-opacity-30 rounded-lg" data-testid="product-item-4">
-                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white"></i>
+            <div className="space-y-4 md:space-y-6">
+              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-baby-green bg-opacity-30 rounded-lg" data-testid="product-item-4">
+                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-lg text-gray-800">📅 Plano Alimentar Semanal</h4>
-                  <p className="text-gray-600">Cardápios organizados e balanceados</p>
+                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">📅 Plano Alimentar Semanal</h4>
+                  <p className="text-xs md:text-base text-gray-600">Cardápios organizados e balanceados</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 bg-accent bg-opacity-30 rounded-lg" data-testid="product-item-5">
-                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white"></i>
+              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-accent bg-opacity-30 rounded-lg" data-testid="product-item-5">
+                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-lg text-gray-800">✅ Checklist de Introdução Alimentar</h4>
-                  <p className="text-gray-600">Passo a passo detalhado</p>
+                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">✅ Checklist de Introdução Alimentar</h4>
+                  <p className="text-xs md:text-base text-gray-600">Passo a passo detalhado</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 bg-orange bg-opacity-20 rounded-lg" data-testid="product-item-6">
-                <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="fas fa-check text-white"></i>
+              <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-orange bg-opacity-20 rounded-lg" data-testid="product-item-6">
+                <div className="w-7 h-7 md:w-8 md:h-8 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <i className="fas fa-check text-white text-xs md:text-sm"></i>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-lg text-gray-800">🔄 Lista de Substituições Inteligentes</h4>
-                  <p className="text-gray-600">Alternativas nutritivas e práticas</p>
+                  <h4 className="font-poppins font-semibold text-sm md:text-lg text-gray-800 leading-tight">🔄 Lista de Substituições Inteligentes</h4>
+                  <p className="text-xs md:text-base text-gray-600">Alternativas nutritivas e práticas</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* CTA Button 1 */}
-          <div className="text-center mt-8 relative">
-            <div className="arrow-bounce text-4xl mb-2">👇</div>
-            <CTAButton variant="primary" size="lg" className="glow">
+          <div className="text-center mt-6 md:mt-8 relative">
+            <div className="arrow-bounce text-3xl md:text-4xl mb-2">👇</div>
+            <CTAButton variant="primary" size="lg" className="glow w-full sm:w-auto px-4 py-4 text-sm sm:text-base">
               🎯 SIM! QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
             </CTAButton>
-            <p className="text-xs text-gray-500 mt-2">💳 Acesso imediato | 🔒 Pagamento 100% seguro | ✅ Garantia de 7 dias</p>
+            <p className="text-xs text-gray-500 mt-2 px-2">💳 Acesso imediato | 🔒 Pagamento 100% seguro | ✅ Garantia de 7 dias</p>
           </div>
         </div>
       </section>
