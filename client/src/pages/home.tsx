@@ -989,11 +989,7 @@ export default function Home() {
             <h4 className="font-poppins text-xl md:text-2xl font-bold text-baby-pink mb-3 md:mb-4">💝 Receitinhas do Bebê</h4>
             <p className="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">Transformando a alimentação infantil com amor e carinho</p>
             
-            <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8 text-xs md:text-sm text-gray-400">
-              <a href="#" className="hover:text-baby-pink transition-colors" data-testid="link-privacy">Política de Privacidade</a>
-              <a href="#" className="hover:text-baby-pink transition-colors" data-testid="link-terms">Termos de Uso</a>
-              <a href="#" className="hover:text-baby-pink transition-colors" data-testid="link-contact">Contato</a>
-            </div>
+            
             
             <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-700">
               <p className="text-gray-500 text-xs md:text-sm" data-testid="copyright">© 2025 Receitinhas do Bebê. Todos os direitos reservados.</p>
