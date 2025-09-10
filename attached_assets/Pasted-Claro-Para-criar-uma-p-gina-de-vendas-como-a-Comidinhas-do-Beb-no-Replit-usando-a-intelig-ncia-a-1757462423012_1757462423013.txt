@@ -1,0 +1,45 @@
+Claro! Para criar uma página de vendas como a "Comidinhas do Bebê" no Replit usando a inteligência artificial da plataforma, você precisa ser extremamente específico. O segredo é detalhar cada seção, o estilo visual e as funcionalidades.
+Aqui está um prompt detalhado e minucioso para você usar no Replit:
+Prompt para Replit: Criação de Landing Page de Vendas de eBook
+Objetivo Principal: Crie uma landing page de alta conversão para um eBook de receitas infantis, focada em solucionar os problemas dos pais e vender o produto de forma convincente. A página deve seguir a estrutura de uma funil de vendas, conduzindo o usuário da identificação do problema à compra.
+Estilo Visual:
+ * Paleta de Cores: Use um fundo principal em tons de amarelo pálido (#FFF8E1) com elementos em rosa pastel (#FFB6C1), verde claro (#A5D6A7) e azul suave (#B0E0E6).
+ * Tipografia: Use uma fonte arredondada, amigável e legível para títulos (ex: Poppins ou Varela Round) e uma fonte limpa e simples para o corpo do texto (ex: Lato ou Inter).
+ * Ícones e Emojis: Use emojis e ícones fofos (corações, colheres, estrelas, chekmarks, etc.) para tornar a página mais visual e acolhedora.
+Estrutura da Página e Conteúdo (Seção por Seção):
+ * Seção de Abertura (Acima da Dobra):
+   * Título: "Comidinhas do Bebê" em rosa, com ícone de coração e colher.
+   * Subtítulo (Headline): Uma citação em destaque que diz: "Descubra como milhares de mães conseguiram fazer seus bebês comerem de forma saudável e sem estresse!".
+   * Vídeo: Crie um espaço para um vídeo de vendas com uma imagem de pré-visualização. A imagem deve conter um celular com o perfil fictício do Instagram "@bebecomidinhas" e o texto "Dicas de Armazenamento de Alimentos para Bebês". Adicione um botão de play no centro e a chamada "Assista urgente" acima.
+ * Seção de Oferta e Conteúdo do Produto:
+   * Faixa de Oferta: Uma faixa horizontal, em cor laranja vibrante, com o texto "OFERTA RELÂMPAGO - Só hoje!".
+   * Preço Promocional: Exiba o preço original riscado "De R197,00" e o novo preço destacado "por apenas **R19,90**" em fonte grande e vermelha. Adicione um selo "95% OFF só hoje!".
+   * Lista de Conteúdo: Crie um checklist com ícones de checagem.
+     * Item 1: "🎁 eBook Comidinhas do Bebê (+100 receitas organizadas por idade e textura)".
+     * Item 2: "➕ 5 BÔNUS EXCLUSIVOS: Guia Completo do Sono do Bebê, Desmame Sem Traumas, Plano Alimentar Semanal, Checklist de Introdução Alimentar e Lista de Substituições Inteligentes".
+ * Seção de Identificação do Problema:
+   * Título: "Você já passou por isso? 🤔"
+   * Lista de Problemas: Apresente uma lista com ícones de coração partido, detalhando as dores do público-alvo:
+     * "💔 Seu bebê recusa tudo que você oferece."
+     * "💔 A hora da refeição virou um momento de choro e desespero."
+     * "💔 Você se sente culpada por não conseguir fazer ele comer direito."
+   * Mensagem de Empatia: Uma caixa de texto abaixo da lista com a frase: "➡ Você NÃO está sozinha, mamãe!".
+ * Seção de Solução e Prova Social:
+   * Título: "A solução que vai transformar a alimentação do seu bebê! ✨"
+   * Descrição: Breve parágrafo sobre as 100+ receitas fáceis e nutritivas que acabarão com o estresse.
+   * Seção de Depoimentos: Crie um carrossel ou uma galeria de imagens que simulem capturas de tela de mensagens de WhatsApp/Instagram de mães reais (fictícias). As mensagens devem ser curtas e positivas, como: "Eu fiz por meu bebê hoje a tarde ele amou" ou "Obrigada, amei as receitas, salvou minha vida!".
+ * Seção de Urgência e Garantia:
+   * Contador Regressivo: Uma faixa superior em laranja com "ÚLTIMAS HORAS - Oferta Relâmpago!". Insira um contador funcional de horas, minutos e segundos.
+   * Garantia: Crie uma seção clara e visível sobre a garantia. Título: "Garantia Mamãe Tranquila - 7 dias". Explique que o reembolso é total caso a mãe não esteja satisfeita, garantindo "ZERO risco".
+   * Benefícios Chave: Uma lista com ícones de estrelas: "Economiza seu tempo", "Acaba com a ansiedade", "Economiza dinheiro" e "Desenvolvimento saudável".
+ * Botões de Compra (CTAs):
+   * Crie botões de compra proeminentes e repetidos em pontos estratégicos da página:
+     * Abaixo da seção de preço.
+     * Após a seção de depoimentos.
+     * Acima da garantia.
+     * No rodapé.
+   * Texto dos Botões: Use frases de ação como "SIM! QUERO AS RECEITAS AGORA", "QUERO TRANSFORMAR A ALIMENTAÇÃO DO MEU BEBÊ AGORA!" e "QUERO GARANTIR MINHA TRANQUILIDADE AGORA!".
+ * Elementos Adicionais:
+   * Barra de Prova Social: Implemente uma barra flutuante ou um pop-up que aparece periodicamente com a mensagem: "Tatiane de SP garantiu o eBook agora mesmo!". A mensagem deve mudar (ex: "Viviane de PB garantiu as receitas") para simular compras em tempo real.
+   * Rodapé: Inclua informações de direitos autorais, política de privacidade e termos de uso.
+Observação para a IA: O layout deve ser responsivo e otimizado para dispositivos móveis, com as seções empilhadas verticalmente e os elementos facilmente visíveis em telas pequenas. Todo o código deve ser gerado em HTML, CSS e JavaScript para garantir a funcionalidade do contador regressivo e da barra de prova social.
