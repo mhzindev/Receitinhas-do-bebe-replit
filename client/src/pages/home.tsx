@@ -492,21 +492,81 @@ export default function Home() {
       </section>
       {/* Guarantee Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="guarantee-section">
-        <div className="bg-gradient-to-r from-baby-green to-baby-blue rounded-2xl shadow-lg p-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <i className="fas fa-shield-alt text-baby-green text-3xl"></i>
+        <div className="bg-white border-2 border-green-200 rounded-2xl shadow-xl p-8 text-center relative overflow-hidden">
+          {/* Security badges background pattern */}
+          <div className="absolute top-4 right-4 opacity-10">
+            <i className="fas fa-certificate text-green-600 text-6xl"></i>
+          </div>
+          <div className="absolute bottom-4 left-4 opacity-10">
+            <i className="fas fa-shield-check text-blue-600 text-6xl"></i>
+          </div>
+          
+          <div className="max-w-4xl mx-auto relative z-10">
+            {/* Professional security badge */}
+            <div className="flex justify-center items-center mb-6">
+              <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-full p-4 shadow-lg mr-4">
+                <i className="fas fa-shield-check text-white text-3xl"></i>
+              </div>
+              <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-full p-4 shadow-lg">
+                <i className="fas fa-lock text-white text-3xl"></i>
+              </div>
             </div>
-            <h3 className="font-poppins text-2xl md:text-3xl font-bold text-white mb-4">
-              Garantia Mamãe Tranquila - 7 dias 🛡️
-            </h3>
-            <p className="text-white text-lg leading-relaxed mb-6">
-              Se por qualquer motivo você não estiver satisfeita com o conteúdo, 
-              devolvemos 100% do seu dinheiro em até 7 dias. 
-              <strong>ZERO risco para você!</strong>
-            </p>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4 inline-block" data-testid="guarantee-badge">
-              <p className="text-white font-bold">✅ Reembolso Total Garantido</p>
+            
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-6 mb-6">
+              <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                🛡️ GARANTIA BLINDADA "MAMÃE TRANQUILA"
+              </h3>
+              <div className="bg-green-600 text-white px-6 py-2 rounded-full inline-block mb-4">
+                <span className="font-bold text-lg">✅ 7 DIAS DE PROTEÇÃO TOTAL</span>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white border-2 border-green-100 rounded-lg p-6 shadow-md">
+                <div className="flex items-center mb-3">
+                  <i className="fas fa-money-bill-wave text-green-600 text-2xl mr-3"></i>
+                  <h4 className="font-semibold text-gray-800">Reembolso Instantâneo</h4>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Dinheiro de volta em <strong>até 24 horas</strong> via PIX, sem burocracias ou perguntas incômodas.
+                </p>
+              </div>
+              
+              <div className="bg-white border-2 border-blue-100 rounded-lg p-6 shadow-md">
+                <div className="flex items-center mb-3">
+                  <i className="fas fa-user-shield text-blue-600 text-2xl mr-3"></i>
+                  <h4 className="font-semibold text-gray-800">Proteção Legal</h4>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Garantia respaldada pelo <strong>Código de Defesa do Consumidor</strong> e nossa empresa registrada.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-xl p-6 mb-6">
+              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                <strong className="text-green-600">COMPROMISSO REAL:</strong> Se em 7 dias você não estiver 100% satisfeita 
+                com as receitas, devolvemos cada centavo investido. 
+              </p>
+              <p className="text-gray-600 font-semibold">
+                💯 <strong>ZERO RISCO</strong> - Você só tem a ganhar!
+              </p>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
+              <div className="flex items-center bg-green-50 px-4 py-2 rounded-full border border-green-200">
+                <i className="fas fa-users text-green-600 mr-2"></i>
+                <span>+15.000 mães confiaram</span>
+              </div>
+              <div className="flex items-center bg-blue-50 px-4 py-2 rounded-full border border-blue-200">
+                <i className="fas fa-star text-yellow-500 mr-2"></i>
+                <span>4.9/5 de satisfação</span>
+              </div>
+              <div className="flex items-center bg-purple-50 px-4 py-2 rounded-full border border-purple-200">
+                <i className="fas fa-award text-purple-600 mr-2"></i>
+                <span>Empresa verificada</span>
+              </div>
             </div>
           </div>
         </div>
