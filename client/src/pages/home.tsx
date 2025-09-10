@@ -7,16 +7,16 @@ export default function Home() {
   return (
     <div className="bg-baby-yellow font-inter text-foreground">
       {/* Countdown Banner */}
-      <div className="bg-red-600 text-white py-3 text-center sticky top-0 z-50">
-        <div className="container mx-auto px-4">
+      <div className="bg-red-600 text-white py-2 md:py-3 text-center sticky top-0 z-50">
+        <div className="container mx-auto px-2 md:px-4">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-4">
-            <p className="text-sm md:text-base font-bold" data-testid="countdown-banner">
-              🔥 APENAS 47 VAGAS RESTANTES neste preço! 
+            <p className="text-xs sm:text-sm md:text-base font-bold leading-tight" data-testid="countdown-banner">
+              🔥 APENAS 47 VAGAS RESTANTES! 
             </p>
-            <div className="flex items-center space-x-2">
-              <span className="text-sm">⏰</span>
+            <div className="flex items-center space-x-1 md:space-x-2">
+              <span className="text-xs md:text-sm">⏰</span>
               <CountdownTimer />
-              <span className="text-sm">restantes</span>
+              <span className="text-xs md:text-sm">restantes</span>
             </div>
           </div>
         </div>
@@ -24,12 +24,12 @@ export default function Home() {
       {/* Floating Social Proof Notification */}
       <SocialProofNotification />
       {/* Header Section */}
-      <header className="container mx-auto px-4 py-8">
+      <header className="container mx-auto px-3 md:px-4 py-4 md:py-8">
         <div className="text-center">
-          <h1 className="font-poppins text-4xl md:text-6xl font-bold text-baby-pink mb-4" data-testid="main-title">
+          <h1 className="font-poppins text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-baby-pink mb-3 md:mb-4 leading-tight" data-testid="main-title">
             💝 Comidinhas do Bebê 🍼
           </h1>
-          <h2 className="font-poppins text-xl md:text-2xl font-semibold text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed" data-testid="main-subtitle">
+          <h2 className="font-poppins text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-gray-700 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-2" data-testid="main-subtitle">
             "Descubra como milhares de mães conseguiram fazer seus bebês comerem de forma saudável e sem estresse!"
           </h2>
         </div>
