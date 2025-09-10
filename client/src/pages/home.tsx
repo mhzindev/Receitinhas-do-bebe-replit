@@ -241,8 +241,9 @@ export default function Home() {
           </div>
 
           {/* CTA Button 1 */}
-          <div className="text-center mt-8">
-            <CTAButton variant="primary" size="lg">
+          <div className="text-center mt-8 relative">
+            <div className="arrow-bounce text-4xl mb-2">👇</div>
+            <CTAButton variant="primary" size="lg" className="glow">
               🎯 SIM! QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
             </CTAButton>
             <p className="text-xs text-gray-500 mt-2">💳 Acesso imediato | 🔒 Pagamento 100% seguro | ✅ Garantia de 7 dias</p>
@@ -660,8 +661,9 @@ export default function Home() {
           </div>
           
           <div className="space-y-4">
-            <div className="w-full md:w-auto">
-              <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl">
+            <div className="w-full md:w-auto relative">
+              <div className="arrow-bounce text-5xl mb-3">👇</div>
+              <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow">
                 🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘
               </CTAButton>
             </div>
