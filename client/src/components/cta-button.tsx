@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { trackAddToCart, trackInitiateCheckout, trackLead } from "@/hooks/useFacebookPixel";
+import { trackAddToCart, trackInitiateCheckout, trackLead, trackEvent } from "@/hooks/useFacebookPixel";
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -54,23 +54,44 @@ export function CTAButton({
       }, 150);
     }
     
-    // Track Facebook Pixel event based on trackingEvent prop
+    // Track Facebook Pixel event with enhanced deduplication
     try {
+      // Use direct trackEvent for better control and deduplication
+      const eventData = {
+        value: 12.90,
+        currency: 'BRL',
+        content_name: 'eBook Receitinhas do Bebê'
+      };
+
       switch (trackingEvent) {
         case "addToCart":
-          trackAddToCart();
+          trackEvent('AddToCart', {
+            ...eventData,
+            content_type: 'product'
+          });
           break;
         case "initiateCheckout":
-          trackInitiateCheckout();
+          trackEvent('InitiateCheckout', {
+            ...eventData,
+            num_items: 1
+          });
           break;
         case "lead":
-          trackLead();
+          trackEvent('Lead', {
+            ...eventData,
+            source: 'landing_page'
+          });
           break;
         default:
-          trackAddToCart(); // Default tracking
+          trackEvent('InitiateCheckout', {
+            ...eventData,
+            num_items: 1
+          }); // Default to checkout since all CTAs lead to checkout
       }
     } catch (error) {
-      console.warn('Facebook Pixel tracking error:', error);
+      if (import.meta.env.DEV) {
+        console.warn('Facebook Pixel tracking error:', error);
+      }
     }
     
     if (import.meta.env.DEV) {

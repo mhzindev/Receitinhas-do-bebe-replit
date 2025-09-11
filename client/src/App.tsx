@@ -50,12 +50,8 @@ function App() {
   // Always call hooks - never conditionally (but hook will handle empty/null pixelId)
   useFacebookPixel(pixelId);
 
-  useEffect(() => {
-    if (pixelId) {
-      // Only track if pixel is configured
-      trackViewContent('eBook Receitinhas do Bebê', 12.90);
-    }
-  }, [pixelId]);
+  // Note: ViewContent tracking is now handled automatically by useFacebookPixel hook
+  // This prevents duplicate ViewContent events
 
   return (
     <QueryClientProvider client={queryClient}>

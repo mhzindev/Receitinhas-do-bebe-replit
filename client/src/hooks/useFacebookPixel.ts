@@ -8,15 +8,30 @@ declare global {
   }
 }
 
-// Use window to persist across HMR in development
+// Enhanced pixel state management with event deduplication
 const getPixelState = () => {
   if (!(window as any).__fbPixelState) {
     (window as any).__fbPixelState = {
       initialized: false,
-      currentId: null
+      currentId: null,
+      lastViewContentTime: 0,
+      eventHistory: new Map() // Track recent events to prevent duplicates
     };
   }
   return (window as any).__fbPixelState;
+};
+
+// Debounce function to prevent rapid duplicate events
+const debounce = (func: Function, wait: number) => {
+  let timeout: NodeJS.Timeout;
+  return function executedFunction(...args: any[]) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
 };
 
 export const useFacebookPixel = (pixelId: string) => {
@@ -66,6 +81,23 @@ export const useFacebookPixel = (pixelId: string) => {
         window.fbq('init', pixelId);
         window.fbq('track', 'PageView');
         
+        // Auto-track ViewContent on initialization (prevents duplication)
+        setTimeout(() => {
+          if (!pixelState.lastViewContentTime || 
+              Date.now() - pixelState.lastViewContentTime > 5000) { // 5 second cooldown
+            window.fbq('track', 'ViewContent', {
+              content_name: 'eBook Receitinhas do Bebê',
+              content_category: 'Digital Product',
+              value: 12.90,
+              currency: 'BRL'
+            });
+            pixelState.lastViewContentTime = Date.now();
+            if (import.meta.env.DEV) {
+              console.log('Facebook Pixel: Auto ViewContent tracked');
+            }
+          }
+        }, 1000);
+        
         // Mark as initialized globally
         pixelState.initialized = true;
         pixelState.currentId = pixelId;
@@ -96,14 +128,43 @@ export const useFacebookPixel = (pixelId: string) => {
   }, [pixelId]);
 };
 
-// Helper functions for tracking specific events
+// Enhanced tracking with deduplication and rate limiting
 export const trackEvent = (event: string, parameters?: Record<string, any>) => {
-  // Try multiple times with shorter intervals for better responsiveness
-  const attemptTracking = (attempt: number = 1, maxAttempts: number = 5) => {
+  const pixelState = getPixelState();
+  const eventKey = `${event}_${JSON.stringify(parameters)}`;
+  const now = Date.now();
+  
+  // Check for recent duplicate events (within 2 seconds)
+  const lastEventTime = pixelState.eventHistory.get(eventKey);
+  if (lastEventTime && now - lastEventTime < 2000) {
+    if (import.meta.env.DEV) {
+      console.warn(`Facebook Pixel: Duplicate event blocked - ${event}`);
+    }
+    return;
+  }
+  
+  // Clean old entries from history (keep only last 10 minutes)
+  for (const [key, timestamp] of pixelState.eventHistory.entries()) {
+    if (now - timestamp > 600000) { // 10 minutes
+      pixelState.eventHistory.delete(key);
+    }
+  }
+  
+  // Record this event
+  pixelState.eventHistory.set(eventKey, now);
+  
+  // Attempt tracking with retry logic
+  const attemptTracking = (attempt: number = 1, maxAttempts: number = 3) => {
     if (window.fbq) {
-      window.fbq('track', event, parameters);
-      if (import.meta.env.DEV) {
-        console.log(`Facebook Pixel: ${event}`, parameters);
+      try {
+        window.fbq('track', event, parameters);
+        if (import.meta.env.DEV) {
+          console.log(`Facebook Pixel: ${event}`, parameters);
+        }
+      } catch (error) {
+        if (import.meta.env.DEV) {
+          console.error(`Facebook Pixel tracking error for ${event}:`, error);
+        }
       }
       return;
     }
@@ -111,7 +172,7 @@ export const trackEvent = (event: string, parameters?: Record<string, any>) => {
     if (attempt < maxAttempts) {
       setTimeout(() => {
         attemptTracking(attempt + 1, maxAttempts);
-      }, 200 * attempt); // Progressive delay: 200ms, 400ms, 600ms, etc.
+      }, 300 * attempt); // 300ms, 600ms, 900ms
     } else {
       if (import.meta.env.DEV) {
         console.warn(`Facebook Pixel not ready after ${maxAttempts} attempts, skipping event: ${event}`);
@@ -121,6 +182,9 @@ export const trackEvent = (event: string, parameters?: Record<string, any>) => {
   
   attemptTracking();
 };
+
+// Debounced tracking functions to prevent rapid-fire events
+const debouncedTrackEvent = debounce(trackEvent, 500);
 
 export const trackViewContent = (contentName: string, value?: number) => {
   trackEvent('ViewContent', {
