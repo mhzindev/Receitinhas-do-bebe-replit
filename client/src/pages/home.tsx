@@ -407,7 +407,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm mt-2">
-                  💳 Ou em até 12x de <span className="font-bold text-baby-pink">R$ 1,07</span> sem juros
+                  💳 Ou em até 2x de <span className="font-bold text-baby-pink">R$ 6,45</span> sem juros
                 </p>
               </div>
 
