@@ -3,7 +3,7 @@ import { CountdownTimer } from "@/components/countdown-timer";
 // Lazy load social proof for better performance
 const SocialProofNotification = lazy(() => import("@/components/social-proof-notification").then(module => ({ default: module.SocialProofNotification })));
 import { CTAButton } from "@/components/cta-button";
-import { Award, Check, Shield, Users, Star, Heart, Baby, MapPin, Clock, ShieldCheck, Download, User } from "lucide-react";
+import { Award, Check, Shield, Users, Star, Heart, Baby, MapPin, Clock, ShieldCheck, Download } from "lucide-react";
 import { LivePurchaseCounter } from "@/components/live-purchase-counter";
 
 // Lazy load heavy components for better performance
@@ -483,8 +483,13 @@ export default function Home() {
                   {/* Avatar with decorative ring */}
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-baby-pink to-baby-blue rounded-full flex items-center justify-center mx-auto mb-4 relative overflow-hidden shadow-2xl">
                     <div className="absolute inset-0 bg-gradient-to-br from-baby-pink to-baby-blue opacity-90"></div>
-                    <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center">
-                      <User className="text-baby-pink w-8 h-8 md:w-12 md:h-12" />
+                    <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                      <img 
+                        src="/marina-profile.jpg" 
+                        alt="Marina S. - Mãe que transformou a alimentação do seu bebê" 
+                        className="w-full h-full object-cover rounded-full"
+                        data-testid="marina-profile-photo"
+                      />
                     </div>
                   </div>
                   
