@@ -8,6 +8,17 @@ declare global {
   }
 }
 
+// Use window to persist across HMR in development
+const getPixelState = () => {
+  if (!(window as any).__fbPixelState) {
+    (window as any).__fbPixelState = {
+      initialized: false,
+      currentId: null
+    };
+  }
+  return (window as any).__fbPixelState;
+};
+
 export const useFacebookPixel = (pixelId: string) => {
   useEffect(() => {
     if (!pixelId) {
@@ -15,20 +26,23 @@ export const useFacebookPixel = (pixelId: string) => {
       return;
     }
 
-    // Prevent duplicate initialization
-    if ((window as any).__pixelInitialized) {
+    const pixelState = getPixelState();
+    
+    // Prevent duplicate initialization for the same pixel ID
+    if (pixelState.initialized && pixelState.currentId === pixelId) {
       return;
     }
 
-    // Only load if not already present
-    if (!window.fbq) {
-      // Load Facebook Pixel script
-      const script = document.createElement('script');
-      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
-      script.async = true;
-      document.head.appendChild(script);
+    // If different pixel ID, warn about it
+    if (pixelState.initialized && pixelState.currentId !== pixelId) {
+      if (import.meta.env.DEV) {
+        console.warn(`Facebook Pixel already initialized with different ID: ${pixelState.currentId}. Skipping new ID: ${pixelId}`);
+      }
+      return;
+    }
 
-      // Initialize fbq function
+    // Initialize fbq function if not already present
+    if (!window.fbq) {
       window.fbq = function() {
         if (window.fbq.callMethod) {
           window.fbq.callMethod.apply(window.fbq, arguments);
@@ -42,46 +56,70 @@ export const useFacebookPixel = (pixelId: string) => {
       window.fbq.loaded = true;
       window.fbq.version = '2.0';
       window.fbq.queue = [];
+    }
 
-      script.onload = () => {
-        // Initialize with pixel ID after script loads
+    // Check if script is already loaded
+    const existingScript = document.querySelector('script[src*="fbevents.js"]');
+    
+    const initializePixel = () => {
+      if (!pixelState.initialized) {
         window.fbq('init', pixelId);
-        
-        // Track initial page view
         window.fbq('track', 'PageView');
         
-        // Mark as initialized to prevent duplicates
-        (window as any).__pixelInitialized = true;
+        // Mark as initialized globally
+        pixelState.initialized = true;
+        pixelState.currentId = pixelId;
         (window as any).__pixelReady = true;
         
-        console.log('Facebook Pixel initialized with ID:', pixelId);
+        if (import.meta.env.DEV) {
+          console.log('Facebook Pixel initialized with ID:', pixelId);
+        }
+      }
+    };
+    
+    if (!existingScript) {
+      // Load Facebook Pixel script
+      const script = document.createElement('script');
+      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      script.async = true;
+      
+      script.onload = initializePixel;
+      script.onerror = () => {
+        console.error('Failed to load Facebook Pixel script');
       };
-    } else if (!((window as any).__pixelInitialized)) {
-      // If script loaded but not initialized with this pixel
-      window.fbq('init', pixelId);
-      window.fbq('track', 'PageView');
-      (window as any).__pixelInitialized = true;
-      (window as any).__pixelReady = true;
+      
+      document.head.appendChild(script);
+    } else {
+      // Script already loaded, just initialize this pixel
+      initializePixel();
     }
   }, [pixelId]);
 };
 
 // Helper functions for tracking specific events
 export const trackEvent = (event: string, parameters?: Record<string, any>) => {
-  if (window.fbq && (window as any).__pixelReady) {
-    window.fbq('track', event, parameters);
-    console.log(`Facebook Pixel: ${event}`, parameters);
-  } else {
-    // Queue the event for later if pixel isn't ready
-    setTimeout(() => {
-      if (window.fbq && (window as any).__pixelReady) {
-        window.fbq('track', event, parameters);
-        console.log(`Facebook Pixel: ${event} (delayed)`, parameters);
-      } else {
-        console.warn(`Facebook Pixel not ready, skipping event: ${event}`);
+  // Try multiple times with shorter intervals for better responsiveness
+  const attemptTracking = (attempt: number = 1, maxAttempts: number = 5) => {
+    if (window.fbq) {
+      window.fbq('track', event, parameters);
+      if (import.meta.env.DEV) {
+        console.log(`Facebook Pixel: ${event}`, parameters);
       }
-    }, 1000);
-  }
+      return;
+    }
+    
+    if (attempt < maxAttempts) {
+      setTimeout(() => {
+        attemptTracking(attempt + 1, maxAttempts);
+      }, 200 * attempt); // Progressive delay: 200ms, 400ms, 600ms, etc.
+    } else {
+      if (import.meta.env.DEV) {
+        console.warn(`Facebook Pixel not ready after ${maxAttempts} attempts, skipping event: ${event}`);
+      }
+    }
+  };
+  
+  attemptTracking();
 };
 
 export const trackViewContent = (contentName: string, value?: number) => {
