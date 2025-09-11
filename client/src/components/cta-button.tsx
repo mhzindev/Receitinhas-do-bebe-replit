@@ -73,10 +73,19 @@ export function CTAButton({
       console.warn('Facebook Pixel tracking error:', error);
     }
     
-    console.log('CTA button clicked with tracking:', trackingEvent, children);
+    if (import.meta.env.DEV) {
+      console.log('CTA button clicked with tracking:', trackingEvent, children);
+    }
     
+    // Execute custom onClick if provided
     if (onClick) {
       onClick();
+    }
+    
+    // Redirect all CTA buttons to Kiwify checkout (with security protection)
+    const checkoutWindow = window.open('https://pay.kiwify.com.br/2gKx6Uc', '_blank', 'noopener,noreferrer');
+    if (checkoutWindow) {
+      checkoutWindow.opener = null; // Extra security for older browsers
     }
   };
 
