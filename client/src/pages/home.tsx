@@ -562,25 +562,25 @@ export default function Home() {
             
             {/* Enhanced CTA Section */}
             <div className="text-center bg-gradient-to-r from-baby-yellow to-baby-pink rounded-xl p-6 md:p-8 border-2 border-baby-pink shadow-lg">
-              <p className="font-poppins font-bold text-gray-800 text-lg md:text-xl mb-2">
-                Se funcionou comigo e com mais de <span className="text-baby-pink text-xl md:text-2xl">+15.000 mães</span>...
+              <p className="font-poppins font-bold text-gray-900 text-lg md:text-xl mb-2 drop-shadow-sm">
+                Se funcionou comigo e com mais de <span className="text-red-700 text-xl md:text-2xl font-extrabold drop-shadow-sm">+15.000 mães</span>...
               </p>
               <p className="font-poppins font-bold text-2xl md:text-3xl mb-4">
-                <span className="gradient-text">VAI FUNCIONAR COM VOCÊ TAMBÉM!</span> 
+                <span className="text-gray-900 drop-shadow-md font-extrabold">VAI FUNCIONAR COM VOCÊ TAMBÉM!</span> 
                 <span className="inline-block ml-2 bounce-gentle">💪</span>
               </p>
               
               {/* Trust Indicators */}
               <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-4">
-                <div className="flex items-center bg-white bg-opacity-70 rounded-full px-3 py-2 text-xs md:text-sm font-semibold text-gray-700">
+                <div className="flex items-center bg-white bg-opacity-90 rounded-full px-3 py-2 text-xs md:text-sm font-bold text-gray-800 shadow-md">
                   <i className="fas fa-clock text-green-600 mr-2"></i>
                   Resultados em 5 dias
                 </div>
-                <div className="flex items-center bg-white bg-opacity-70 rounded-full px-3 py-2 text-xs md:text-sm font-semibold text-gray-700">
+                <div className="flex items-center bg-white bg-opacity-90 rounded-full px-3 py-2 text-xs md:text-sm font-bold text-gray-800 shadow-md">
                   <i className="fas fa-shield-alt text-blue-600 mr-2"></i>
                   100% Seguro
                 </div>
-                <div className="flex items-center bg-white bg-opacity-70 rounded-full px-3 py-2 text-xs md:text-sm font-semibold text-gray-700">
+                <div className="flex items-center bg-white bg-opacity-90 rounded-full px-3 py-2 text-xs md:text-sm font-bold text-gray-800 shadow-md">
                   <i className="fas fa-heart text-red-500 mr-2"></i>
                   15k+ Mães Satisfeitas
                 </div>
