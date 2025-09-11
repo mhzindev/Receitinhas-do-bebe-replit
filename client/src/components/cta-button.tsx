@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { trackAddToCart, trackInitiateCheckout, trackLead } from "@/hooks/useFacebookPixel";
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -6,6 +7,7 @@ interface CTAButtonProps {
   size?: "default" | "lg" | "xl";
   className?: string;
   onClick?: () => void;
+  trackingEvent?: "addToCart" | "initiateCheckout" | "lead";
 }
 
 export function CTAButton({ 
@@ -13,7 +15,8 @@ export function CTAButton({
   variant = "primary", 
   size = "default", 
   className = "",
-  onClick
+  onClick,
+  trackingEvent = "addToCart"
 }: CTAButtonProps) {
   const getVariantClasses = () => {
     switch (variant) {
@@ -51,8 +54,26 @@ export function CTAButton({
       }, 150);
     }
     
-    // TODO: Implement actual purchase/checkout logic
-    console.log('CTA button clicked:', children);
+    // Track Facebook Pixel event based on trackingEvent prop
+    try {
+      switch (trackingEvent) {
+        case "addToCart":
+          trackAddToCart();
+          break;
+        case "initiateCheckout":
+          trackInitiateCheckout();
+          break;
+        case "lead":
+          trackLead();
+          break;
+        default:
+          trackAddToCart(); // Default tracking
+      }
+    } catch (error) {
+      console.warn('Facebook Pixel tracking error:', error);
+    }
+    
+    console.log('CTA button clicked with tracking:', trackingEvent, children);
     
     if (onClick) {
       onClick();

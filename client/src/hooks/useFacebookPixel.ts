@@ -11,7 +11,12 @@ declare global {
 export const useFacebookPixel = (pixelId: string) => {
   useEffect(() => {
     if (!pixelId) {
-      console.warn('Facebook Pixel ID not found');
+      console.warn('Facebook Pixel ID not provided. Tracking disabled.');
+      return;
+    }
+
+    // Prevent duplicate initialization
+    if ((window as any).__pixelInitialized) {
       return;
     }
 
@@ -45,21 +50,37 @@ export const useFacebookPixel = (pixelId: string) => {
         // Track initial page view
         window.fbq('track', 'PageView');
         
+        // Mark as initialized to prevent duplicates
+        (window as any).__pixelInitialized = true;
+        (window as any).__pixelReady = true;
+        
         console.log('Facebook Pixel initialized with ID:', pixelId);
       };
-    } else {
-      // If already loaded, just init
+    } else if (!((window as any).__pixelInitialized)) {
+      // If script loaded but not initialized with this pixel
       window.fbq('init', pixelId);
       window.fbq('track', 'PageView');
+      (window as any).__pixelInitialized = true;
+      (window as any).__pixelReady = true;
     }
   }, [pixelId]);
 };
 
 // Helper functions for tracking specific events
 export const trackEvent = (event: string, parameters?: Record<string, any>) => {
-  if (window.fbq) {
+  if (window.fbq && (window as any).__pixelReady) {
     window.fbq('track', event, parameters);
     console.log(`Facebook Pixel: ${event}`, parameters);
+  } else {
+    // Queue the event for later if pixel isn't ready
+    setTimeout(() => {
+      if (window.fbq && (window as any).__pixelReady) {
+        window.fbq('track', event, parameters);
+        console.log(`Facebook Pixel: ${event} (delayed)`, parameters);
+      } else {
+        console.warn(`Facebook Pixel not ready, skipping event: ${event}`);
+      }
+    }, 1000);
   }
 };
 

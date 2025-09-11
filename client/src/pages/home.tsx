@@ -432,7 +432,7 @@ export default function Home() {
           <div className="text-center mt-8 relative flex flex-col items-center">
             <div className="arrow-bounce text-4xl mb-4">👇</div>
             <div className="w-full flex justify-center">
-              <CTAButton variant="primary" size="lg" className="glow w-full sm:w-auto text-lg font-bold shadow-2xl max-w-2xl">
+              <CTAButton variant="primary" size="lg" className="glow w-full sm:w-auto text-lg font-bold shadow-2xl max-w-2xl" trackingEvent="addToCart">
                 🎯 QUERO ACABAR COM O ESTRESSE DAS REFEIÇÕES 🎯
               </CTAButton>
             </div>
@@ -720,7 +720,7 @@ export default function Home() {
           {/* CTA Button 2 */}
           <div className="text-center mt-6 md:mt-8 flex justify-center">
             <div className="w-full flex justify-center">
-              <CTAButton variant="orange" size="lg" className="w-full sm:w-auto px-4 py-4 text-sm sm:text-base max-w-2xl">
+              <CTAButton variant="orange" size="lg" className="w-full sm:w-auto px-4 py-4 text-sm sm:text-base max-w-2xl" trackingEvent="lead">
                 ⚡ GARANTIR MINHA TRANQUILIDADE AGORA! ⚡
               </CTAButton>
             </div>
@@ -814,7 +814,7 @@ export default function Home() {
                   </p>
                   
                   <div className="w-full flex justify-center">
-                    <CTAButton variant="orange" size="xl" className="w-full sm:w-auto glow max-w-2xl">
+                    <CTAButton variant="orange" size="xl" className="w-full sm:w-auto glow max-w-2xl" trackingEvent="addToCart">
                       <span className="hidden sm:inline">🎯 QUERO O EBOOK COMPLETO AGORA! 🎯</span>
                       <span className="sm:hidden">🎯 QUERO O EBOOK AGORA! 🎯</span>
                     </CTAButton>
@@ -997,7 +997,7 @@ export default function Home() {
             <div className="w-full flex flex-col items-center relative">
               <div className="arrow-bounce text-3xl md:text-5xl mb-3">👇</div>
               <div className="w-full flex justify-center">
-                <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow px-4 py-4 text-sm sm:text-base max-w-2xl">
+                <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow px-4 py-4 text-sm sm:text-base max-w-2xl" trackingEvent="initiateCheckout">
                   <span className="hidden sm:inline">🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘</span>
                   <span className="sm:hidden">🆘 PARAR DE SOFRER AGORA! 🆘</span>
                 </CTAButton>
