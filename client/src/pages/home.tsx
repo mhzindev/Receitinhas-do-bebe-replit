@@ -418,85 +418,78 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Total Value Summary - ENHANCED IRRESISTIBLE OFFER */}
-          <div className="mt-10 relative bg-gradient-to-br from-red-600 via-red-500 to-orange-500 rounded-3xl p-8 text-center overflow-hidden shadow-2xl glow" data-testid="price-card">
-            {/* Decorative background elements */}
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-600/90 to-orange-600/90"></div>
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-yellow-300 rounded-full opacity-20 blur-lg"></div>
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-white rounded-full opacity-10 blur-md"></div>
+          {/* Total Value Summary - ENHANCED BUT HARMONIOUS */}
+          <div className="mt-10 relative bg-white border-2 border-baby-pink rounded-2xl shadow-lg p-6 md:p-8 text-center overflow-hidden" data-testid="price-card">
+            {/* Decorative top gradient strip */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-baby-pink via-baby-yellow to-baby-green"></div>
             
-            {/* MASSIVE DISCOUNT BADGE */}
-            <div className="absolute -top-4 -right-4 transform rotate-12 scale-in">
-              <div className="bg-gradient-to-br from-yellow-400 to-orange-400 text-red-800 font-extrabold text-lg px-6 py-3 rounded-2xl shadow-2xl border-4 border-white heart-pulse">
-                <div className="flex items-center space-x-1">
-                  <span className="text-2xl">🔥</span>
-                  <span>97% OFF</span>
-                </div>
-              </div>
+            {/* Subtle decorative background elements */}
+            <div className="absolute top-4 right-4 opacity-5">
+              <div className="w-16 h-16 bg-baby-pink rounded-full"></div>
+            </div>
+            <div className="absolute bottom-4 left-4 opacity-5">
+              <div className="w-12 h-12 bg-baby-blue rounded-full"></div>
             </div>
 
             {/* Content Container */}
             <div className="relative z-10">
-              {/* Urgency Header */}
+              {/* Header with discount badge */}
+              <div className="mb-6">
+                <div className="flex justify-center items-center gap-3 mb-4">
+                  <div className="bg-baby-yellow text-gray-800 font-bold text-sm px-4 py-2 rounded-full border border-baby-pink bounce-gentle">
+                    <span className="mr-1">⚡</span>
+                    <span>OFERTA POR TEMPO LIMITADO</span>
+                  </div>
+                  <div className="bg-baby-green text-white font-extrabold text-xs px-3 py-1 rounded-full animated-pulse">
+                    -98% OFF
+                  </div>
+                </div>
+                
+                <h3 className="font-poppins text-xl md:text-2xl font-bold text-baby-pink mb-2">
+                  💝 VALOR TOTAL COMPLETO
+                </h3>
+              </div>
+
+              {/* Original Price */}
               <div className="mb-4">
-                <div className="inline-flex items-center bg-yellow-300 text-red-800 font-black text-sm px-4 py-2 rounded-full animate-bounce">
-                  <span className="mr-2">⚡</span>
-                  <span>OFERTA RELÂMPAGO</span>
-                  <span className="ml-2">⚡</span>
+                <p className="text-gray-500 text-sm md:text-base font-medium mb-2">DE:</p>
+                <div className="text-gray-500 text-2xl md:text-3xl font-bold line-through">
+                  R$ 555,00
                 </div>
               </div>
 
-              {/* Original Price - CROSSED OUT */}
+              {/* Current Price - HIGHLIGHTED */}
               <div className="mb-6">
-                <div className="text-white/90 text-lg font-semibold mb-2">DE:</div>
-                <div className="relative inline-block">
-                  <span className="text-white text-4xl md:text-5xl font-bold opacity-80 relative">
-                    R$ 555,00
-                    {/* Multiple strike-through lines for emphasis */}
-                    <div className="absolute top-1/2 left-0 w-full h-1 bg-yellow-300 transform -rotate-12"></div>
-                    <div className="absolute top-1/2 left-0 w-full h-1 bg-yellow-300 transform rotate-12"></div>
-                    <div className="absolute top-1/2 left-0 w-full h-1 bg-red-300"></div>
-                  </span>
-                </div>
-              </div>
-
-              {/* Current Price - MASSIVE & GLOWING */}
-              <div className="mb-6">
-                <div className="text-yellow-300 text-xl font-bold mb-3 float-up">POR APENAS:</div>
+                <p className="text-baby-pink font-poppins text-lg md:text-xl font-bold mb-3 float-up">
+                  POR APENAS HOJE:
+                </p>
                 <div className="relative">
-                  {/* Glow effect behind price */}
-                  <div className="absolute inset-0 bg-yellow-300 rounded-2xl blur-xl opacity-50 scale-110"></div>
-                  <div className="relative bg-gradient-to-r from-yellow-300 to-yellow-100 text-red-700 text-6xl md:text-8xl font-black py-4 px-8 rounded-2xl border-4 border-white shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                  <div className="bg-gradient-to-r from-baby-green to-green-400 text-white text-4xl md:text-5xl font-black py-4 px-6 rounded-2xl shadow-lg border-2 border-baby-pink">
                     R$ 12,90
                   </div>
                 </div>
+                <p className="text-gray-600 text-sm mt-2">
+                  💳 Ou em até 12x de <span className="font-bold text-baby-pink">R$ 1,07</span> sem juros
+                </p>
               </div>
 
               {/* Savings Highlight */}
-              <div className="bg-green-500 text-white font-bold text-xl py-3 px-6 rounded-xl mb-4 border-2 border-white shadow-lg bounce-gentle">
-                <span className="text-2xl mr-2">💰</span>
+              <div className="bg-green-100 border border-green-300 text-green-800 font-bold text-lg py-3 px-6 rounded-xl mb-6">
+                <span className="text-xl mr-2">💰</span>
                 VOCÊ ECONOMIZA R$ 542,10!
               </div>
 
-              {/* Payment Info */}
-              <div className="text-white/95 text-lg">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30">
-                  <div className="font-semibold mb-2">💳 Ou em até 12x de R$ 1,07</div>
-                  <div className="text-sm opacity-90">Sem juros no cartão</div>
-                </div>
-              </div>
-
               {/* Trust indicators */}
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <div className="bg-white/90 text-red-600 font-bold text-xs px-3 py-2 rounded-full flex items-center">
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="bg-baby-blue bg-opacity-30 text-blue-700 font-semibold text-xs px-3 py-2 rounded-full flex items-center border border-blue-200">
                   <span className="mr-1">🔒</span>
                   PAGAMENTO SEGURO
                 </div>
-                <div className="bg-white/90 text-green-600 font-bold text-xs px-3 py-2 rounded-full flex items-center">
+                <div className="bg-baby-green bg-opacity-30 text-green-700 font-semibold text-xs px-3 py-2 rounded-full flex items-center border border-green-200">
                   <span className="mr-1">⚡</span>
                   ACESSO IMEDIATO
                 </div>
-                <div className="bg-white/90 text-blue-600 font-bold text-xs px-3 py-2 rounded-full flex items-center">
+                <div className="bg-baby-yellow bg-opacity-30 text-yellow-700 font-semibold text-xs px-3 py-2 rounded-full flex items-center border border-yellow-200">
                   <span className="mr-1">✅</span>
                   GARANTIA 7 DIAS
                 </div>
