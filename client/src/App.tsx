@@ -40,11 +40,19 @@ function Router() {
 }
 
 function App() {
-  // Get pixel ID from environment variables configured in Replit Secrets
-  const pixelId = import.meta.env.VITE_FACEBOOK_PIXEL_ID;
+  // Get pixel ID from environment variables or use fallback for production domain only
+  const isProductionDomain = typeof window !== 'undefined' && 
+    window.location.hostname === 'receitinhas-do-bebe.netlify.app';
   
-  if (!pixelId) {
-    console.warn('VITE_FACEBOOK_PIXEL_ID not configured. Facebook Pixel tracking disabled. Set this environment variable in Replit Secrets for production.');
+  const pixelId = import.meta.env.VITE_FACEBOOK_PIXEL_ID || 
+    (isProductionDomain ? '776748938411758' : '');
+  
+  if (!import.meta.env.VITE_FACEBOOK_PIXEL_ID) {
+    if (import.meta.env.DEV) {
+      console.warn('VITE_FACEBOOK_PIXEL_ID not configured in development.');
+    } else if (isProductionDomain) {
+      console.warn('VITE_FACEBOOK_PIXEL_ID not configured. Using fallback for production domain.');
+    }
   }
   
   // Always call hooks - never conditionally (but hook will handle empty/null pixelId)
