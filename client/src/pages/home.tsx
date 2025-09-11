@@ -256,69 +256,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Flash Offer Section */}
-      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-8 md:py-12 mb-8 md:mb-12 relative overflow-hidden" data-testid="flash-offer-section">
-        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-6 border border-white/20">
-            <h3 className="font-poppins text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
-              ⚡ ÚLTIMA CHANCE - OFERTA RELÂMPAGO ⚡
-            </h3>
-          
-          {/* Value Breakdown */}
-          <div className="bg-white bg-opacity-10 rounded-lg p-3 md:p-4 mb-4 md:mb-6 max-w-2xl mx-auto">
-            <p className="text-xs md:text-sm mb-2">📊 Valor individual dos produtos:</p>
-            <div className="text-xs md:text-sm space-y-1">
-              <div className="flex justify-between">
-                <span>• eBook Receitinhas do Bebê</span>
-                <span>R$ 197,00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>• Guia do Sono do Bebê</span>
-                <span>R$ 97,00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>• Desmame Sem Traumas</span>
-                <span>R$ 97,00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>• Plano Alimentar Semanal</span>
-                <span>R$ 97,00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>• Bônus Substituições</span>
-                <span>R$ 67,00</span>
-              </div>
-              <div className="border-t border-white border-opacity-30 pt-2 mt-2">
-                <div className="flex justify-between font-bold">
-                  <span>VALOR TOTAL:</span>
-                  <span>R$ 555,00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-              <div className="text-center flex-1">
-                <p className="text-xl md:text-2xl line-through opacity-80 mb-2" data-testid="original-price">De R$ 555,00</p>
-                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" data-testid="sale-price">
-                  <div className="text-white/90 text-lg md:text-xl mb-1">por apenas</div>
-                  <div className="text-yellow-300 drop-shadow-lg">R$ 12,90</div>
-                </div>
-                <p className="text-base md:text-lg mt-3 text-white/90">💳 2x de R$ 6,45 sem juros</p>
-              </div>
-              <div className="bg-yellow-400 text-red-700 px-8 py-6 rounded-2xl shadow-2xl border-4 border-white/20 transform hover:scale-105 transition-transform" data-testid="discount-badge">
-                <p className="font-black text-xl md:text-2xl mb-1">🔥 98% OFF!</p>
-                <p className="text-sm md:text-base font-bold">ECONOMIA DE R$ 542,10!</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Live Counter */}
-          <div className="mt-8">
-            <LivePurchaseCounter />
-          </div>
-        </div>
-      </section>
+      
       {/* Product Content Section */}
       <section className="container mx-auto px-4 md:px-6 mb-12 md:mb-16" data-testid="product-content-section">
         <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-10 border border-gray-100">
