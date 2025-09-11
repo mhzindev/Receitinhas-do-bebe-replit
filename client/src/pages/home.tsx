@@ -1034,7 +1034,7 @@ export default function Home() {
             {/* Header com ícone de escudo */}
             <div className="mb-6">
               <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-baby-blue to-baby-green rounded-full mb-4 shadow-lg">
-                <i className="fas fa-shield-check text-white text-2xl md:text-3xl"></i>
+                <ShieldCheck className="text-white w-8 h-8 md:w-10 md:h-10" />
               </div>
               <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
                 🛡️ COMPROMISSO COM A ÉTICA
