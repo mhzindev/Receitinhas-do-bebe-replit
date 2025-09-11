@@ -1055,7 +1055,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-4 md:gap-6">
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <i className="fas fa-check-circle text-white text-lg"></i>
+                  <Check className="text-white w-6 h-6" />
                 </div>
                 <h4 className="font-semibold text-green-800 text-sm md:text-base mb-1">Conteúdo 100% Original</h4>
                 <p className="text-green-700 text-xs md:text-sm">Receitas testadas e aprovadas</p>
@@ -1063,7 +1063,7 @@ export default function Home() {
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <i className="fas fa-headset text-white text-lg"></i>
+                  <ShieldCheck className="text-white w-6 h-6" />
                 </div>
                 <h4 className="font-semibold text-blue-800 text-sm md:text-base mb-1">Suporte Garantido</h4>
                 <p className="text-blue-700 text-xs md:text-sm">Atendimento especializado</p>
@@ -1071,7 +1071,7 @@ export default function Home() {
 
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
                 <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <i className="fas fa-download text-white text-lg"></i>
+                  <Download className="text-white w-6 h-6" />
                 </div>
                 <h4 className="font-semibold text-purple-800 text-sm md:text-base mb-1">Entrega Garantida</h4>
                 <p className="text-purple-700 text-xs md:text-sm">Entrega Certa. Acesso imediato.</p>
