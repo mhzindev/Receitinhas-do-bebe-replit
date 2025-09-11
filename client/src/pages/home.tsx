@@ -962,20 +962,26 @@ export default function Home() {
         <div className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl shadow-lg p-8 text-center">
           {/* Enhanced ÚLTIMA CHANCE banner with timer */}
           <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-xl p-6 mb-6 shadow-xl border-2 border-red-800">
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 lg:space-x-6">
-              <div className="flex items-center justify-center lg:justify-start">
+            <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 md:gap-8">
+              {/* Left - ÚLTIMA CHANCE */}
+              <div className="text-center md:text-left" data-testid="text-ultima-chance">
                 <h4 className="font-bold text-xl md:text-2xl">ÚLTIMA CHANCE</h4>
               </div>
               
-              <div className="text-center flex-1">
-                <p className="text-sm md:text-base font-semibold mb-3">Preço volta ao normal em:</p>
+              {/* Center - Timer */}
+              <div className="text-center" data-testid="box-countdown">
+                <p className="text-sm md:text-base font-semibold mb-2">Preço volta ao normal em:</p>
                 <div className="bg-white text-red-600 px-6 py-3 rounded-lg shadow-inner inline-block">
                   <CountdownTimer />
                 </div>
               </div>
+              
+              {/* Right - Empty space for balance */}
+              <div className="hidden md:block"></div>
             </div>
             
-            <div className="mt-4 text-center">
+            {/* Warning message - centered below for all breakpoints */}
+            <div className="mt-4 md:mt-6 text-center" data-testid="text-price-reverts">
               <p className="text-sm md:text-base font-semibold text-yellow-200">
                 🔥 Depois disso, o preço volta para R$ 555,00! 🔥
               </p>
