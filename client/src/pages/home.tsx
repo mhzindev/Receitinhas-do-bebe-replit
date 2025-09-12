@@ -217,6 +217,45 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* NOVO: Elementos de Engajamento na Hero Section */}
+        <div className="max-w-4xl mx-auto space-y-6 mt-8">
+          {/* Hook Emocional Principal */}
+          <div className="bg-gradient-to-r from-red-100 to-pink-100 border-2 border-red-300 rounded-2xl p-6 shadow-lg">
+            <div className="text-center">
+              <p className="text-red-700 font-bold text-lg md:text-xl mb-2" data-testid="hero-hook">
+                ⚠️ Seu bebê está rejeitando comida e você não sabe mais o que fazer?
+              </p>
+              <p className="text-red-600 text-sm md:text-base">
+                <strong>PARE DE SOFRER!</strong> Descubra as 3 receitas que fazem qualquer bebê pedir bis...
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Principal na Hero */}
+          <div className="text-center">
+            <CTAButton 
+              variant="orange" 
+              size="xl" 
+              className="animate-pulse glow w-full sm:w-auto px-8 py-6 text-lg sm:text-xl font-bold shadow-2xl" 
+              trackingEvent="initiateCheckout"
+              data-testid="hero-main-cta"
+            >
+              🎁 QUERO TRANSFORMAR A ALIMENTAÇÃO DO MEU BEBÊ AGORA!
+            </CTAButton>
+            <p className="text-gray-600 text-xs mt-2">👆 Acesso imediato por apenas R$ 12,90</p>
+          </div>
+
+          {/* Incentivo ao Scroll */}
+          <div className="text-center">
+            <div className="inline-flex flex-col items-center text-baby-pink animate-bounce">
+              <p className="text-sm font-semibold mb-2">👇 Veja como mais de 15.000 mães conseguiram!</p>
+              <div className="w-10 h-10 border-2 border-baby-pink rounded-full flex items-center justify-center">
+                <ChevronDown className="w-5 h-5" />
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       {/* Trust & Credibility Section */}
       <section className="container mx-auto px-3 md:px-4 mb-6 md:mb-8" data-testid="trust-section">
