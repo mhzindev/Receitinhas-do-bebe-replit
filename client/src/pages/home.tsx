@@ -217,26 +217,26 @@ export default function Home() {
           >
             Quero as receitas agora
           </CTAButton>
-          <p className="text-gray-600 text-sm mt-3">
-            💳 Acesso por apenas <span className="font-bold text-baby-pink">R$ 12,90</span> • Garantia de 7 dias
+          <p className="text-gray-800 text-sm mt-3 font-medium">
+            💳 Acesso por apenas <span className="font-bold text-pink-700">R$ 12,90</span> • Garantia de 7 dias
           </p>
         </div>
       </header>
       {/* Simple Trust Section */}
       <section className="container mx-auto px-3 md:px-4 mb-8" data-testid="trust-section">
-        <div className="bg-white rounded-xl shadow-lg p-6">
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
           <div className="flex justify-center items-center space-x-6 md:space-x-8 text-center">
             <div className="flex items-center space-x-2">
-              <Shield className="text-baby-green w-5 h-5" />
-              <span className="text-sm font-semibold text-gray-700">Garantia 7 dias</span>
+              <Shield className="text-green-600 w-5 h-5" />
+              <span className="text-sm font-bold text-gray-800">Garantia 7 dias</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Award className="text-baby-pink w-5 h-5" />
-              <span className="text-sm font-semibold text-gray-700">Receitas aprovadas</span>
+              <Award className="text-pink-600 w-5 h-5" />
+              <span className="text-sm font-bold text-gray-800">Receitas aprovadas</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Clock className="text-baby-blue w-5 h-5" />
-              <span className="text-sm font-semibold text-gray-700">Acesso imediato</span>
+              <Clock className="text-blue-600 w-5 h-5" />
+              <span className="text-sm font-bold text-gray-800">Acesso imediato</span>
             </div>
           </div>
         </div>
@@ -250,62 +250,62 @@ export default function Home() {
           </h3>
         </div>
       
-        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
+        <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-6 md:p-8">
           
           <div className="space-y-4">
-            <div className="flex items-start space-x-4 p-4 bg-baby-yellow/20 rounded-lg" data-testid="product-item-1">
-              <div className="w-10 h-10 bg-baby-pink rounded-full flex items-center justify-center flex-shrink-0">
-                <Check className="text-white w-5 h-5" />
+            <div className="flex items-start space-x-4 p-5 bg-yellow-100 border border-yellow-300 rounded-lg shadow-sm" data-testid="product-item-1">
+              <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <Check className="text-white w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-lg text-gray-800">📚 eBook Receitinhas do Bebê</h4>
-                <p className="text-gray-600">Mais de 100 receitas organizadas por idade e textura</p>
+                <h4 className="font-bold text-lg text-gray-900">📚 eBook Receitinhas do Bebê</h4>
+                <p className="text-gray-700 font-medium">Mais de 100 receitas organizadas por idade e textura</p>
               </div>
             </div>
             
-            <div className="flex items-start space-x-4 p-4 bg-baby-blue/20 rounded-lg" data-testid="product-item-2">
-              <div className="w-10 h-10 bg-baby-green rounded-full flex items-center justify-center flex-shrink-0">
-                <Check className="text-white w-5 h-5" />
+            <div className="flex items-start space-x-4 p-5 bg-blue-100 border border-blue-300 rounded-lg shadow-sm" data-testid="product-item-2">
+              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <Check className="text-white w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-lg text-gray-800">🌙 Guia do Sono do Bebê</h4>
-                <p className="text-gray-600">Como a alimentação afeta o sono e técnicas para noites tranquilas</p>
+                <h4 className="font-bold text-lg text-gray-900">🌙 Guia do Sono do Bebê</h4>
+                <p className="text-gray-700 font-medium">Como a alimentação afeta o sono e técnicas para noites tranquilas</p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-4 p-4 bg-baby-green/20 rounded-lg" data-testid="product-item-3">
-              <div className="w-10 h-10 bg-baby-blue rounded-full flex items-center justify-center flex-shrink-0">
-                <Check className="text-white w-5 h-5" />
+            <div className="flex items-start space-x-4 p-5 bg-green-100 border border-green-300 rounded-lg shadow-sm" data-testid="product-item-3">
+              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <Check className="text-white w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-lg text-gray-800">📅 Plano Alimentar Semanal</h4>
-                <p className="text-gray-600">Cardápios organizados com lista de compras incluída</p>
+                <h4 className="font-bold text-lg text-gray-900">📅 Plano Alimentar Semanal</h4>
+                <p className="text-gray-700 font-medium">Cardápios organizados com lista de compras incluída</p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-4 p-4 bg-baby-pink/20 rounded-lg" data-testid="product-item-4">
-              <div className="w-10 h-10 bg-orange rounded-full flex items-center justify-center flex-shrink-0">
-                <Check className="text-white w-5 h-5" />
+            <div className="flex items-start space-x-4 p-5 bg-pink-100 border border-pink-300 rounded-lg shadow-sm" data-testid="product-item-4">
+              <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                <Check className="text-white w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-lg text-gray-800">🔄 Bônus: Lista de Substituições</h4>
-                <p className="text-gray-600">Alternativas saudáveis para qualquer ingrediente</p>
+                <h4 className="font-bold text-lg text-gray-900">🔄 Bônus: Lista de Substituições</h4>
+                <p className="text-gray-700 font-medium">Alternativas saudáveis para qualquer ingrediente</p>
               </div>
             </div>
           </div>
 
           {/* Simple, honest pricing */}
-          <div className="mt-8 text-center bg-baby-yellow/30 rounded-xl p-6" data-testid="price-card">
-            <h4 className="font-poppins text-xl font-bold text-gray-800 mb-4">
+          <div className="mt-8 text-center bg-yellow-100 border-2 border-yellow-300 rounded-xl p-6 shadow-lg" data-testid="price-card">
+            <h4 className="font-poppins text-xl font-bold text-gray-900 mb-4">
               Acesso completo por:
             </h4>
-            <div className="bg-baby-green text-white text-3xl md:text-4xl font-black py-4 px-6 rounded-lg shadow-lg inline-block">
+            <div className="bg-green-600 text-white text-3xl md:text-4xl font-black py-4 px-6 rounded-lg shadow-xl inline-block border-2 border-green-700">
               R$ 12,90
             </div>
-            <p className="text-gray-600 text-sm mt-3">
+            <p className="text-gray-800 text-sm mt-3 font-medium">
               💳 Ou 2x de R$ 6,45 sem juros
             </p>
-            <p className="text-baby-pink font-semibold mt-2">
+            <p className="text-pink-700 font-bold mt-2">
               ✨ Preço acessível para ajudar o maior número de famílias
             </p>
           </div>
@@ -320,7 +320,7 @@ export default function Home() {
             >
               Quero transformar as refeições do meu bebê
             </CTAButton>
-            <p className="text-gray-600 text-sm mt-3">
+            <p className="text-gray-800 text-sm mt-3 font-medium">
               🔒 Pagamento seguro • ⚡ Acesso imediato • ✅ Garantia 7 dias
             </p>
           </div>
@@ -328,11 +328,11 @@ export default function Home() {
       </section>
       {/* Simple guarantee section */}
       <section className="container mx-auto px-4 mb-8" data-testid="guarantee-section">
-        <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 text-center">
-          <h3 className="font-poppins text-xl font-bold text-green-700 mb-3">
+        <div className="bg-green-50 border-2 border-green-400 rounded-xl p-6 text-center shadow-lg">
+          <h3 className="font-poppins text-xl font-bold text-green-800 mb-3">
             🔒 Garantia de 7 dias
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-800 font-medium">
             Se em 7 dias você não notar melhora na alimentação do seu bebê, 
             devolvemos 100% do seu dinheiro. Sem perguntas, sem complicação.
           </p>
@@ -361,8 +361,8 @@ export default function Home() {
               <p className="text-gray-700 font-medium">Você se sente culpada por não conseguir fazer ele comer direito</p>
             </div>
 
-            <div className="bg-baby-yellow border-2 border-baby-pink rounded-lg p-6 text-center mt-8" data-testid="empathy-message">
-              <p className="font-poppins text-lg font-semibold text-gray-800">
+            <div className="bg-yellow-100 border-2 border-pink-400 rounded-lg p-6 text-center mt-8 shadow-md" data-testid="empathy-message">
+              <p className="font-poppins text-lg font-bold text-gray-900">
                 ➡️ Você NÃO está sozinha, mamãe! 🤗
               </p>
             </div>
@@ -371,11 +371,11 @@ export default function Home() {
       </section>
       {/* Solution Section */}
       <section className="container mx-auto px-4 mb-12" data-testid="solution-section">
-        <div className="bg-gradient-to-br from-baby-blue to-baby-green rounded-2xl shadow-lg p-8 text-center">
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-white mb-6">
+        <div className="bg-gradient-to-br from-blue-600 to-green-600 rounded-2xl shadow-xl border-2 border-blue-700 p-8 text-center">
+          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-white mb-6 drop-shadow-md">
             A solução que vai transformar a alimentação do seu bebê! ✨
           </h3>
-          <p className="text-white text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-white text-lg max-w-3xl mx-auto leading-relaxed drop-shadow-sm font-medium">
             Mais de 100 receitas fáceis, nutritivas e aprovadas por nutricionistas que vão acabar com o estresse na hora das refeições. 
             Seu bebê vai amar comer e você vai ter a tranquilidade que merece! 💖
           </p>
@@ -510,257 +510,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
-      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="benefits-section">
-        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-8">
-          <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-8">
-            Os benefícios que você vai ter:
-          </h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 w-full">
-            <div className="text-center p-6 bg-baby-yellow rounded-lg" data-testid="benefit-1">
-              <div className="text-4xl mb-4">⏰</div>
-              <h4 className="font-poppins font-semibold text-lg mb-2">Economiza seu tempo</h4>
-              <p className="text-gray-600 text-sm">Receitas rápidas e práticas</p>
-            </div>
-
-            <div className="text-center p-6 bg-baby-pink bg-opacity-30 rounded-lg" data-testid="benefit-2">
-              <div className="text-4xl mb-4">😌</div>
-              <h4 className="font-poppins font-semibold text-lg mb-2">Acaba com a ansiedade</h4>
-              <p className="text-gray-600 text-sm">Refeições sem estresse</p>
-            </div>
-
-            <div className="text-center p-6 bg-baby-blue bg-opacity-30 rounded-lg" data-testid="benefit-3">
-              <div className="text-4xl mb-4">💰</div>
-              <h4 className="font-poppins font-semibold text-lg mb-2">Economiza dinheiro</h4>
-              <p className="text-gray-600 text-sm">Ingredientes acessíveis</p>
-            </div>
-
-            <div className="text-center p-6 bg-baby-green bg-opacity-30 rounded-lg" data-testid="benefit-4">
-              <div className="text-4xl mb-4">🌱</div>
-              <h4 className="font-poppins font-semibold text-lg mb-2">Desenvolvimento saudável</h4>
-              <p className="text-gray-600 text-sm">Nutrição completa</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Guarantee Section */}
-      <section className="container mx-auto px-4 mb-12" data-testid="guarantee-section">
-        <div className="bg-white border-2 border-green-200 rounded-2xl shadow-xl p-8 text-center relative overflow-hidden">
-          {/* Security badges background pattern */}
-          <div className="absolute top-4 right-4 opacity-10">
-            <i className="fas fa-certificate text-green-600 text-6xl"></i>
-          </div>
-          <div className="absolute bottom-4 left-4 opacity-10">
-            <i className="fas fa-shield-check text-blue-600 text-6xl"></i>
-          </div>
-          
-          <div className="max-w-4xl mx-auto relative z-10">
-            {/* Professional security badge */}
-            <div className="flex justify-center items-center mb-6">
-              <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-full p-4 shadow-lg mr-4">
-                <i className="fas fa-shield-check text-white text-3xl"></i>
-              </div>
-              <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-full p-4 shadow-lg">
-                <i className="fas fa-lock text-white text-3xl"></i>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-6 mb-6">
-              <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                🛡️ GARANTIA BLINDADA "MAMÃE TRANQUILA"
-              </h3>
-              <div className="bg-green-600 text-white px-6 py-2 rounded-full inline-block mb-4">
-                <span className="font-bold text-lg">✅ 7 DIAS DE PROTEÇÃO TOTAL</span>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white border-2 border-green-100 rounded-lg p-6 shadow-md">
-                <div className="flex items-center mb-3">
-                  <i className="fas fa-money-bill-wave text-green-600 text-2xl mr-3"></i>
-                  <h4 className="font-semibold text-gray-800">Reembolso Garantido</h4>
-                </div>
-                <p className="text-gray-600 text-sm">
-                  Dinheiro de volta em <strong>até 7 dias</strong> via PIX, sem burocracias ou perguntas incômodas.
-                </p>
-              </div>
-              
-              <div className="bg-white border-2 border-blue-100 rounded-lg p-6 shadow-md">
-                <div className="flex items-center mb-3">
-                  <i className="fas fa-user-shield text-blue-600 text-2xl mr-3"></i>
-                  <h4 className="font-semibold text-gray-800">Proteção Legal</h4>
-                </div>
-                <p className="text-gray-600 text-sm">
-                  Garantia respaldada pelo <strong>Código de Defesa do Consumidor</strong> e nossa empresa registrada.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 border-2 border-gray-200 rounded-xl p-6 mb-6">
-              <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                <strong className="text-green-600">COMPROMISSO REAL:</strong> Se em 7 dias você não estiver 100% satisfeita 
-                com as receitas, devolvemos cada centavo investido. 
-              </p>
-              <p className="text-gray-600 font-semibold">
-                💯 <strong>ZERO RISCO</strong> - Você só tem a ganhar!
-              </p>
-            </div>
-
-            {/* Trust indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
-              <div className="flex items-center bg-green-50 px-4 py-2 rounded-full border border-green-200">
-                <i className="fas fa-users text-green-600 mr-2"></i>
-                <span>+15.000 mães confiaram</span>
-              </div>
-              <div className="flex items-center bg-blue-50 px-4 py-2 rounded-full border border-blue-200">
-                <i className="fas fa-star text-yellow-500 mr-2"></i>
-                <span>4.9/5 de satisfação</span>
-              </div>
-              <div className="flex items-center bg-purple-50 px-4 py-2 rounded-full border border-purple-200">
-                <i className="fas fa-award text-purple-600 mr-2"></i>
-                <span>Empresa verificada</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Final CTA Section */}
+      {/* Final CTA - Simple and Direct */}
       <section className="container mx-auto px-4 mb-12" data-testid="final-cta-section">
-        <div className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl shadow-lg p-8 text-center">
-          {/* Enhanced ÚLTIMA CHANCE banner with timer */}
-          <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-xl p-6 mb-6 shadow-xl border-2 border-red-800">
-            <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 md:gap-8">
-              {/* Left - ÚLTIMA CHANCE */}
-              <div className="text-center md:text-left" data-testid="text-ultima-chance">
-                <h4 className="font-bold text-xl md:text-2xl">ÚLTIMA CHANCE</h4>
-              </div>
-              
-              {/* Center - Timer */}
-              <div className="text-center" data-testid="box-countdown">
-                <p className="text-sm md:text-base font-semibold mb-2">Preço volta ao normal em:</p>
-                <div className="bg-white text-red-600 px-6 py-3 rounded-lg shadow-inner inline-block">
-                  <CountdownTimer />
-                </div>
-              </div>
-              
-              {/* Right - Empty space for balance */}
-              <div className="hidden md:block"></div>
-            </div>
-            
-            {/* Warning message - centered below for all breakpoints */}
-            <div className="mt-4 md:mt-6 text-center" data-testid="text-price-reverts">
-              <p className="text-sm md:text-base font-semibold text-yellow-200">
-                🔥 Depois disso, o preço volta para R$ 555,00! 🔥
-              </p>
-            </div>
-          </div>
-          <h3 className="font-poppins text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-            Não seja a ÚNICA mãe sem essas receitas! 😰
+        <div className="bg-baby-yellow/20 rounded-xl p-8 text-center">
+          <h3 className="font-poppins text-xl md:text-2xl font-bold text-gray-800 mb-6">
+            Pronta para transformar as refeições do seu bebê?
           </h3>
-          <div className="bg-white border-2 border-baby-pink rounded-lg p-6 mb-6 max-w-2xl mx-auto">
-            <p className="text-gray-700 text-lg leading-relaxed">
-              <strong>Enquanto outras +15.000 mães já têm:</strong><br/>
-              ✅ Bebês que comem com prazer<br/>
-              ✅ Refeições sem choro e estresse<br/>
-              ✅ Desenvolvimento saudável garantido<br/>
-              <br/>
-              <span className="text-red-600 font-semibold">Você ainda vai continuar lutando sozinha?</span>
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="w-full flex flex-col items-center relative">
-              <div className="arrow-bounce text-3xl md:text-5xl mb-3">👇</div>
-              <div className="w-full flex justify-center">
-                <CTAButton variant="orange" size="xl" className="w-full md:w-auto text-white bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 shadow-xl glow px-4 py-4 text-sm sm:text-base max-w-2xl" trackingEvent="initiateCheckout">
-                  <span className="hidden sm:inline">🆘 SIM! QUERO PARAR DE SOFRER AGORA! 🆘</span>
-                  <span className="sm:hidden">🆘 PARAR DE SOFRER AGORA! 🆘</span>
-                </CTAButton>
-              </div>
-            </div>
-            <div className="bg-green-100 border border-green-300 rounded-lg p-3 max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row sm:justify-center text-sm text-green-800 font-semibold space-y-1 sm:space-y-0 sm:space-x-2">
-                <span className="flex items-center justify-center">🔐 SSL Seguro</span>
-                <span className="hidden sm:inline">|</span>
-                <span className="flex items-center justify-center">💳 Todos os cartões</span>
-                <span className="hidden sm:inline">|</span>
-                <span className="flex items-center justify-center">📱 Acesso imediato</span>
-              </div>
-            </div>
-            <div className="mt-3 px-2">
-              <p className="text-xs text-gray-600 text-center leading-relaxed">
-                👆 <span className="block sm:inline mt-1 sm:mt-0">Um clique separa você da tranquilidade que você merece</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Seção Anti-Pirataria */}
-      <section className="container mx-auto px-3 md:px-4 mb-8 md:mb-12" data-testid="anti-piracy-section">
-        <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl shadow-lg p-6 md:p-8">
-          <div className="text-center">
-            {/* Header com ícone de escudo */}
-            <div className="mb-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-baby-blue to-baby-green rounded-full mb-4 shadow-lg">
-                <ShieldCheck className="text-white w-8 h-8 md:w-10 md:h-10" />
-              </div>
-              <h3 className="font-poppins text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
-                🛡️ COMPROMISSO COM A ÉTICA
-              </h3>
-              <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-                Valorizamos seu investimento e o trabalho honesto
-              </p>
-            </div>
-
-            {/* Mensagem principal */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 mb-6 shadow-sm">
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed max-w-4xl mx-auto">
-                Ao adquirir este produto, você não está apenas comprando um item, mas sim <strong className="text-baby-pink">investindo no trabalho e na dedicação de uma equipe de profissionais</strong>. Cada detalhe foi pensado para entregar um conteúdo de alta qualidade, e essa criação só é possível com o seu apoio. <strong className="text-gray-800">A pirataria é um crime que prejudica a indústria e desvaloriza o esforço de quem cria.</strong> Compre o original, garanta a qualidade e ajude a construir um mercado mais justo e ético.
-              </p>
-            </div>
-
-            {/* Benefícios do original */}
-            <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Check className="text-white w-6 h-6" />
-                </div>
-                <h4 className="font-semibold text-green-800 text-sm md:text-base mb-1">Conteúdo 100% Original</h4>
-                <p className="text-green-700 text-xs md:text-sm">Receitas testadas e aprovadas</p>
-              </div>
-
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <ShieldCheck className="text-white w-6 h-6" />
-                </div>
-                <h4 className="font-semibold text-blue-800 text-sm md:text-base mb-1">Suporte Garantido</h4>
-                <p className="text-blue-700 text-xs md:text-sm">Atendimento especializado</p>
-              </div>
-
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
-                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Download className="text-white w-6 h-6" />
-                </div>
-                <h4 className="font-semibold text-purple-800 text-sm md:text-base mb-1">Entrega Garantida</h4>
-                <p className="text-purple-700 text-xs md:text-sm">Entrega Certa. Acesso imediato.</p>
-              </div>
-            </div>
-
-            {/* Selo de autenticidade - Agora clicável */}
-            <div className="mt-6 text-center">
-              <CTAButton 
-                variant="accent" 
-                size="lg" 
-                className="inline-flex items-center shadow-lg hover:shadow-xl transition-all duration-300" 
-                trackingEvent="initiateCheckout"
-                data-testid="button-original-certified"
-              >
-                <i className="fas fa-certificate mr-2"></i>
-                <span className="font-semibold text-sm">GARANTIR PRODUTO ORIGINAL CERTIFICADO</span>
-              </CTAButton>
-            </div>
-          </div>
+          <CTAButton 
+            variant="primary" 
+            size="lg" 
+            className="w-full sm:w-auto text-lg font-bold mb-4" 
+            trackingEvent="initiateCheckout"
+          >
+            Sim, quero as receitas
+          </CTAButton>
+          <p className="text-gray-600 text-sm">
+            💳 R$ 12,90 • 📱 Acesso imediato • 🛡️ Garantia de 7 dias
+          </p>
         </div>
       </section>
       {/* Footer */}
@@ -768,7 +534,7 @@ export default function Home() {
         <div className="container mx-auto px-3 md:px-4">
           <div className="text-center">
             <h4 className="font-poppins text-xl md:text-2xl font-bold text-baby-pink mb-3 md:mb-4">💝 Receitinhas do Bebê</h4>
-            <p className="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">Você fez a escolha certa! Mais de 15.000 mães já transformaram a alimentação dos seus bebês com nossas receitas. Agora é a sua vez! 💕</p>
+            <p className="text-gray-400 mb-4 text-sm md:text-base">Transforme as refeições do seu bebê com receitas práticas e saudáveis 💕</p>
             
             
             
