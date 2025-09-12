@@ -154,11 +154,11 @@ export default function Home() {
         <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden mb-6 md:mb-8 w-full" data-testid="credibility-section">
           <div className="relative">
             {/* Certificate Design */}
-            <div className="bg-gradient-to-br from-baby-blue to-baby-green p-4 md:p-8 text-center relative">
-              <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 mx-auto max-w-lg shadow-xl border-4 border-gold relative">
+            <div className="bg-gradient-to-br from-slate-700 to-blue-900 p-4 md:p-8 text-center relative">
+              <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 mx-auto max-w-lg shadow-xl border-4 border-amber-400 relative">
                 {/* Certificate Header */}
                 <div className="flex items-center justify-center mb-4">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-baby-green rounded-full flex items-center justify-center border-4 border-baby-yellow">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-emerald-600 rounded-full flex items-center justify-center border-4 border-amber-400">
                     <Award className="text-white w-6 h-6 md:w-8 md:h-8" />
                   </div>
                 </div>
@@ -172,17 +172,17 @@ export default function Home() {
                 {/* Main Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-baby-green">94%</div>
+                    <div className="text-2xl md:text-3xl font-bold text-emerald-600">94%</div>
                     <p className="text-xs text-gray-700">Taxa de Sucesso</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-baby-pink">+15.000</div>
+                    <div className="text-2xl md:text-3xl font-bold text-blue-700">+15.000</div>
                     <p className="text-xs text-gray-700">Famílias Atendidas</p>
                   </div>
                 </div>
                 
                 {/* Certification Text */}
-                <div className="bg-baby-yellow bg-opacity-30 rounded-lg p-3 md:p-4 mb-4">
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 md:p-4 mb-4">
                   <p className="text-xs md:text-sm text-gray-700 font-semibold">
                     ✅ Receitas Aprovadas por Nutricionistas<br/>
                     ✅ Metodologia Validada Cientificamente<br/>
@@ -199,12 +199,12 @@ export default function Home() {
                 
                 {/* Corner Stamps */}
                 <div className="absolute top-2 right-2">
-                  <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
                     <Check className="text-white w-3 h-3" />
                   </div>
                 </div>
                 <div className="absolute bottom-2 left-2">
-                  <div className="w-8 h-8 bg-baby-green rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center">
                     <Star className="text-white w-3 h-3" />
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export default function Home() {
             </div>
             
             {/* Trust Banner */}
-            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white text-center py-2">
+            <div className="bg-gradient-to-r from-emerald-700 to-emerald-800 text-white text-center py-2">
               <p className="font-bold text-xs md:text-sm">🏆 COMPROVAÇÃO CIENTÍFICA DE RESULTADOS</p>
             </div>
           </div>
@@ -245,8 +245,6 @@ export default function Home() {
             </CTAButton>
             <p className="text-gray-600 text-xs mt-2">👆 Acesso imediato por apenas R$ 12,90</p>
           </div>
-
-          
         </div>
       </header>
       {/* Trust & Credibility Section */}
