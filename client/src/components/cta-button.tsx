@@ -21,15 +21,15 @@ export function CTAButton({
   const getVariantClasses = () => {
     switch (variant) {
       case "primary":
-        return "bg-baby-pink hover:bg-pink-400 text-white";
+        return "bg-gradient-to-r from-pink-700 to-pink-600 hover:from-pink-800 hover:to-pink-700 text-white drop-shadow-[0_6px_12px_rgba(236,72,153,0.4)] border-2 border-pink-400 hover:border-pink-500 focus-visible:ring-4 focus-visible:ring-pink-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black";
       case "secondary":
-        return "bg-baby-green hover:bg-green-400 text-white";
+        return "bg-gradient-to-r from-green-700 to-green-600 hover:from-green-800 hover:to-green-700 text-white drop-shadow-[0_6px_12px_rgba(34,197,94,0.4)] border-2 border-green-400 hover:border-green-500 focus-visible:ring-4 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black";
       case "accent":
-        return "bg-baby-blue hover:bg-blue-400 text-white";
+        return "bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white drop-shadow-[0_6px_12px_rgba(59,130,246,0.4)] border-2 border-blue-400 hover:border-blue-500 focus-visible:ring-4 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black";
       case "orange":
-        return "bg-orange hover:bg-orange-600 text-white";
+        return "bg-gradient-to-r from-orange-700 to-orange-600 hover:from-orange-800 hover:to-orange-700 text-white drop-shadow-[0_6px_12px_rgba(249,115,22,0.4)] border-2 border-orange-400 hover:border-orange-500 focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black";
       default:
-        return "bg-baby-pink hover:bg-pink-400 text-white";
+        return "bg-gradient-to-r from-pink-700 to-pink-600 hover:from-pink-800 hover:to-pink-700 text-white drop-shadow-[0_6px_12px_rgba(236,72,153,0.4)] border-2 border-pink-400 hover:border-pink-500 focus-visible:ring-4 focus-visible:ring-pink-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black";
     }
   };
 
@@ -40,7 +40,7 @@ export function CTAButton({
       case "xl":
         return "text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6";
       default:
-        return "px-4 sm:px-6 py-2 sm:py-3";
+        return "px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg";
     }
   };
 
@@ -117,16 +117,20 @@ export function CTAButton({
         className={`
           ${getVariantClasses()}
           ${getSizeClasses()}
-          font-poppins font-bold rounded-full shadow-lg 
-          transform hover:scale-105 transition-all duration-200 
+          font-poppins font-black rounded-full
+          transform hover:scale-105 active:scale-95 
+          transition-all duration-300 ease-in-out
           animated-pulse leading-tight
-          min-h-[44px] flex items-center justify-center
-          text-center mx-auto
+          min-h-[50px] flex items-center justify-center
+          text-center mx-auto uppercase tracking-wide
+          hover:shadow-2xl focus:outline-none
           ${className}
         `}
         data-testid="cta-button"
       >
-        {children}
+        <span className="drop-shadow-[0_1px_0_rgba(0,0,0,0.3)]">
+          {children}
+        </span>
       </Button>
     </div>
   );
