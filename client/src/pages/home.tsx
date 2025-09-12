@@ -3,7 +3,7 @@ import { CountdownTimer } from "@/components/countdown-timer";
 // Lazy load social proof for better performance
 const SocialProofNotification = lazy(() => import("@/components/social-proof-notification").then(module => ({ default: module.SocialProofNotification })));
 import { CTAButton } from "@/components/cta-button";
-import { Award, Check, Shield, Users, Star, Heart, Baby, MapPin, Clock, ShieldCheck, Download } from "lucide-react";
+import { Award, Check, Shield, Users, Star, Heart, Baby, MapPin, Clock, ShieldCheck, Download, ChevronDown } from "lucide-react";
 import { LivePurchaseCounter } from "@/components/live-purchase-counter";
 
 // Lazy load heavy components for better performance
@@ -252,6 +252,52 @@ export default function Home() {
               </div>
               <p className="text-xs md:text-sm font-semibold text-gray-700 leading-tight">Aprovado por</p>
               <p className="text-xs text-gray-500">nutricionistas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NOVO: Hook de Engajamento e Elementos de Scroll */}
+      <section className="container mx-auto px-3 md:px-4 mb-6 md:mb-8" data-testid="engagement-section">
+        {/* Hook Emocional - 3 Erros */}
+        <div className="bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-400 rounded-r-lg p-4 mb-6 shadow-lg">
+          <div className="flex items-center">
+            <div className="text-2xl mr-3">⚠️</div>
+            <div>
+              <p className="font-bold text-red-700 text-sm md:text-base" data-testid="warning-text">
+                ATENÇÃO: Você está cometendo esses 3 erros na alimentação do seu bebê?
+              </p>
+              <p className="text-red-600 text-xs md:text-sm mt-1">
+                👇 Descubra abaixo como milhares de mães resolveram isso...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Preview Antes vs Depois */}
+        <div className="bg-white rounded-xl shadow-lg p-4 mb-6">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="text-center p-4 bg-red-50 rounded-lg border border-red-200" data-testid="before-state">
+              <div className="text-3xl mb-2">😩</div>
+              <p className="text-sm font-semibold text-red-600">ANTES</p>
+              <p className="text-xs text-gray-600">Estresse nas refeições</p>
+              <p className="text-xs text-red-500 mt-1">Bebê rejeitando comida</p>
+            </div>
+            <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200" data-testid="after-state">
+              <div className="text-3xl mb-2">😊</div>
+              <p className="text-sm font-semibold text-green-600">DEPOIS</p>
+              <p className="text-xs text-gray-600">Bebê pedindo bis!</p>
+              <p className="text-xs text-green-500 mt-1">Refeições prazerosas</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Seta Animada de Scroll */}
+        <div className="text-center animate-bounce" data-testid="scroll-indicator">
+          <div className="inline-flex flex-col items-center text-baby-pink">
+            <p className="text-sm font-semibold mb-2">Veja o que você vai receber 👇</p>
+            <div className="w-8 h-8 border-2 border-baby-pink rounded-full flex items-center justify-center">
+              <ChevronDown className="w-4 h-4" />
             </div>
           </div>
         </div>
@@ -1084,10 +1130,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Selo de autenticidade */}
-            <div className="mt-6 inline-flex items-center bg-gradient-to-r from-baby-pink to-baby-blue text-white rounded-full px-6 py-3 shadow-lg">
-              <i className="fas fa-certificate mr-2"></i>
-              <span className="font-semibold text-sm">Produto Original Certificado</span>
+            {/* Selo de autenticidade - Agora clicável */}
+            <div className="mt-6 text-center">
+              <CTAButton 
+                variant="accent" 
+                size="lg" 
+                className="inline-flex items-center shadow-lg hover:shadow-xl transition-all duration-300" 
+                trackingEvent="initiateCheckout"
+                data-testid="button-original-certified"
+              >
+                <i className="fas fa-certificate mr-2"></i>
+                <span className="font-semibold text-sm">GARANTIR PRODUTO ORIGINAL CERTIFICADO</span>
+              </CTAButton>
             </div>
           </div>
         </div>
