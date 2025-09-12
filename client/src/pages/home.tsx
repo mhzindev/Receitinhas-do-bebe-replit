@@ -246,15 +246,7 @@ export default function Home() {
             <p className="text-gray-600 text-xs mt-2">👆 Acesso imediato por apenas R$ 12,90</p>
           </div>
 
-          {/* Incentivo ao Scroll */}
-          <div className="text-center">
-            <div className="inline-flex flex-col items-center text-baby-pink animate-bounce">
-              <p className="text-sm font-semibold mb-2">👇 Veja como mais de 15.000 mães conseguiram!</p>
-              <div className="w-10 h-10 border-2 border-baby-pink rounded-full flex items-center justify-center">
-                <ChevronDown className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
+          
         </div>
       </header>
       {/* Trust & Credibility Section */}
