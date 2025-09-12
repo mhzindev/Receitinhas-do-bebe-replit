@@ -142,109 +142,84 @@ export default function Home() {
       {/* Header Section */}
       <header className="container mx-auto px-3 md:px-4 py-4 md:py-8">
         <div className="text-center">
-          <h1 className="font-poppins text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-baby-pink mb-3 md:mb-4 leading-tight" data-testid="main-title">
-            💝 Receitinhas do Bebê 🍼
+          <h1 className="font-poppins text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 md:mb-4 leading-tight" data-testid="main-title">
+            Seu bebê vai comer com prazer em até 7 dias
           </h1>
-          <h2 className="font-poppins text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-gray-700 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-2" data-testid="main-subtitle">
-            "Descubra como milhares de mães conseguiram fazer seus bebês comerem de forma saudável e sem estresse!"
+          <h2 className="font-poppins text-lg sm:text-xl md:text-2xl font-semibold text-baby-pink mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-2" data-testid="main-subtitle">
+            💝 Com receitas simples aprovadas por nutricionistas 💝
           </h2>
+          <p className="text-gray-600 text-base md:text-lg mb-8 max-w-3xl mx-auto">
+            Mais de 15.000 mães já transformaram a hora da refeição em um momento tranquilo e feliz.
+          </p>
         </div>
 
-        {/* Credibility Certificate Section */}
-        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden mb-6 md:mb-8 w-full" data-testid="credibility-section">
-          <div className="relative">
-            {/* Certificate Design */}
-            <div className="bg-gradient-to-br from-slate-700 to-blue-900 p-4 md:p-8 text-center relative">
-              <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 mx-auto max-w-lg shadow-xl border-4 border-amber-400 relative">
-                {/* Certificate Header */}
-                <div className="flex items-center justify-center mb-4">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-emerald-600 rounded-full flex items-center justify-center border-4 border-amber-400">
-                    <Award className="text-white w-6 h-6 md:w-8 md:h-8" />
-                  </div>
-                </div>
-                
-                {/* Certificate Title */}
-                <h3 className="font-poppins font-bold text-lg md:text-xl text-gray-800 mb-2">
-                  CERTIFICADO DE EFICÁCIA
-                </h3>
-                <p className="text-xs md:text-sm text-gray-600 mb-4">Resultado Comprovado Cientificamente</p>
-                
-                {/* Main Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-emerald-600">94%</div>
-                    <p className="text-xs text-gray-700">Taxa de Sucesso</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-blue-700">+15.000</div>
-                    <p className="text-xs text-gray-700">Famílias Atendidas</p>
-                  </div>
-                </div>
-                
-                {/* Certification Text */}
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 md:p-4 mb-4">
-                  <p className="text-xs md:text-sm text-gray-700 font-semibold">
-                    ✅ Receitas Aprovadas por Nutricionistas<br/>
-                    ✅ Metodologia Validada Cientificamente<br/>
-                    ✅ Resultados em Até 7 Dias
-                  </p>
-                </div>
-                
-                {/* Authority Signature */}
-                <div className="border-t-2 border-gray-200 pt-3">
-                  <p className="text-xs text-gray-600">Validado por:</p>
-                  <p className="font-bold text-sm text-gray-800">Conselho de Nutrição Infantil</p>
-                  
-                </div>
-                
-                {/* Corner Stamps */}
-                <div className="absolute top-2 right-2">
-                  <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
-                    <Check className="text-white w-3 h-3" />
-                  </div>
-                </div>
-                <div className="absolute bottom-2 left-2">
-                  <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center">
-                    <Star className="text-white w-3 h-3" />
-                  </div>
-                </div>
+        {/* Marina's Story - Moved to prominent position */}
+        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-8">
+          <div className="text-center mb-6">
+            <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-baby-pink shadow-lg">
+              <img 
+                src="/marina-profile.jpg" 
+                alt="Marina S. - Mãe que transformou a alimentação do seu bebê" 
+                className="w-full h-full object-cover"
+                data-testid="marina-profile-photo"
+              />
+            </div>
+            <h3 className="font-poppins text-xl md:text-2xl font-bold text-gray-800 mb-2">
+              A história que mudou tudo 💕
+            </h3>
+            <div className="flex justify-center items-center space-x-1 mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="text-yellow-400 w-5 h-5 fill-current" />
+              ))}
+              <span className="ml-2 text-gray-600 text-sm">(Depoimento Verificado)</span>
+            </div>
+          </div>
+          
+          <div className="bg-gray-50 rounded-xl p-6 relative">
+            <div className="absolute -top-2 left-4 text-4xl text-baby-pink opacity-60">"</div>
+            <div className="text-gray-700 space-y-4">
+              <p className="text-base md:text-lg italic">
+                <span className="font-bold text-red-600">Eu era uma mãe desesperada.</span> Meu filho de 8 meses chorava a cada refeição, 
+                recusava tudo que eu oferecia e eu me sentia a pior mãe do mundo...
+              </p>
+              
+              <p className="text-base md:text-lg italic">
+                Até que descobri que o problema não era comigo ou com ele - 
+                era simplesmente a <span className="font-bold text-baby-pink">FORMA</span> como eu estava oferecendo a comida.
+              </p>
+              
+              <div className="bg-green-100 border-l-4 border-green-400 p-4 rounded-r-lg">
+                <p className="text-lg font-bold text-green-700">
+                  Em apenas <span className="bg-green-200 px-2 py-1 rounded-full text-green-800">5 dias</span> usando essas receitas, 
+                  meu filho começou a comer com prazer. Hoje ele tem 3 anos e é a criança mais saudável da creche!
+                </p>
               </div>
             </div>
-            
-            {/* Trust Banner */}
-            <div className="bg-gradient-to-r from-emerald-700 to-emerald-800 text-white text-center py-2">
-              <p className="font-bold text-xs md:text-sm">🏆 COMPROVAÇÃO CIENTÍFICA DE RESULTADOS</p>
-            </div>
+            <div className="absolute -bottom-2 right-4 text-4xl text-baby-blue opacity-60 rotate-180">"</div>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-600">
+              <MapPin className="inline w-4 h-4 mr-1" />
+              Marina S., São Paulo - SP • Verificado em Dezembro 2024
+            </p>
           </div>
         </div>
 
-        {/* NOVO: Elementos de Engajamento na Hero Section */}
-        <div className="max-w-4xl mx-auto space-y-6 mt-8">
-          {/* Hook Emocional Principal */}
-          <div className="bg-gradient-to-r from-red-100 to-pink-100 border-2 border-red-300 rounded-2xl p-6 shadow-lg">
-            <div className="text-center">
-              <p className="text-red-700 font-bold text-lg md:text-xl mb-2" data-testid="hero-hook">
-                ⚠️ Seu bebê está rejeitando comida e você não sabe mais o que fazer?
-              </p>
-              <p className="text-red-600 text-sm md:text-base">
-                <strong>PARE DE SOFRER!</strong> Descubra as 3 receitas que fazem qualquer bebê pedir bis...
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Principal na Hero */}
-          <div className="text-center">
-            <CTAButton 
-              variant="orange" 
-              size="xl" 
-              className="animate-pulse glow w-full sm:w-auto px-8 py-6 text-lg sm:text-xl font-bold shadow-2xl" 
-              trackingEvent="initiateCheckout"
-              data-testid="hero-main-cta"
-            >
-              🎁 QUERO TRANSFORMAR A ALIMENTAÇÃO DO MEU BEBÊ AGORA!
-            </CTAButton>
-            <p className="text-gray-600 text-xs mt-2">👆 Acesso imediato por apenas R$ 12,90</p>
-          </div>
+        {/* Simple CTA after Marina's story */}
+        <div className="text-center max-w-2xl mx-auto">
+          <CTAButton 
+            variant="primary" 
+            size="lg" 
+            className="w-full sm:w-auto px-8 py-4 text-lg font-bold shadow-lg" 
+            trackingEvent="initiateCheckout"
+            data-testid="hero-main-cta"
+          >
+            Quero as receitas agora
+          </CTAButton>
+          <p className="text-gray-600 text-sm mt-3">
+            💳 Acesso por apenas <span className="font-bold text-baby-pink">R$ 12,90</span> • Garantia de 7 dias
+          </p>
         </div>
       </header>
       {/* Trust & Credibility Section */}
